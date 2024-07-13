@@ -230,3 +230,54 @@ Este archivo configura Lualine, un plugin para personalizar la barra de estado d
 **Atajos de Teclado:**
 
 Lualine no define atajos de teclado directamente en este archivo. La interacción con los componentes de Lualine se realiza a través de otros atajos definidos en tu configuración o en los plugins que se integran con Lualine.
+
+
+
+# Cuarto
+
+* [lua/plugins/ui/indentline.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/indentline.lua)
+* [lua/plugins/ui/rainbow.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/rainbow.lua)
+
+## Configuración Avanzada de Neovim: Resaltado de Código y Guías de Indentación
+
+### `rainbow.lua`
+
+Este archivo configura el plugin "rainbow-delimiters.nvim" para resaltar los delimitadores (paréntesis, corchetes, llaves) en el código con diferentes colores. Esto facilita la identificación visual de bloques de código anidados, mejorando la legibilidad y comprensión del código.
+
+**Funcionalidades:**
+
+-   **Estrategias de Resaltado:** Permite definir diferentes estrategias para resaltar delimitadores en distintos tipos de archivo.
+-   **Consultas de Delimitadores:** Personaliza cómo se buscan los delimitadores en diferentes tipos de archivo.
+-   **Colores Personalizados:** Utiliza una paleta de colores predefinida para resaltar los delimitadores.
+-   **Lista Negra de Archivos:** Excluye ciertos tipos de archivo o patrones de archivo del resaltado.
+
+**Dependencias:**
+
+-   "rainbow-delimiters.nvim" (requerido)
+
+**Atajos de Teclado:**
+
+El plugin "rainbow-delimiters.nvim" puede tener sus propios atajos de teclado para controlar su comportamiento. Consulta la documentación del plugin para más detalles.
+
+### `indentline.lua`
+
+Este archivo configura la visualización de guías de indentación en Neovim utilizando el plugin "indent-blankline.nvim". Las guías de indentación son líneas verticales que ayudan a visualizar la estructura del código, especialmente en lenguajes con niveles de indentación profundos.
+
+**Funcionalidades:**
+
+-   **Colores Personalizados:** Utiliza una paleta de colores definida en el archivo para las guías de indentación.
+-   **Integración con Rainbow Delimiters:** Coordina los colores de las guías de indentación con los colores de los delimitadores proporcionados por el plugin "rainbow-delimiters.nvim".
+-   **Exclusión de Tipos de Archivo:** Permite excluir ciertos tipos de archivo de la visualización de las guías de indentación.
+
+**Dependencias:**
+
+-   "indent-blankline.nvim" (requerido)
+-   "rainbow_delimiters.nvim" (opcional, pero se recomienda para una mejor integración visual)
+
+**Atajos de Teclado:**
+
+Los atajos de teclado para controlar la visualización de las guías de indentación se definen en el plugin "indent-blankline.nvim". Consulta la documentación del plugin para más detalles.
+
+**Combinación de Rainbow Delimiters e Indent Blankline:**
+
+La configuración en `rainbow.lua` y `indentline.lua` está diseñada para trabajar en conjunto. Al usar la misma paleta de colores, las guías de indentación y los delimitadores resaltados se complementan visualmente, creando un entorno de edición más coherente y agradable.

@@ -17,6 +17,17 @@ local plugins = {
 		config = load_config("ui.lualine"),
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = load_config("ui.indentline"),
+		main = "ibl",
+		event = { "BufReadPre", "BufNewFile" },
+	},
+	{
+		"HiPhish/rainbow-delimiters.nvim",
+		config = load_config("ui.rainbow"),
+		event = { "BufReadPre", "BufNewFile" },
+	},
 }
 
 return {
