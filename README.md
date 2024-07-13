@@ -656,3 +656,35 @@ Acción
 `<M-s>` `<alt-s>`
 
 Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
+
+
+# QUINCEAVO
+
+## Configuración Avanzada de Neovim: Comentarios Inteligentes con mini.comment
+
+### `comment.lua`
+
+* [lua/plugins/lang/comment.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/comment.lua)
+
+
+Este archivo configura el plugin `mini.comment`, que proporciona una manera simple y eficiente de agregar y eliminar comentarios en Neovim. También se integra con el plugin `ts_context_commentstring` para utilizar cadenas de comentarios específicas del contexto proporcionadas por Treesitter.
+
+**Funcionalidades:**
+
+-   **Comentarios Inteligentes:** Utiliza Treesitter para determinar la cadena de comentarios adecuada según el tipo de código en el que te encuentres.
+-   **Atajos de Teclado Personalizables:** Define atajos para comentar/descomentar líneas, párrafos o selecciones visuales.
+-   **Textobjeto "gc":** Permite seleccionar y manipular bloques de comentarios completos.
+-   **Opciones de Configuración Flexibles:** Puedes personalizar el comportamiento del plugin, como ignorar líneas en blanco o no forzar los comentarios al inicio de la línea.
+
+**Dependencias:**
+
+-   "mini.comment" (requerido)
+-   "ts_context_commentstring" (requerido)
+
+### Atajos de Teclado Personalizados
+
+`gc` Comentar/descomentar un párrafo (textobjeto)
+
+`gcc` Comentar/descomentar la línea actual
+
+`gc` (modo visual) Comentar/descomentar la selección

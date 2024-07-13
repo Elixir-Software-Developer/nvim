@@ -30,3 +30,10 @@
 `<M-s>` `<alt-s>`
 
 Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
+
+
+`gc` Comentar/descomentar un párrafo (textobjeto)
+
+`gcc` Comentar/descomentar la línea actual
+
+`gc` (modo visual) Comentar/descomentar la selección

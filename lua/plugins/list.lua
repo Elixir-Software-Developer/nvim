@@ -102,6 +102,15 @@ local plugins = {
 		config = load_config("lang.autopairs"),
 		event = "InsertEnter",
 	},
+	{
+		"echasnovski/mini.comment",
+		version = "*",
+		dependencies = "JoosepAlviste/nvim-ts-context-commentstring",
+		config = load_config("lang.comment"),
+		event = { "BufReadPre", "BufNewFile" },
+		-- enabled if anything not 0.10
+		enabled = vim.fn.has("nvim-0.10.0") == 0,
+	},
 }
 
 return {
