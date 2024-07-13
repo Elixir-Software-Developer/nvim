@@ -496,3 +496,37 @@ Atajo Acción
 `t` Alternar
 
 `q`, `<Esc>` Cerrar (en ventana flotante)
+
+
+# ONCEAVO
+
+## Configuración Avanzada de Neovim: Ejecución de Pruebas con Neotest
+
+### `neotest.lua`
+
+Este archivo configura Neotest, un framework para ejecutar y gestionar pruebas dentro de Neovim.
+
+**Funcionalidades:**
+
+-   **Adaptadores de Pruebas:** Permite integrar Neotest con diferentes frameworks de pruebas. En este caso, se configuran adaptadores para RSpec (Ruby) y Jest (JavaScript).
+-   **Ejecución de Pruebas:** Neotest facilita la ejecución de pruebas individuales, suites de pruebas o todas las pruebas de un proyecto.
+-   **Resultados de Pruebas:** Muestra los resultados de las pruebas de forma clara y concisa, incluyendo información sobre pruebas exitosas, fallidas y errores.
+-   **Depuración de Pruebas:** Permite depurar las pruebas directamente desde Neovim, lo que facilita la identificación y corrección de errores.
+
+**Dependencias:**
+
+-   "neotest" (requerido)
+-   "neotest-rspec" (requerido si se utilizan pruebas de RSpec)
+-   "neotest-jest" (requerido si se utilizan pruebas de Jest)
+
+**Atajos de Teclado:**
+
+Puedes definir tus propios atajos de teclado en `core/keys.lua` para interactuar con Neotest. Algunos ejemplos son:
+
+```LUA
+vim.keymap.set("n", "<leader>tn", function() require("neotest").run.run() end)    -- Ejecutar la prueba actual
+vim.keymap.set("n", "<leader>tf", function() require("neotest").run.run(vim.fn.expand("%")) end) -- Ejecutar todas las pruebas en el archivo actual
+vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end)  -- Adjuntar al proceso de prueba en ejecución
+vim.keymap.set("n", "<leader>to", function() require("neotest").output.open({ enter = true }) end) -- Abrir la ventana de salida de Neotest
+vim.keymap.set("n", "<leader>ts", function() require("neotest").summary.toggle() end) -- Alternar la ventana de resumen de Neotest
+```

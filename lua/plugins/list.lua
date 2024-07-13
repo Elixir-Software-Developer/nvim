@@ -77,6 +77,16 @@ local plugins = {
 		config = load_config("lang.dap"),
 		cmd = { "DapUIToggle", "DapToggleRepl", "DapToggleBreakpoint" },
 	},
+	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-neotest/nvim-nio",
+			"olimorris/neotest-rspec",
+			"haydenmeade/neotest-jest",
+		},
+		config = load_config("lang.neotest"),
+		cmd = "Neotest",
+	},e
 }
 
 return {
