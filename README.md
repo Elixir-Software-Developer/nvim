@@ -23,7 +23,7 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 │   └── keybindings.md [ ]
 ├── images
 │   └── screenshot.png [ ]
-├── init.lua [ ]
+├── init.lua [x]
 ├── LICENSE [ ]
 ├── lua
 │   ├── core
@@ -32,8 +32,8 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 │   │   ├── keys.lua [ ]
 │   │   └── options.lua [ ]
 │   ├── lib
-│   │   ├── icons.lua [ ]
-│   │   └── util.lua [ ]
+│   │   ├── icons.lua [x]
+│   │   └── util.lua [x]
 │   └── plugins
 │       ├── lang
 │       │   ├── ai.lua [ ]
@@ -72,16 +72,16 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 │       │   ├── telescope.lua [ ]
 │       │   └── which-key.lua [ ]
 │       └── ui
-│           ├── dashboard.lua [ ]
-│           ├── dressing.lua [ ]
-│           ├── indentline.lua [ ]
-│           ├── lualine.lua [ ]
-│           ├── notify.lua [ ]
-│           ├── onedark.lua [ ]
-│           ├── rainbow.lua [ ]
-│           ├── twilight.lua [ ]
-│           ├── wilder.lua [ ]
-│           └── zen-mode.lua [ ]
+│           ├── dashboard.lua [x]
+│           ├── dressing.lua [x]
+│           ├── indentline.lua [x]
+│           ├── lualine.lua [x]
+│           ├── notify.lua [x]
+│           ├── onedark.lua [x]
+│           ├── rainbow.lua [x]
+│           ├── twilight.lua [x]
+│           ├── wilder.lua [x]
+│           └── zen-mode.lua [x]
 ├── plugin
 │   └── after
 │       └── highlights.lua [ ]
