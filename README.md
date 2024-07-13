@@ -122,7 +122,7 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 ¡Comencemos con la instalación y configuración básica de Neovim!
 
 
-# lazy.lua
+# Primero
 
 * [lua/plugins/lazy.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/lazy.lua)
 * [lua/plugins/list.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/list.lua)
@@ -143,3 +143,63 @@ Además,  `lazy.lua` interactúa con:
 -   **`init.lua`:** Es el punto de entrada principal de la configuración y se encarga de cargar `lazy.lua`.
 
 Asegúrate de tener estos archivos en las ubicaciones correctas y con el contenido adecuado para un funcionamiento óptimo de tu configuración de Neovim.
+
+
+
+
+
+# Segundo
+
+* [lua/plugins/ui/onedark.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/onedark.lua)
+* [lua/lib/util.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/util.lua)
+
+
+## Configuración Avanzada de Neovim: Onedark y Utilidades Personalizadas
+
+Este proyecto documenta paso a paso la configuración de Neovim, comenzando con el tema Onedark y un conjunto de funciones de utilidad.
+
+### `onedark.lua`
+
+Este archivo configura el tema Onedark para Neovim, personalizando la apariencia del editor con colores y estilos específicos. Permite ajustar aspectos como:
+
+-   **Estilo:** Diferentes variantes de Onedark (ej., 'dark', 'deep', 'light').
+-   **Transparencia:** Fondo transparente para la interfaz.
+-   **Colores en la terminal:** Si se deben usar los colores del tema en la terminal integrada.
+-   **Estilos de código:** Personalizar el estilo (itálico, negrita, subrayado) para comentarios, palabras clave, funciones, etc.
+-   **Integración con Lualine:** Opciones para la barra de estado Lualine.
+-   **Diagnósticos:** Apariencia de los mensajes de diagnóstico (errores, advertencias).
+
+**Atajo de Teclado:**
+
+-   `<leader>ot`: Alterna entre los diferentes estilos de Onedark disponibles.
+
+**Dependencias:**
+
+-   `onedark.lua` depende de `lib/util.lua` para obtener configuraciones de usuario personalizadas (si existen).
+
+### `lib/util.lua`
+
+Este archivo contiene funciones de utilidad que se utilizan en otras partes de la configuración de Neovim. Algunas de estas funciones son:
+
+-   **`get_user_config(key, default)`:** Obtiene un valor de configuración del usuario, si existe, o devuelve un valor predeterminado.
+-   **`get_root_dir()`:** Intenta determinar el directorio raíz del proyecto actual (útil para configuraciones específicas del proyecto).
+-   **`get_file_type_cmd(extension)`:** Obtiene un comando para establecer el tipo de archivo según la extensión y el contexto del proyecto.
+-   **`is_present(bin)`:** Verifica si un ejecutable está presente en el sistema.
+
+**Dependencias:**
+
+-   `lib/util.lua` no tiene dependencias directas de otros archivos de configuración. Utiliza funciones integradas de Neovim.
+
+### Próximos Pasos
+
+Con el tema Onedark y las funciones de utilidad configuradas, podemos avanzar hacia la personalización de opciones, atajos de teclado y la gestión de plugins para construir un entorno de Neovim completo y eficiente.
+
+
+
+## Atajos de Teclado Personalizados
+
+| Atajo        | Acción                                             |
+| :----------- | :------------------------------------------------- |
+| `<leader>ot` | Alterna entre diferentes estilos del tema Onedark. |
+
+**Nota:** `<leader>` generalmente se configura como la barra espaciadora (` `).
