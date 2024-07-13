@@ -688,3 +688,118 @@ Este archivo configura el plugin `mini.comment`, que proporciona una manera simp
 `gcc` Comentar/descomentar la línea actual
 
 `gc` (modo visual) Comentar/descomentar la selección
+
+
+
+
+# DIECISEISAVO
+
+## Configuración Avanzada de Neovim: Manipulación de Entornos con mini.surround
+
+### `surround.lua`
+
+* [lua/plugins/lang/surround.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/surround.lua)
+
+Este archivo configura el plugin `mini.surround`, que permite agregar, eliminar, reemplazar y manipular fácilmente "entornos" de texto en Neovim. Los entornos son pares de caracteres que rodean texto, como paréntesis, corchetes, comillas, etiquetas HTML, etc.
+
+**Funcionalidades:**
+
+-   **Manipulación de Entornos:** Agrega, elimina o reemplaza entornos alrededor del texto seleccionado o el cursor.
+-   **Búsqueda de Entornos:** Busca entornos cercanos al cursor o que cubren el texto seleccionado.
+-   **Resaltado de Entornos:** Resalta visualmente el entorno que rodea al texto seleccionado.
+-   **Personalización de Atajos:** Te permite personalizar los atajos de teclado para las acciones del plugin.
+
+**Dependencias:**
+
+-   "mini.surround" (requerido)
+
+**Atajos de Teclado:**
+
+Atajo
+
+Acción
+
+`gsa` Agregar un entorno alrededor del texto seleccionado o el cursor.
+
+`gsd` Eliminar el entorno que rodea al texto seleccionado o el cursor.
+
+`gsf` Buscar el siguiente entorno y mover el cursor al final del mismo.
+
+`gsF` Buscar el entorno anterior y mover el cursor al inicio del mismo.
+
+`gsh` Resaltar el entorno que rodea al texto seleccionado o el cursor.
+
+`gsr` Reemplazar el entorno que rodea al texto seleccionado o el cursor.
+
+`gsnl` Buscar el último entorno y actualizar el número de líneas a incluir.
+
+`gsnn`  Buscar el siguiente entorno y actualizar el número de líneas a incluir.
+
+Los "entornos" en el contexto de `mini.surround` se refieren a pares de caracteres que encierran o "rodean" un texto. Estos pares pueden ser:
+
+-   **Paréntesis:**  `( )`
+-   **Corchetes:**  `[ ]`
+-   **Llaves:**  `{ }`
+-   **Comillas:**  `""`,  `''`,  ` `` ` (backticks)
+-   **Etiquetas HTML:**  `<div> </div>`,  `<h1> </h1>`
+
+En esencia, cualquier par de caracteres que se utilice para delimitar un bloque de texto se considera un entorno.
+
+**Ejemplos Prácticos:**
+
+Imagina que tienes el siguiente texto en tu editor de Neovim:
+
+```
+Este es un ejemplo de texto.
+
+```
+
+**Agregar un Entorno:**
+
+1.  **Selecciona el texto:** Coloca el cursor al principio de la línea y presiona `V` (mayúscula) para entrar en modo de selección de línea. Luego, mueve el cursor hasta el final de la línea para seleccionar todo el texto.
+
+2.  **Usa `gsa`:** Mientras el texto está seleccionado, presiona `gsa`. Esto abrirá un pequeño menú en la parte inferior de la pantalla donde puedes elegir el tipo de entorno que deseas agregar.
+
+3.  **Elige un entorno:** Por ejemplo, puedes elegir `(` para agregar paréntesis. El resultado será:
+
+
+```
+(Este es un ejemplo de texto.)
+
+```
+
+**Eliminar un Entorno:**
+
+1.  **Coloca el cursor:** Coloca el cursor en cualquier lugar dentro de los paréntesis.
+
+2.  **Usa `gsd`:** Presiona `gsd`. Los paréntesis se eliminarán, dejando el texto original:
+
+
+```
+Este es un ejemplo de texto.
+
+```
+
+**Reemplazar un Entorno:**
+
+1.  **Coloca el cursor:** Coloca el cursor dentro de los paréntesis (si los has vuelto a agregar).
+
+2.  **Usa `gsr`:** Presiona `gsr`. Esto abrirá el menú de selección de nuevo.
+
+3.  **Elige un nuevo entorno:** Por ejemplo, elige `"` para reemplazar los paréntesis por comillas dobles:
+
+
+```
+"Este es un ejemplo de texto."
+
+```
+
+**Otros Ejemplos:**
+
+-   **En HTML:** Puedes usar `gsa` para envolver un texto seleccionado con etiquetas HTML, como `<p>` (párrafo) o `<strong>` (negrita).
+-   **En Markdown:** Puedes usar `gsa` para agregar énfasis (`*texto*`) o enlaces (`[texto](enlace)`).
+-   **En Programación:** Puedes usar `gsa` para agregar paréntesis alrededor de una expresión matemática o comillas alrededor de una cadena de texto.
+
+**¿Por qué es útil?**
+
+`mini.surround` te permite manipular entornos de texto de forma rápida y eficiente, lo que puede ahorrarte mucho tiempo y evitar errores al escribir código, especialmente cuando trabajas con estructuras anidadas.

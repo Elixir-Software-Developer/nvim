@@ -111,6 +111,12 @@ local plugins = {
 		-- enabled if anything not 0.10
 		enabled = vim.fn.has("nvim-0.10.0") == 0,
 	},
+	{
+		"echasnovski/mini.surround",
+		version = "*",
+		config = load_config("lang.surround"),
+		event = { "BufReadPre", "BufNewFile" },
+	},
 }
 
 return {

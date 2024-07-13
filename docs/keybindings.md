@@ -37,3 +37,19 @@ Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
 `gcc` Comentar/descomentar la línea actual
 
 `gc` (modo visual) Comentar/descomentar la selección
+
+`gsa` Agregar un entorno alrededor del texto seleccionado o el cursor.
+
+`gsd` Eliminar el entorno que rodea al texto seleccionado o el cursor.
+
+`gsf` Buscar el siguiente entorno y mover el cursor al final del mismo.
+
+`gsF` Buscar el entorno anterior y mover el cursor al inicio del mismo.
+
+`gsh` Resaltar el entorno que rodea al texto seleccionado o el cursor.
+
+`gsr` Reemplazar el entorno que rodea al texto seleccionado o el cursor.
+
+`gsnl` Buscar el último entorno y actualizar el número de líneas a incluir.
+
+`gsnn`  Buscar el siguiente entorno y actualizar el número de líneas a incluir.
