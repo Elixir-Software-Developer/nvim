@@ -11,7 +11,7 @@
 paru -S lua-format
 paru -S style-lua
 paru -S luarocks
-
+pip install flake8 black
 
 
 
@@ -1179,3 +1179,84 @@ Este archivo configura el plugin Mason, un gestor de paquetes diseñado específ
 `<C-c>` Cancela la instalación en curso.
 
 `<C-f>` Aplica un filtro de lenguaje para mostrar solo los paquetes relevantes para el lenguaje actual.
+
+
+
+
+
+## Configuración Avanzada de Neovim: Autocompletado Inteligente con nvim-cmp
+
+### `cmp.lua`
+
+Este archivo configura el potente plugin de autocompletado `nvim-cmp`, que proporciona sugerencias de código inteligentes mientras escribes. Utiliza diversas fuentes de sugerencias, como el LSP (Language Server Protocol), snippets, el contenido del búfer actual y más.
+
+**Funcionalidades:**
+
+-   **Múltiples Fuentes de Sugerencias:** Combina sugerencias de diferentes fuentes para un autocompletado más completo y preciso.
+-   **Snippets:** Permite insertar rápidamente plantillas de código utilizando el plugin `luasnip`.
+-   **Integración con el LSP:** Utiliza las sugerencias de los servidores de lenguaje para un autocompletado contextualizado.
+-   **Personalización del Formato:** Personaliza la apariencia de las sugerencias con iconos y detalles sobre el origen de cada sugerencia.
+-   **Atajos de Teclado Cómodos:** Navega por la lista de sugerencias, acepta sugerencias, expande snippets, etc.
+
+**Dependencias:**
+
+-   "nvim-cmp" (requerido)
+-   "luasnip" (requerido)
+
+**Atajos de Teclado:**
+
+Atajo
+
+Acción
+
+`<C-k>` Seleccionar el elemento anterior en la lista de autocompletado.
+
+`<C-j>` Seleccionar el siguiente elemento en la lista de autocompletado.
+
+`<C-b>` Desplazarse hacia arriba en la documentación del elemento seleccionado.
+
+`<C-f>` Desplazarse hacia abajo en la documentación del elemento seleccionado.
+
+`<C-Space>` Mostrar la lista de autocompletado.
+
+`<C-u>` Desplazarse 4 líneas hacia arriba en la documentación.
+
+`<C-d>` Desplazarse 4 líneas hacia abajo en la documentación.
+
+`<C-y>` Desactivar el autocompletado.
+
+`<C-c>` (En modo inserción) Cancelar el autocompletado. (En modo comando) Cerrar la ventana de autocompletado.
+
+`<CR>` Confirmar la selección y reemplazar el texto actual.
+
+`<Tab>` Seleccionar el siguiente elemento, expandir un snippet o saltar al siguiente punto de un snippet.
+
+`<S-Tab>` Seleccionar el elemento anterior o saltar al punto anterior de un snippet.
+
+
+**Escenario:**
+
+Estás escribiendo código Python y quieres usar `cmp.lua` para completar automáticamente el nombre de una función.
+
+**Ejemplo de Uso:**
+
+1.  **Comienzas a escribir:** Escribes las primeras letras de la función que quieres usar, por ejemplo,  `pri`.
+
+2.  **Activas el autocompletado:** Presionas `<C-Space>` (Control + Espacio). Se abre una ventana emergente con sugerencias de autocompletado basadas en el LSP, snippets, el contenido del búfer actual, etc.
+
+3.  **Navegas por las sugerencias:**
+
+    -   Presionas `<C-j>` (Control + j) para seleccionar la siguiente sugerencia en la lista.
+    -   Presionas `<C-k>` (Control + k) para seleccionar la sugerencia anterior.
+4.  **Ves la documentación:** Mientras navegas por las sugerencias, puedes presionar `<C-b>` (Control + b) o `<C-f>` (Control + f) para desplazarte por la documentación de la sugerencia seleccionada en una ventana flotante.
+
+5.  **Aceptas una sugerencia:** Cuando encuentres la sugerencia que deseas, presionas `<CR>` (Enter) para aceptarla. El texto se completará automáticamente.
+
+6.  **Expandes un snippet:** Si la sugerencia es un snippet, puedes presionar `<Tab>` para expandirlo. Si el snippet tiene varios campos, puedes usar `<Tab>` y `<S-Tab>` (Shift + Tab) para moverte entre los campos.
+
+
+**Otros Ejemplos:**
+
+-   **Completar nombres de variables:** Comienza a escribir el nombre de una variable y presiona `<C-Space>` para ver las sugerencias.
+-   **Completar rutas de archivo:** En un contexto donde se espera una ruta de archivo, presiona `<C-Space>` para obtener sugerencias de rutas.
+-   **Completar palabras clave de un lenguaje:** En un archivo de código, presiona `<C-Space>` para ver sugerencias de palabras clave del lenguaje.

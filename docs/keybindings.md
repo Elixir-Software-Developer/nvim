@@ -130,3 +130,31 @@ interfaz de mason
 `<C-c>` Cancela la instalación en curso.
 
 `<C-f>` Aplica un filtro de lenguaje para mostrar solo los paquetes relevantes para el lenguaje actual.
+
+
+auto completion
+
+
+`<C-k>` Seleccionar el elemento anterior en la lista de autocompletado.
+
+`<C-j>` Seleccionar el siguiente elemento en la lista de autocompletado.
+
+`<C-b>` Desplazarse hacia arriba en la documentación del elemento seleccionado.
+
+`<C-f>` Desplazarse hacia abajo en la documentación del elemento seleccionado.
+
+`<C-Space>` Mostrar la lista de autocompletado.
+
+`<C-u>` Desplazarse 4 líneas hacia arriba en la documentación.
+
+`<C-d>` Desplazarse 4 líneas hacia abajo en la documentación.
+
+`<C-y>` Desactivar el autocompletado.
+
+`<C-c>` (En modo inserción) Cancelar el autocompletado. (En modo comando) Cerrar la ventana de autocompletado.
+
+`<CR>` Confirmar la selección y reemplazar el texto actual.
+
+`<Tab>` Seleccionar el siguiente elemento, expandir un snippet o saltar al siguiente punto de un snippet.
+
+`<S-Tab>` Seleccionar el elemento anterior o saltar al punto anterior de un snippet.
