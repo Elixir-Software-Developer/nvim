@@ -210,7 +210,7 @@ Con el tema Onedark y las funciones de utilidad configuradas, podemos avanzar ha
 ## Configuración Avanzada de Neovim: Lualine
 
 * [lua/plugins/ui/lualine.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/lualine.lua)
-* * [lua/lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/icons.lua)
+* [lua/lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/icons.lua)
 
 ### `lualine.lua`
 
@@ -281,3 +281,28 @@ Los atajos de teclado para controlar la visualización de las guías de indentac
 **Combinación de Rainbow Delimiters e Indent Blankline:**
 
 La configuración en `rainbow.lua` y `indentline.lua` está diseñada para trabajar en conjunto. Al usar la misma paleta de colores, las guías de indentación y los delimitadores resaltados se complementan visualmente, creando un entorno de edición más coherente y agradable.
+
+
+
+# Quinto
+
+## Configuración Avanzada de Neovim: Notificaciones Personalizadas
+
+* [lua/plugins/ui/rainbow.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/nvim_notify.lua)
+* [lua/lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/icons.lua)
+
+### `nvim_notify.lua`
+
+Este archivo configura el plugin "nvim-notify" para mostrar notificaciones personalizadas en Neovim.
+
+**Funcionalidades:**
+
+-   **Apariencia Personalizada:** Controla el color de fondo, los iconos, el estilo de renderizado y las animaciones de las notificaciones.
+-   **Niveles de Severidad:** Permite filtrar las notificaciones por su nivel de severidad (TRACE, DEBUG, INFO, WARN, ERROR).
+-   **Agrupación de Mensajes:** Agrupa notificaciones similares para evitar el spam.
+-   **Tamaño Dinámico:** Ajusta el tamaño máximo de las notificaciones en función del tamaño de la ventana de Neovim.
+
+**Dependencias:**
+
+-   "nvim-notify" (requerido)
+-   "lib/icons.lua" (opcional, pero se recomienda para mejorar la presentación visual)

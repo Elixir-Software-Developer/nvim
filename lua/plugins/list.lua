@@ -28,6 +28,12 @@ local plugins = {
 		config = load_config("ui.rainbow"),
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	{
+		"rcarriga/nvim-notify",
+		config = load_config("ui.notify"),
+		event = "VeryLazy",
+		cmd = "Notifications",
+	},
 }
 
 return {
