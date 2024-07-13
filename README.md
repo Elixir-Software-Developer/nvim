@@ -12,10 +12,25 @@
 
 
 
+
+
 Este proyecto tiene como objetivo replicar y documentar una configuración avanzada de Neovim, detallando cada paso en un formato similar a un libro. La meta es crear un entorno de desarrollo potente, personalizado y eficiente.
 
 ### Estructura del Proyecto
 
+Onedark (tema)
+Utilidades personalizadas (lib/util.lua)
+Lazy.nvim (gestor de plugins)
+Lualine (barra de estado)
+Indent Blankline (guías de indentación)
+Rainbow Delimiters (resaltado de delimitadores)
+nvim-notify (notificaciones personalizadas)
+Dressing.nvim (mejora de inputs y selecciones)
+Dashboard (página de inicio personalizada)
+Wilder.nvim (mejora del wildmenu)
+Zen Mode y Twilight (modo zen y oscurecimiento de código)
+Neotest (ejecución de pruebas)
+SnipRun (ejecución de fragmentos de código)
 
 
 * [lua/plugins/lazy.lua](# primero)
@@ -508,6 +523,9 @@ Atajo Acción
 
 ### `neotest.lua`
 
+
+* [lua/plugins/lang/neotest.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/neotest.lua)
+
 Este archivo configura Neotest, un framework para ejecutar y gestionar pruebas dentro de Neovim.
 
 **Funcionalidades:**
@@ -543,6 +561,8 @@ vim.keymap.set("n", "<leader>ts", function() require("neotest").summary.toggle()
 
 ### `sniprun.lua`
 
+* [lua/plugins/lang/sniprun.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/sniprun.lua)
+
 Este archivo configura el plugin SnipRun, que permite ejecutar fragmentos de código seleccionados directamente desde Neovim sin necesidad de guardar el archivo.
 
 **Funcionalidades:**
@@ -570,3 +590,37 @@ vim.keymap.set("v", "<leader>r", function() require("sniprun").run() end, { desc
 -   Si se utiliza lazy.nvim deberás colocar en `build` el valor `bash ./install.sh`
 
 Con este atajo, puedes seleccionar un fragmento de código en modo visual y presionar `<leader>r` para ejecutarlo.
+
+
+# TRECEAVO
+
+## Configuración Avanzada de Neovim: Refactorización de Código con refactoring.nvim
+
+### `refactoring.lua`
+
+
+* [lua/plugins/lang/refactoring.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/refactoring.lua)
+
+Este archivo configura el plugin `refactoring.nvim`, que te permite realizar refactorizaciones de código comunes directamente desde Neovim.
+
+**Funcionalidades:**
+
+-   **Extracción de Funciones:** Extrae un bloque de código seleccionado en una nueva función.
+-   **Extracción de Variables:** Extrae una expresión en una nueva variable.
+-   **Renombrado:** Renombra variables, funciones y otros símbolos en tu código.
+-   **Otras Refactorizaciones:** El plugin soporta otras refactorizaciones como "Extract Block", "Inline Variable", "Go to Declaration", etc.
+
+**Dependencias:**
+
+-   "refactoring.nvim" (requerido)
+
+**Atajos de Teclado:**
+
+Puedes definir tus propios atajos de teclado en `core/keys.lua` para realizar las refactorizaciones. Algunos ejemplos:
+
+```lua
+vim.keymap.set("v", "<leader>re", function() require("refactoring").refactor("Extract Function") end, { desc = "Extract Function" })
+vim.keymap.set("v", "<leader>rf", function() require("refactoring").refactor("Extract Function to File") end, { desc = "Extract Function to File" })
+vim.keymap.set("v", "<leader>rv", function() require("refactoring").refactor("Extract Variable") end, { desc = "Extract Variable" })
+vim.keymap.set("n", "<leader>rn", function() require("refactoring").refactor("Rename") end, { desc = "Rename" })
+```
