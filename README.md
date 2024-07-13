@@ -306,3 +306,29 @@ Este archivo configura el plugin "nvim-notify" para mostrar notificaciones perso
 
 -   "nvim-notify" (requerido)
 -   "lib/icons.lua" (opcional, pero se recomienda para mejorar la presentación visual)
+
+
+# Sexto
+
+## Configuración Avanzada de Neovim: Inputs y Selecciones Mejoradas
+
+* [lua/plugins/ui/dressing.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/dressing.lua)
+
+### `dressing.lua`
+
+Este archivo configura el plugin "dressing.nvim" para mejorar la apariencia y funcionalidad de los inputs de texto y selecciones en Neovim.
+
+**Funcionalidades:**
+
+-   **Inputs de Texto Mejorados:** Personaliza la apariencia de los inputs de texto, como el prompt, el borde y el ancho de la ventana.
+-   **Selecciones Mejoradas:** Utiliza backends como Telescope, FZF o FZF Lua para mejorar la experiencia de selección de elementos.
+-   **Temas Personalizados:** Se integra con temas de Neovim para una apariencia coherente.
+
+**Dependencias:**
+
+-   "dressing.nvim" (requerido)
+-   Opcionalmente, puedes instalar "telescope.nvim", "fzf_lua", "fzf" o "nui.nvim" para usarlos como backends de selección.
+
+**Atajos de Teclado:**
+
+No define atajos de teclado específicos, pero mejora la experiencia de uso de los inputs y selecciones estándar de Neovim.

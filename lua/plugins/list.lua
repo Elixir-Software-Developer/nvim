@@ -34,6 +34,11 @@ local plugins = {
 		event = "VeryLazy",
 		cmd = "Notifications",
 	},
+	{
+		"stevearc/dressing.nvim",
+		config = load_config("ui.dressing"),
+		event = { "BufReadPre", "BufNewFile" },
+	},
 }
 
 return {
