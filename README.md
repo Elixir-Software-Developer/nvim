@@ -1096,4 +1096,43 @@ Este archivo no define atajos de teclado directamente. La interacción con el LS
 -   **Instalación de Servidores LSP:** Antes de poder utilizar las funciones del LSP, debes instalar los servidores LSP correspondientes a los lenguajes que utilizas. Puedes usar `mason-lspconfig` para instalarlos fácilmente.
 -   **Configuración de Plugins de LSP:** Es posible que necesites configurar plugins adicionales, como `lspsaga.nvim`, para mejorar la experiencia de uso del LSP.
 
+
+
+
+
+## Configuración Avanzada de Neovim: Interfaz de Usuario Mejorada para LSP con lspsaga.nvim
+
+### `lspsaga.lua`
+
+
+* [lua/plugins/lang/lspsaga.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/lspsaga.lua)
+
+Este archivo configura el plugin `lspsaga.nvim`, que proporciona una interfaz de usuario más visual y fácil de usar para las funciones del LSP (Language Server Protocol) en Neovim. Lspsaga mejora la presentación de información como la definición de símbolos, diagnósticos, referencias de código, acciones de código, y más.
+
+**Funcionalidades:**
+
+-   **Definición de Símbolos:** Muestra la definición de un símbolo en una ventana flotante con formato mejorado.
+-   **Diagnósticos:** Proporciona una mejor visualización de los errores, advertencias y sugerencias del LSP.
+-   **Referencias de Código:** Muestra las referencias de un símbolo en una ventana flotante.
+-   **Acciones de Código:** Presenta las acciones de código disponibles en un menú emergente.
+-   **Hover:** Muestra información adicional sobre un símbolo al pasar el cursor sobre él.
+-   **...y más:** Lspsaga.nvim ofrece muchas otras funciones para mejorar la experiencia de uso del LSP.
+
+**Dependencias:**
+
+-   "lspsaga.nvim" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+
+**Atajos de Teclado:**
+
+Lspsaga.nvim proporciona muchos atajos de teclado para acceder a sus funcionalidades. Puedes encontrar la lista completa en la documentación del plugin [invalid URL removed].
+
+**Ejemplo de Configuración Personalizada en `core/keys.lua`:**
+
+Lua
+
+```
+vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true }) -- Abre el buscador de símbolos de lspsaga
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true }) -- Muestra las acciones de código disponibles
+
 ```

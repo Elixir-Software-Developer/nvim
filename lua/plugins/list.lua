@@ -157,6 +157,11 @@ local plugins = {
         'folke/lazydev.nvim',
         ft = 'lua',
     },
+    {
+        'nvimdev/lspsaga.nvim',
+        config = load_config('lang.lspsaga'),
+        event = 'LspAttach',
+    },
 }
 
 return {
