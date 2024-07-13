@@ -6,33 +6,75 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 
 ```
 .
-├── docs/
-│   └── keybindings.md
-├── images/
-│   └── screenshot.png
-├── init.lua
-├── LICENSE
-├── lua/
-│   ├── core/
-│   │   ├── autocmd.lua
-│   │   ├── functions.lua
-│   │   ├── keys.lua
-│   │   └── options.lua
-│   ├── lib/
-│   │   ├── icons.lua
-│   │   └── util.lua
-│   └── plugins/
-│       ├── lang/
-│       ├── lazy.lua
-│       ├── list.lua
-│       ├── lock.json
-│       ├── tools/
-│       └── ui/
-├── plugin/
-│   └── after/
-│       └── highlights.lua
-├── README.md
-└── tree.txt
+├── docs
+│   └── keybindings.md [ ]
+├── images
+│   └── screenshot.png [ ]
+├── init.lua [ ]
+├── LICENSE [ ]
+├── lua
+│   ├── core
+│   │   ├── autocmd.lua [ ]
+│   │   ├── functions.lua [ ]
+│   │   ├── keys.lua [ ]
+│   │   └── options.lua [ ]
+│   ├── lib
+│   │   ├── icons.lua [ ]
+│   │   └── util.lua [ ]
+│   └── plugins
+│       ├── lang
+│       │   ├── ai.lua [ ]
+│       │   ├── autopairs.lua [ ]
+│       │   ├── cmp.lua [ ]
+│       │   ├── comment.lua [ ]
+│       │   ├── copilot-chat.lua [ ]
+│       │   ├── copilot.lua [ ]
+│       │   ├── dap.lua [ ]
+│       │   ├── lspconfig.lua [ ]
+│       │   ├── lspsaga.lua [ ]
+│       │   ├── mason.lua [ ]
+│       │   ├── neotest.lua [ ]
+│       │   ├── null-ls.lua [ ]
+│       │   ├── refactoring.lua [ ]
+│       │   ├── ror.lua [ ]
+│       │   ├── sniprun.lua [ ]
+│       │   ├── surround.lua [ ]
+│       │   ├── textobjects.lua [ ]
+│       │   └── treesitter.lua [ ]
+│       ├── lazy.lua [ ]
+│       ├── list.lua [ ]
+│       ├── lock.json [ ]
+│       ├── tools
+│       │   ├── ccc.lua [ ]
+│       │   ├── dbee.lua [ ]
+│       │   ├── flash.lua [ ]
+│       │   ├── gitlinker.lua [ ]
+│       │   ├── gitsigns.lua [ ]
+│       │   ├── marks.lua [ ]
+│       │   ├── navigator.lua [ ]
+│       │   ├── nvim-tree.lua [ ]
+│       │   ├── spectre.lua [ ]
+│       │   ├── spider.lua [ ]
+│       │   ├── tabout.lua [ ]
+│       │   ├── telescope.lua [ ]
+│       │   └── which-key.lua [ ]
+│       └── ui
+│           ├── dashboard.lua [ ]
+│           ├── dressing.lua [ ]
+│           ├── indentline.lua [ ]
+│           ├── lualine.lua [ ]
+│           ├── notify.lua [ ]
+│           ├── onedark.lua [ ]
+│           ├── rainbow.lua [ ]
+│           ├── twilight.lua [ ]
+│           ├── wilder.lua [ ]
+│           └── zen-mode.lua [ ]
+├── plugin
+│   └── after
+│       └── highlights.lua [ ]
+├── README.md [ ]
+└── tree.txt [ ]
+
 
 ```
 
