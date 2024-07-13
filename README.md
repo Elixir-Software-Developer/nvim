@@ -4,6 +4,13 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 
 ### Estructura del Proyecto
 
+
+
+* [lua/plugins/lazy.lua](# primero)
+* [lua/plugins/list.lua](# primero)
+* [lib/icons.lua](# primero)
+* [init.luan](# primero)
+
 ```
 .
 ├── docs
@@ -96,20 +103,43 @@ Este proyecto tiene como objetivo replicar y documentar una configuración avanz
 ### Plan de Acción
 
 1.  **Instalación y Configuración Básica de Neovim:** Asegurarnos de tener Neovim instalado y crear un archivo `init.lua` básico.
-    
+
 2.  **Opciones y Atajos de Teclado (`core/`):** Personalizar opciones y crear atajos de teclado eficientes.
-    
+
 3.  **Funciones Personalizadas (`core/functions.lua`):** Añadir funciones para extender las capacidades de Neovim.
-    
+
 4.  **Gestión de Plugins (`plugins/`):** Utilizar un administrador de plugins (ej., "lazy.nvim") para instalar y configurar plugins de forma eficiente.
-    
+
 5.  **Interfaz de Usuario (`plugins/ui/`):** Mejorar la apariencia con temas, iconos y personalización de la barra de estado.
-    
+
 6.  **Lenguajes de Programación (`plugins/lang/`):** Instalar plugins específicos para lenguajes de programación (resaltado, autocompletado, formateo).
-    
+
 7.  **Herramientas y Utilidades (`plugins/tools/`):** Añadir plugins para administración de archivos, integración con Git, búsqueda, etc.
-    
+
 8.  **Documentación y Ajustes Finales:** Documentar cada paso en detalle y realizar ajustes finales para una configuración óptima.
-    
+
 
 ¡Comencemos con la instalación y configuración básica de Neovim!
+
+
+# lazy.lua
+
+* [lua/plugins/lazy.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/lazy.lua)
+* [lua/plugins/list.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/list.lua)
+* [lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/icons.lua)
+* [init.luan](https://github.com/FQ211776/neovim/blob/master/init.lua)
+
+
+### Dependencias de `lazy.lua`
+
+El archivo `lazy.lua`, encargado de gestionar los plugins en nuestra configuración de Neovim, depende de los siguientes archivos:
+
+-   **`lib/icons.lua`:** Proporciona los iconos utilizados en la interfaz de usuario de Lazy.nvim.
+-   **`plugins/list.lua`:** Contiene la lista completa de plugins a instalar y configurar.
+
+Además,  `lazy.lua` interactúa con:
+
+-   **`plugins/lock.json`:** Almacena información sobre las versiones de los plugins instalados para garantizar la reproducibilidad de la configuración.
+-   **`init.lua`:** Es el punto de entrada principal de la configuración y se encarga de cargar `lazy.lua`.
+
+Asegúrate de tener estos archivos en las ubicaciones correctas y con el contenido adecuado para un funcionamiento óptimo de tu configuración de Neovim.
