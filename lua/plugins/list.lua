@@ -153,7 +153,10 @@ local plugins = {
         config = load_config('lang.lspconfig'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
-
+{
+        'folke/lazydev.nvim',
+        ft = 'lua',
+    },
 }
 
 return {
