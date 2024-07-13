@@ -408,3 +408,43 @@ Este archivo configura el plugin Wilder.nvim, que mejora la experiencia de autoc
 -   "wilder.nvim" (requerido)
 -   "fd" y "rg" (opcional, pero recomendado para una búsqueda más rápida)
 -   "lib/icons.lua" (opcional, pero se recomienda para una mejor presentación visual)
+
+
+
+# Noveno
+
+## Configuración Avanzada de Neovim: Modo Zen y Oscurecimiento de Código
+
+### `zen-mode.nvim` y `twilight.nvim`
+
+* [lua/plugins/ui/dashboard.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/zen-mode.nvim)
+* [lua/lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/twilight.nvims.lua)
+
+
+Estos archivos configuran el plugin `zen-mode.nvim` para activar un modo de edición sin distracciones y el plugin `twilight.nvim` para oscurecer las partes del código que no están en foco.
+
+**Funcionalidades de `zen-mode.nvim`:**
+
+-   **Modo Zen:** Oculta elementos de la interfaz de usuario para una experiencia de edición más inmersiva.
+-   **Integración con Twilight:** Utiliza `twilight.nvim` para oscurecer partes del código y resaltar la línea actual.
+-   **Expansión Automática:** Expande automáticamente bloques de código (funciones, métodos, etc.) para una mejor visualización.
+
+**Funcionalidades de `twilight.nvim`:**
+
+-   **Oscurecimiento de Código:** Oscurece las partes inactivas del código para reducir las distracciones.
+-   **Personalización del Oscurecimiento:** Permite ajustar la opacidad y el color del oscurecimiento.
+-   **Integración con Treesitter:** Utiliza Treesitter para un oscurecimiento más preciso basado en la estructura del código.
+
+**Dependencias:**
+
+-   **`zen-mode.nvim`:** Requiere "twilight.nvim".
+
+**Atajos de Teclado:**
+
+Puedes definir tus propios atajos de teclado en `core/keys.lua` para activar y desactivar estos modos. Por ejemplo:
+
+```
+vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")  -- Activar/desactivar Zen Mode
+vim.keymap.set("n", "<leader>t", "<cmd>Twilight<CR>") -- Activar/desactivar Twilight
+
+```
