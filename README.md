@@ -1,5 +1,8 @@
 ## Configuración Avanzada de Neovim: Un Enfoque Paso a Paso
 
+# TODO
+  Instalar tdo [ ]
+
 Este proyecto tiene como objetivo replicar y documentar una configuración avanzada de Neovim, detallando cada paso en un formato similar a un libro. La meta es crear un entorno de desarrollo potente, personalizado y eficiente.
 
 ### Estructura del Proyecto
@@ -332,3 +335,47 @@ Este archivo configura el plugin "dressing.nvim" para mejorar la apariencia y fu
 **Atajos de Teclado:**
 
 No define atajos de teclado específicos, pero mejora la experiencia de uso de los inputs y selecciones estándar de Neovim.
+
+
+
+# Septimo
+
+## Configuración Avanzada de Neovim: Dashboard Personalizado
+
+### `dashboard.lua`
+
+* [lua/plugins/ui/dashboard.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/dashboard.lua)
+
+Este archivo configura el plugin "dashboard-nvim" para mostrar una página de inicio personalizada al abrir Neovim.
+
+**Funcionalidades:**
+
+-   **Tema:** Utiliza el tema "hyper" para la apariencia visual del dashboard.
+-   **Atajos de Teclado:** Define atajos para acceder a funcionalidades comunes como la gestión de plugins, búsqueda de archivos, tareas pendientes, etc.
+-   **Secciones Personalizadas:** Muestra información como proyectos recientes, archivos modificados recientemente, lista de tareas pendientes, etc.
+-   **Integración con Telescope (Opcional):** Algunos atajos utilizan Telescope para buscar archivos y realizar búsquedas en el código.
+
+**Dependencias:**
+
+-   "dashboard-nvim" (requerido)
+-   "lib/icons.lua" (opcional, pero se recomienda para mejorar la presentación visual)
+-   "telescope.nvim" (opcional, si se utilizan los atajos de búsqueda)
+-   "Tdo" (opcional, si se utiliza el atajo `d`)
+
+**Atajos de Teclado:**
+
+Atajo
+
+Acción
+
+`m` Ejecutar el comando `Mason`.
+
+`p` Ejecutar el comando `Lazy`.
+
+`f` Buscar archivos (requiere Telescope).
+
+`g` Realizar una búsqueda en vivo en el código (requiere Telescope).
+
+`d` Ejecutar el comando `Tdo`.
+
+`q` Salir de Neovim.

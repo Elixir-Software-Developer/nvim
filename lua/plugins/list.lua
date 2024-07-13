@@ -39,6 +39,17 @@ local plugins = {
 		config = load_config("ui.dressing"),
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	{
+		"nvimdev/dashboard-nvim",
+		config = load_config("ui.dashboard"),
+		-- Only load when no arguments
+		event = function()
+			if vim.fn.argc() == 0 then
+				return "VimEnter"
+			end
+		end,
+		cmd = "Dashboard",
+	},
 }
 
 return {
