@@ -1361,3 +1361,50 @@ Estos archivos configuran el plugin `copilot.lua`, que integra GitHub Copilot en
 `<M-[>` Ir a la sugerencia en línea anterior.
 
 `<C-]>` Descartar la sugerencia en línea actual.
+
+--------------------------------------
+ENTRANDO A SECCION TOOLS
+--------------------------------------
+
+
+## Configuración Avanzada de Neovim: Explorador de Archivos con nvim-tree.lua
+
+### `nvim-tree.lua`
+
+* [lua/plugins/tools/nvim-tree.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/nvim-tree.lua)
+
+
+
+Este archivo configura el plugin `nvim-tree.lua`, que proporciona un explorador de archivos en forma de árbol dentro de Neovim. El explorador permite navegar fácilmente por la estructura de directorios y archivos de tu proyecto, abrir archivos, crear nuevos archivos y directorios, renombrar elementos, y más.
+
+**Funcionalidades:**
+
+-   **Vista de Árbol:** Muestra los archivos y directorios de tu proyecto en una estructura jerárquica fácil de navegar.
+-   **Iconos:** Utiliza iconos de `lib/icons.lua` para representar visualmente diferentes tipos de archivos, carpetas y estados de Git.
+-   **Atajos de Teclado:** Proporciona atajos de teclado para navegar por el árbol, abrir archivos, crear elementos, etc.
+-   **Personalización:** Permite personalizar la apariencia y el comportamiento del explorador de archivos.
+
+**Dependencias:**
+
+-   "nvim-tree.lua" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+
+**Atajos de Teclado:**
+
+
+`Y` Copiar el nombre del archivo o directorio seleccionado al portapapeles.
+
+`y` Copiar la ruta relativa del archivo o directorio seleccionado al portapapeles.
+
+`l` o `<CR>` Abrir el archivo o directorio seleccionado.
+
+`h` Cerrar el directorio actual (o navegar al directorio padre si ya estás en la raíz).
+
+`v` Abrir el archivo o directorio seleccionado en una división vertical.
+
+`o` Abrir el archivo o directorio seleccionado en una división horizontal.
+
+
+**Comando para Abrir/Cerrar:**
+
+`:NvimTreeToggle`

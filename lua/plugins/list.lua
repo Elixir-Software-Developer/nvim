@@ -220,6 +220,15 @@ local plugins = {
         },
         config = load_config('lang.copilot-chat'),
     },
+    -- Tools
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+        },
+        config = load_config('tools.nvim-tree'),
+        cmd = 'NvimTreeToggle',
+    },
 }
 
 return {

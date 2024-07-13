@@ -210,3 +210,19 @@ auto completion
 `<M-[>` Ir a la sugerencia en línea anterior.
 
 `<C-]>` Descartar la sugerencia en línea actual.
+
+
+**NVIM-TREE:**
+
+
+`Y` Copiar el nombre del archivo o directorio seleccionado al portapapeles.
+
+`y` Copiar la ruta relativa del archivo o directorio seleccionado al portapapeles.
+
+`l` o `<CR>` Abrir el archivo o directorio seleccionado.
+
+`h` Cerrar el directorio actual (o navegar al directorio padre si ya estás en la raíz).
+
+`v` Abrir el archivo o directorio seleccionado en una división vertical.
+
+`o` Abrir el archivo o directorio seleccionado en una división horizontal.
