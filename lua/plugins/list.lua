@@ -97,6 +97,11 @@ local plugins = {
 		"ThePrimeagen/refactoring.nvim",
 		config = load_config("lang.refactoring"),
 	},
+	{
+		"windwp/nvim-autopairs",
+		config = load_config("lang.autopairs"),
+		event = "InsertEnter",
+	},
 }
 
 return {

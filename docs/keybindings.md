@@ -25,3 +25,8 @@
 `t` Alternar
 
 `q`, `<Esc>` Cerrar (en ventana flotante)
+
+
+`<M-s>` `<alt-s>`
+
+Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`

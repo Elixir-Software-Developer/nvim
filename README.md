@@ -624,3 +624,35 @@ vim.keymap.set("v", "<leader>rf", function() require("refactoring").refactor("Ex
 vim.keymap.set("v", "<leader>rv", function() require("refactoring").refactor("Extract Variable") end, { desc = "Extract Variable" })
 vim.keymap.set("n", "<leader>rn", function() require("refactoring").refactor("Rename") end, { desc = "Rename" })
 ```
+
+# CATORCEAVO
+
+## Configuración Avanzada de Neovim: Autocompletado de Pares con nvim-autopairs
+
+### `autopairs.lua`
+
+* [lua/plugins/lang/autopairs.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/autopairs.lua)
+
+
+Este archivo configura el plugin nvim-autopairs, que proporciona autocompletado automático de pares de caracteres (paréntesis, corchetes, comillas) en Neovim.
+
+**Funcionalidades:**
+
+-   **Autocompletado de Pares:** Cuando escribes un carácter de apertura (por ejemplo,  `(`), nvim-autopairs insertará automáticamente el carácter de cierre correspondiente (`)`).
+-   **Integración con Treesitter:** Utiliza Treesitter para mejorar el comportamiento del autocompletado en diferentes contextos de código.
+-   **Fast Wrap:** Permite envolver rápidamente el texto seleccionado con caracteres específicos mediante el atajo de teclado `<M-s>`.
+-   **Personalización:** Puedes personalizar los caracteres utilizados, los tipos de archivo en los que se activa/desactiva y el comportamiento del fast wrap.
+
+**Dependencias:**
+
+-   "nvim-autopairs" (requerido)
+
+**Atajos de Teclado:**
+
+Atajo
+
+Acción
+
+`<M-s>` `<alt-s>`
+
+Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
