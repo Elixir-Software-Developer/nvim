@@ -7,6 +7,10 @@
   Instalar fzf [ ]
   Instalar debugpy [ ] requerido por dap.lua
   Instalar readapt [ ] requerido por dap.lua
+ Deberás instalar sniprun  [ ] con su comando `install.sh`
+
+
+
 
 Este proyecto tiene como objetivo replicar y documentar una configuración avanzada de Neovim, detallando cada paso en un formato similar a un libro. La meta es crear un entorno de desarrollo potente, personalizado y eficiente.
 
@@ -530,3 +534,39 @@ vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end
 vim.keymap.set("n", "<leader>to", function() require("neotest").output.open({ enter = true }) end) -- Abrir la ventana de salida de Neotest
 vim.keymap.set("n", "<leader>ts", function() require("neotest").summary.toggle() end) -- Alternar la ventana de resumen de Neotest
 ```
+
+
+# DOCEAVO:
+
+
+## Configuración Avanzada de Neovim: Ejecutar Fragmentos de Código con SnipRun
+
+### `sniprun.lua`
+
+Este archivo configura el plugin SnipRun, que permite ejecutar fragmentos de código seleccionados directamente desde Neovim sin necesidad de guardar el archivo.
+
+**Funcionalidades:**
+
+-   **Ejecución Rápida de Fragmentos:** Selecciona un fragmento de código y ejecútalo instantáneamente para ver los resultados.
+-   **Visualización Flexible:** Los resultados se pueden mostrar como texto virtual sobre el código, en la línea de comandos o en una ventana flotante temporal.
+-   **Soporte para Múltiples Lenguajes:** SnipRun es compatible con varios lenguajes de programación, lo que lo convierte en una herramienta versátil para el desarrollo.
+
+**Dependencias:**
+
+-   "sniprun" (requerido)
+
+**Atajos de Teclado:**
+
+Puedes definir tus propios atajos de teclado en `core/keys.lua` para ejecutar fragmentos de código con SnipRun. Por ejemplo:
+
+```
+vim.keymap.set("v", "<leader>r", function() require("sniprun").run() end, { desc = "Run Snippet" })
+
+```
+
+**Instalación:**
+
+-   Deberás instalar sniprun con su comando `install.sh`
+-   Si se utiliza lazy.nvim deberás colocar en `build` el valor `bash ./install.sh`
+
+Con este atajo, puedes seleccionar un fragmento de código en modo visual y presionar `<leader>r` para ejecutarlo.

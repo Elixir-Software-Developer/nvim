@@ -86,7 +86,13 @@ local plugins = {
 		},
 		config = load_config("lang.neotest"),
 		cmd = "Neotest",
-	},e
+	},
+	{
+		"michaelb/sniprun",
+		build = "bash ./install.sh",
+		config = load_config("lang.sniprun"),
+		cmd = "SnipRun",
+	},
 }
 
 return {
