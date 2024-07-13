@@ -203,3 +203,30 @@ Con el tema Onedark y las funciones de utilidad configuradas, podemos avanzar ha
 | `<leader>ot` | Alterna entre diferentes estilos del tema Onedark. |
 
 **Nota:** `<leader>` generalmente se configura como la barra espaciadora (` `).
+
+
+# Tercero
+
+## Configuración Avanzada de Neovim: Lualine
+
+* [lua/plugins/ui/lualine.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/lualine.lua)
+* * [lua/lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/icons.lua)
+
+### `lualine.lua`
+
+Este archivo configura Lualine, un plugin para personalizar la barra de estado de Neovim. Define el aspecto visual de la barra de estado, incluyendo colores, iconos y secciones de información.
+
+**Funcionalidades:**
+
+-   **Colores Personalizados:** Utiliza una paleta de colores definida en el archivo para crear un tema visualmente atractivo.
+-   **Iconos:** Integra iconos de `lib/icons.lua` para mostrar información de forma clara y concisa.
+-   **Secciones de Información:** Divide la barra de estado en secciones (izquierda, centro, derecha) para mostrar diferentes tipos de información, como el modo de Neovim, nombre del archivo, estado de Git, diagnósticos, etc.
+-   **Condiciones de Visualización:** Algunas secciones se muestran solo bajo ciertas condiciones (por ejemplo, si el archivo está bajo control de versiones o si la ventana tiene un ancho mínimo).
+
+**Dependencias:**
+
+-   `lualine.lua` depende directamente de `lib/icons.lua` para mostrar iconos en la barra de estado.
+
+**Atajos de Teclado:**
+
+Lualine no define atajos de teclado directamente en este archivo. La interacción con los componentes de Lualine se realiza a través de otros atajos definidos en tu configuración o en los plugins que se integran con Lualine.

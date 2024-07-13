@@ -12,6 +12,11 @@ local plugins = {
 		lazy = false,
 		priority = 1000,
 	},
+	{
+		"nvim-lualine/lualine.nvim",
+		config = load_config("ui.lualine"),
+		event = { "BufReadPre", "BufNewFile" },
+	},
 }
 
 return {
