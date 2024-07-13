@@ -1180,13 +1180,18 @@ Este archivo configura el plugin Mason, un gestor de paquetes diseñado específ
 
 `<C-f>` Aplica un filtro de lenguaje para mostrar solo los paquetes relevantes para el lenguaje actual.
 
+------------------------------------
+entrando a completion seccion
+------------------------------------
 
-
+# VIGESIMO SEGUNDO
 
 
 ## Configuración Avanzada de Neovim: Autocompletado Inteligente con nvim-cmp
 
 ### `cmp.lua`
+
+* [lua/plugins/lang/cmp.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/cmp.lua)
 
 Este archivo configura el potente plugin de autocompletado `nvim-cmp`, que proporciona sugerencias de código inteligentes mientras escribes. Utiliza diversas fuentes de sugerencias, como el LSP (Language Server Protocol), snippets, el contenido del búfer actual y más.
 
@@ -1260,3 +1265,99 @@ Estás escribiendo código Python y quieres usar `cmp.lua` para completar autom�
 -   **Completar nombres de variables:** Comienza a escribir el nombre de una variable y presiona `<C-Space>` para ver las sugerencias.
 -   **Completar rutas de archivo:** En un contexto donde se espera una ruta de archivo, presiona `<C-Space>` para obtener sugerencias de rutas.
 -   **Completar palabras clave de un lenguaje:** En un archivo de código, presiona `<C-Space>` para ver sugerencias de palabras clave del lenguaje.
+
+
+
+# VIGESIMO TERCERO
+
+## Configuración Avanzada de Neovim: Chat con Copilot usando Copilot Chat
+
+
+### `copilot-chat.nvim`
+
+
+* [lua/plugins/lang/copilot-chat.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/copilot-chat.lua)
+* [lua/plugins/lang/copilot.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/copilot.lua)
+
+Este archivo configura el plugin `Copilot Chat`, que permite interactuar con GitHub Copilot a través de una interfaz de chat directamente en Neovim. Puedes hacer preguntas sobre tu código, pedir sugerencias, solicitar explicaciones y más.
+
+**Funcionalidades:**
+
+-   **Interfaz de Chat:** Proporciona una ventana de chat integrada en Neovim para comunicarse con Copilot.
+-   **Contexto Personalizable:** Puedes especificar el contexto de tus preguntas (por ejemplo, el búfer actual o todos los búferes abiertos).
+-   **Historial de Chat:** Guarda el historial de tus conversaciones con Copilot.
+-   **Respuestas en Tiempo Real:** Copilot responde a tus preguntas directamente en la ventana de chat.
+-   **Atajos de Teclado Personalizables:** Te permite configurar atajos de teclado para acciones comunes en el chat.
+
+**Dependencias:**
+
+-   "Copilot Chat" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+
+**Atajos de Teclado:**
+
+
+`<Tab>` (En modo inserción) Mostrar opciones de autocompletado en el prompt de chat.
+
+`/<Tab>`
+(En modo inserción) Mostrar opciones de autocompletado en el prompt de chat.
+
+`q` (En modo normal) Cerrar la ventana de chat.
+
+`<C-c>` (En modo inserción) Cerrar la ventana de chat.
+
+`<C-l>` (En modo normal e inserción) Reiniciar el chat (borrar el historial).
+
+`<CR>` (En modo normal) Enviar el prompt actual a Copilot.
+
+`<C-m>` (En modo inserción) Enviar el prompt actual a Copilot.
+
+`<C-y>` (En modo normal e inserción) Aceptar los cambios sugeridos por Copilot.
+
+`gy` (En modo normal) Copiar los cambios sugeridos por Copilot al portapapeles.
+
+`gd` (En modo normal) Mostrar los cambios sugeridos por Copilot en una vista de diferencias.
+
+`gp` (En modo normal) Mostrar el prompt del sistema generado por Copilot.
+
+`gs` (En modo normal) Mostrar la selección actual del usuario en la ventana de chat (útil para el contexto).
+
+
+## Configuración Avanzada de Neovim: Integración de GitHub Copilot
+
+### `copilot.lua` y `copilot_cmp.setup()`
+
+Estos archivos configuran el plugin `copilot.lua`, que integra GitHub Copilot en Neovim para proporcionar sugerencias de código basadas en inteligencia artificial.
+
+**Funcionalidades:**
+
+-   **Panel de Sugerencias:** Muestra sugerencias de código de Copilot en un panel en la parte inferior del editor.
+-   **Sugerencias en Línea:** Muestra sugerencias de código directamente en el editor mientras escribes.
+-   **Integración con nvim-cmp:** Permite que las sugerencias de Copilot aparezcan en el menú de autocompletado de `nvim-cmp`.
+
+**Dependencias:**
+
+-   `copilot.lua` (requerido)
+-   `nvim-cmp` (requerido para la integración con el autocompletado)
+-   `lib/icons.lua` (opcional, para iconos en la interfaz de Copilot)
+
+**Atajos de Teclado `copilot.lua` (Panel):**
+`[[` Ir a la sugerencia anterior de Copilot.
+
+`]]` Ir a la siguiente sugerencia de Copilot.
+
+`<CR>` Aceptar la sugerencia seleccionada de Copilot.
+
+`gr` Refrescar las sugerencias de Copilot.
+
+`<M-CR>` Abrir la sugerencia seleccionada en una ventana flotante.
+
+`copilot.lua` (Sugerencias)
+
+`<M-l>` Aceptar la sugerencia en línea actual de Copilot.
+
+`<M-]>` Ir a la siguiente sugerencia en línea.
+
+`<M-[>` Ir a la sugerencia en línea anterior.
+
+`<C-]>` Descartar la sugerencia en línea actual.

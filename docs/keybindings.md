@@ -158,3 +158,55 @@ auto completion
 `<Tab>` Seleccionar el siguiente elemento, expandir un snippet o saltar al siguiente punto de un snippet.
 
 `<S-Tab>` Seleccionar el elemento anterior o saltar al punto anterior de un snippet.
+
+
+**Copilot:**
+
+
+`<Tab>` (En modo inserción) Mostrar opciones de autocompletado en el prompt de chat.
+
+`/<Tab>`
+(En modo inserción) Mostrar opciones de autocompletado en el prompt de chat.
+
+`q` (En modo normal) Cerrar la ventana de chat.
+
+`<C-c>` (En modo inserción) Cerrar la ventana de chat.
+
+`<C-l>` (En modo normal e inserción) Reiniciar el chat (borrar el historial).
+
+`<CR>` (En modo normal) Enviar el prompt actual a Copilot.
+
+`<C-m>` (En modo inserción) Enviar el prompt actual a Copilot.
+
+`<C-y>` (En modo normal e inserción) Aceptar los cambios sugeridos por Copilot.
+
+`gy` (En modo normal) Copiar los cambios sugeridos por Copilot al portapapeles.
+
+`gd` (En modo normal) Mostrar los cambios sugeridos por Copilot en una vista de diferencias.
+
+`gp` (En modo normal) Mostrar el prompt del sistema generado por Copilot.
+
+`gs` (En modo normal) Mostrar la selección actual del usuario en la ventana de chat (útil para el contexto).
+
+
+**copilot.lua (Panel)**
+
+`[[` Ir a la sugerencia anterior de Copilot.
+
+`]]` Ir a la siguiente sugerencia de Copilot.
+
+`<CR>` Aceptar la sugerencia seleccionada de Copilot.
+
+`gr` Refrescar las sugerencias de Copilot.
+
+`<M-CR>` Abrir la sugerencia seleccionada en una ventana flotante.
+
+`copilot.lua` (Sugerencias)
+
+`<M-l>` Aceptar la sugerencia en línea actual de Copilot.
+
+`<M-]>` Ir a la siguiente sugerencia en línea.
+
+`<M-[>` Ir a la sugerencia en línea anterior.
+
+`<C-]>` Descartar la sugerencia en línea actual.
