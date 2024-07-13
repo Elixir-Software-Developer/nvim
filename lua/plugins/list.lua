@@ -117,6 +117,13 @@ local plugins = {
 		config = load_config("lang.surround"),
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	{
+		"echasnovski/mini.ai",
+		version = "*",
+		config = load_config("lang.ai"),
+		event = { "BufReadPre", "BufNewFile" },
+	},
+  
 }
 
 return {

@@ -470,7 +470,7 @@ vim.keymap.set("n", "<leader>t", "<cmd>Twilight<CR>") -- Activar/desactivar Twil
 
 ```
 ---
-# Entrando a la seccion tools
+# Entrando a la seccion LANGS
 ---
 
 # Decimo
@@ -803,3 +803,97 @@ Este es un ejemplo de texto.
 **¿Por qué es útil?**
 
 `mini.surround` te permite manipular entornos de texto de forma rápida y eficiente, lo que puede ahorrarte mucho tiempo y evitar errores al escribir código, especialmente cuando trabajas con estructuras anidadas.
+
+
+
+# DIECISETEAVO
+
+## Configuración Avanzada de Neovim: Textobjetos Extendidos con mini.ai
+
+### `ai.lua`
+
+Este archivo configura el plugin `mini.ai`, que extiende las capacidades de los textobjetos en Neovim. Los textobjetos son una forma de seleccionar texto basada en criterios específicos, como palabras, frases o bloques de código.  `mini.ai` permite definir textobjetos personalizados y proporciona algunos textobjetos predefinidos útiles.
+
+**Funcionalidades:**
+
+-   **Textobjetos Personalizados:** Puedes definir tus propios textobjetos utilizando patrones de texto o consultas de Treesitter.
+-   **Textobjetos Predefinidos:** Incluye textobjetos para bloques de código (funciones, condicionales, bucles), clases y etiquetas HTML.
+-   **Atajos de Teclado Personalizables:** Te permite configurar los atajos de teclado para los textobjetos.
+-   **Búsqueda Flexible:** Puedes ajustar cómo se buscan los textobjetos en el código.
+
+**Dependencias:**
+
+-   "mini.ai" (requerido)
+
+**Atajos de Teclado:**
+
+Atajo
+
+Acción
+
+`ao` Selecciona alrededor de un bloque de código (función, condicional, bucle), clase, o etiqueta HTML.
+
+`ai` Selecciona dentro de un bloque de código (función, condicional, bucle), clase, o etiqueta HTML.
+
+`af` Selecciona alrededor de una función.
+
+`ai` Selecciona dentro de una función.
+
+`ac` Selecciona alrededor de una clase.
+
+`ic` Selecciona dentro de una clase.
+
+`at` Selecciona alrededor de una etiqueta HTML (`<([%p%w]-)%f[^<%w][^<>]->.-</%1>`, `^<.->().*()</[^/]->$`).
+
+`it` Selecciona dentro de una etiqueta HTML (`<([%p%w]-)%f[^<%w][^<>]->.-</%1>`, `^<.->().*()</[^/]->$`).
+
+`an` Selecciona alrededor del siguiente bloque de código, función, clase o etiqueta HTML.
+
+`in` Selecciona dentro del siguiente bloque de código, función, clase o etiqueta HTML.
+
+`al` Selecciona alrededor del último bloque de código, función, clase o etiqueta HTML.
+
+`il` Selecciona dentro del último bloque de código, función, clase o etiqueta HTML.
+
+`g[` Mueve el cursor al borde izquierdo del textobjeto 'a' (alrededor).
+
+`g]` Mueve el cursor al borde derecho del textobjeto 'a' (alrededor).
+
+(En modo visual u operador-pendiente) + 'a' o 'i'
+
+Espera un carácter adicional como identificador de textobjeto. Si el carácter es válido, aplica el textobjeto. Si no, se revierten los cambios y se espera otro carácter. Si no se proporciona un carácter en 200ms o se pulsa `<Esc>`, se cancela y se revierten los cambios.
+
+
+
+Los atajos de teclado de `mini.ai` se pueden usar en diferentes modos, dependiendo de la acción que quieras realizar:
+
+**Modo Normal (`n`):**
+
+-   **Movimiento del cursor:** Los atajos como `g[` y `g]` se utilizan en modo normal para mover el cursor al principio o al final del textobjeto 'a' (alrededor).
+
+**Modo Visual (`v`) o Modo Operador-Pendiente:**
+
+-   **Selección de texto:** Los atajos que comienzan con `a` o `i`, seguidos de un carácter que identifica el tipo de textobjeto (por ejemplo,  `af` para seleccionar una función), se utilizan en modo visual para seleccionar el texto correspondiente.
+-   **Operaciones con texto:** Puedes combinar estos atajos con operadores como `d` (eliminar),  `c` (cambiar),  `y` (copiar), etc., para realizar operaciones en el texto seleccionado. Por ejemplo,  `daf` eliminaría una función completa.
+
+**Ejemplo:**
+
+1.  **Modo Normal:** Estás en medio de una función y quieres mover el cursor al principio de la función. Presionas `g[` para ir al inicio de la función.
+
+2.  **Modo Visual:** Quieres seleccionar todo el contenido de una etiqueta HTML. Presionas `vit` para seleccionar el texto dentro de la etiqueta.
+
+3.  **Modo Operador-Pendiente:** Quieres copiar una clase completa. Presionas `yac` para copiar (yank) la clase.
+
+
+**Combinación de Modos:**
+
+En algunos casos, puedes iniciar una acción en modo normal y luego cambiar a modo visual para ajustar la selección. Por ejemplo, puedes presionar `af` en modo normal para seleccionar una función, y luego usar las teclas de movimiento del cursor en modo visual para ajustar la selección antes de realizar una operación.
+
+**Importante:** Los atajos de teclado de `mini.ai` son altamente personalizables. Puedes cambiarlos en la configuración del plugin para adaptarlos a tus preferencias.
+
+
+---
+# Entrando a la seccion Tresitter
+---
+
+
