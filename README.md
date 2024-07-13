@@ -1096,9 +1096,7 @@ Este archivo no define atajos de teclado directamente. La interacción con el LS
 -   **Instalación de Servidores LSP:** Antes de poder utilizar las funciones del LSP, debes instalar los servidores LSP correspondientes a los lenguajes que utilizas. Puedes usar `mason-lspconfig` para instalarlos fácilmente.
 -   **Configuración de Plugins de LSP:** Es posible que necesites configurar plugins adicionales, como `lspsaga.nvim`, para mejorar la experiencia de uso del LSP.
 
-
-
-
+# VIGESIMO
 
 ## Configuración Avanzada de Neovim: Interfaz de Usuario Mejorada para LSP con lspsaga.nvim
 
@@ -1136,3 +1134,48 @@ vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true }) -- A
 vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true }) -- Muestra las acciones de código disponibles
 
 ```
+
+
+# VIGESIMO PRIMERO
+
+## Configuración Avanzada de Neovim: Gestión de Servidores LSP con Mason
+
+### `mason.lua`
+
+* [lua/plugins/lang/mason.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/mason.lua)
+
+
+Este archivo configura el plugin Mason, un gestor de paquetes diseñado específicamente para instalar y gestionar servidores LSP (Language Server Protocol), DAP (Debug Adapter Protocol) y linters en Neovim. Mason simplifica el proceso de instalación y actualización de estas herramientas esenciales para el desarrollo.
+
+**Funcionalidades:**
+
+-   **Instalación y Gestión de Paquetes:** Permite instalar, actualizar y desinstalar servidores LSP, DAP y linters con facilidad.
+-   **Interfaz de Usuario:** Proporciona una interfaz de usuario interactiva para gestionar los paquetes instalados y verificar si hay actualizaciones disponibles.
+-   **Integración con nvim-lspconfig:** Se integra con el plugin `nvim-lspconfig` para configurar automáticamente los servidores LSP instalados.
+-   **Atajos de Teclado:** Ofrece atajos de teclado para interactuar con la interfaz de usuario y realizar acciones como instalar, actualizar y desinstalar paquetes.
+
+**Dependencias:**
+
+-   "mason.nvim" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+
+**Atajos de Teclado:**
+
+
+`<CR>` Expande o contrae la información de un paquete.
+
+`i` Instala el paquete seleccionado.
+
+`u` Actualiza el paquete seleccionado.
+
+`c` Verifica la versión del paquete seleccionado.
+
+`U` Actualiza todos los paquetes instalados.
+
+`C` Verifica si hay paquetes desactualizados.
+
+`x` Desinstala el paquete seleccionado.
+
+`<C-c>` Cancela la instalación en curso.
+
+`<C-f>` Aplica un filtro de lenguaje para mostrar solo los paquetes relevantes para el lenguaje actual.

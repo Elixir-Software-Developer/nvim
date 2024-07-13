@@ -109,3 +109,24 @@ Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
 
 `<leader>rk` Ir al uso anterior de un símbolo.
 
+
+interfaz de mason
+
+
+`<CR>` Expande o contrae la información de un paquete.
+
+`i` Instala el paquete seleccionado.
+
+`u` Actualiza el paquete seleccionado.
+
+`c` Verifica la versión del paquete seleccionado.
+
+`U` Actualiza todos los paquetes instalados.
+
+`C` Verifica si hay paquetes desactualizados.
+
+`x` Desinstala el paquete seleccionado.
+
+`<C-c>` Cancela la instalación en curso.
+
+`<C-f>` Aplica un filtro de lenguaje para mostrar solo los paquetes relevantes para el lenguaje actual.

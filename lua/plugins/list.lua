@@ -162,6 +162,11 @@ local plugins = {
         config = load_config('lang.lspsaga'),
         event = 'LspAttach',
     },
+     {
+        'williamboman/mason.nvim',
+        config = load_config('lang.mason'),
+        cmd = 'Mason',
+    },
 }
 
 return {
