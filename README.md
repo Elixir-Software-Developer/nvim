@@ -812,6 +812,8 @@ Este es un ejemplo de texto.
 
 ### `ai.lua`
 
+* [lua/plugins/lang/ai.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/ai.lua)
+
 Este archivo configura el plugin `mini.ai`, que extiende las capacidades de los textobjetos en Neovim. Los textobjetos son una forma de seleccionar texto basada en criterios específicos, como palabras, frases o bloques de código.  `mini.ai` permite definir textobjetos personalizados y proporciona algunos textobjetos predefinidos útiles.
 
 **Funcionalidades:**
@@ -901,6 +903,9 @@ En algunos casos, puedes iniciar una acción en modo normal y luego cambiar a mo
 
 ### `treesitter.lua`
 
+
+* [lua/plugins/lang/treesitter.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/treesitter.lua)
+
 Este archivo configura el plugin `nvim-treesitter`, que proporciona un potente análisis del código fuente basado en la gramática del lenguaje. Treesitter permite a Neovim comprender la estructura del código de forma más precisa, lo que se traduce en mejoras significativas en funciones como el resaltado de sintaxis, la indentación, el plegado de código y la refactorización.
 
 **Funcionalidades:**
@@ -970,4 +975,3 @@ Gran pregunta! Veamos cómo se diferencian `a;` (seleccionar el contenedor exter
 **En resumen:**
 
 Los textobjetos de Treesitter (`a;` e `i;`) son más precisos y específicos para la selección de código, mientras que `surround.lua` se centra en la manipulación de pares de caracteres. `mini.ai` ofrece una mayor flexibilidad para definir textobjetos personalizados y proporciona algunos textobjetos predefinidos útiles. La elección de cuál usar dependerá de la tarea específica que necesites realizar.
-
