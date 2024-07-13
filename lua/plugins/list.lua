@@ -139,10 +139,21 @@ local plugins = {
 		event = { "BufReadPre", "BufNewFile" },
 	},
 	{
-		"ckolkey/ts-node-action",
-		dependencies = { "nvim-treesitter" },
-		enabled = false,
-	},
+        'ckolkey/ts-node-action',
+        dependencies = { 'nvim-treesitter' },
+        enabled = false,
+  },
+  -- LSP
+  {
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            'williamboman/mason-lspconfig.nvim',
+            'hrsh7th/cmp-nvim-lsp',
+        },
+        config = load_config('lang.lspconfig'),
+        event = { 'BufReadPre', 'BufNewFile' },
+    },
+
 }
 
 return {

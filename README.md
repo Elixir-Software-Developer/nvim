@@ -1064,3 +1064,36 @@ function calcularArea(base, altura) {
 ---
 
 
+## Configuración Avanzada de Neovim: LSP (Language Server Protocol)
+
+### `lspconfig.lua`
+
+
+* [lua/plugins/lang/lspconfig.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/lspconfig.lua)
+
+Este archivo es el núcleo de la configuración del LSP (Language Server Protocol) en Neovim. El LSP es un protocolo estándar que permite a los editores de texto comunicarse con servidores de lenguaje para proporcionar funciones avanzadas como autocompletado, diagnóstico de errores, formateo, navegación por el código, y más.
+
+**Funcionalidades:**
+
+-   **Configuración de Servidores LSP:** El archivo configura los servidores LSP que se utilizarán para diferentes lenguajes de programación. En este caso, se utiliza el plugin `mason-lspconfig` para gestionar la instalación y configuración de los servidores.
+-   **Capacidades del Cliente LSP:** Define las capacidades del cliente LSP de Neovim, es decir, las funciones que Neovim puede solicitar al servidor LSP. Estas capacidades incluyen autocompletado, formateo, definición de tipos, etc.
+-   **Diagnósticos e Iconos:** Configura los signos (iconos) que se mostrarán en el margen izquierdo del editor para indicar errores, advertencias, sugerencias e información proporcionados por el servidor LSP.
+-   **Configuración Personalizada para Lua:** El archivo incluye una configuración específica para el servidor LSP de Lua (`lua_ls`), que ajusta la versión de tiempo de ejecución, las variables globales y las opciones de formateo.
+
+**Dependencias:**
+
+-   **`nvim-lspconfig`:** Este es el módulo principal para configurar LSP en Neovim. Proporciona funciones para interactuar con los servidores LSP y personalizar su comportamiento.
+-   **`cmp_nvim_lsp`:** Este módulo se utiliza para integrar el plugin de autocompletado nvim-cmp con los servidores LSP. Permite que nvim-cmp utilice las sugerencias de completado proporcionadas por los servidores LSP.
+-   **`mason-lspconfig`:** Este plugin facilita la instalación y gestión de servidores LSP.
+-   **`lib/icons.lua`:** Proporciona los iconos que se utilizan para mostrar los diagnósticos del LSP en el editor.
+
+**Atajos de Teclado:**
+
+Este archivo no define atajos de teclado directamente. La interacción con el LSP (por ejemplo, ir a la definición de un símbolo, mostrar información sobre el tipo, formatear el código, etc.) se realiza a través de atajos de teclado definidos en otros archivos de configuración o proporcionados por plugins que se integran con el LSP, como `lspsaga.nvim`.
+
+**Consideraciones:**
+
+-   **Instalación de Servidores LSP:** Antes de poder utilizar las funciones del LSP, debes instalar los servidores LSP correspondientes a los lenguajes que utilizas. Puedes usar `mason-lspconfig` para instalarlos fácilmente.
+-   **Configuración de Plugins de LSP:** Es posible que necesites configurar plugins adicionales, como `lspsaga.nvim`, para mejorar la experiencia de uso del LSP.
+
+```
