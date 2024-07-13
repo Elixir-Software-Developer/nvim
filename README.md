@@ -10,7 +10,7 @@
  Deberás instalar sniprun  [ ] con su comando `install.sh`
 paru -S lua-format
 paru -S style-lua
-
+paru -S luarocks
 
 
 

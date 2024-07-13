@@ -1,0 +1,28 @@
+{
+  "name": "Neovim Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "[lua]": {
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true,
+      "editor.detectIndentation": false,
+      "editor.defaultFormatter": "JohnnyMorganz.stylua"
+    }
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "JohnnyMorganz.stylua"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "npm install",
+}
