@@ -1,0 +1,8 @@
+indent_type = "Spaces"
+indent_width = 2
+column_limit = 80
+continuation_indent_width = 4
+
+call_parentheses = "Preserve"
+table_separator = ","
+keep_simple_function_one_line = false

@@ -8,6 +8,8 @@
   Instalar debugpy [ ] requerido por dap.lua
   Instalar readapt [ ] requerido por dap.lua
  Deberás instalar sniprun  [ ] con su comando `install.sh`
+paru -S lua-format
+paru -S style-lua
 
 
 
@@ -975,3 +977,90 @@ Gran pregunta! Veamos cómo se diferencian `a;` (seleccionar el contenedor exter
 **En resumen:**
 
 Los textobjetos de Treesitter (`a;` e `i;`) son más precisos y específicos para la selección de código, mientras que `surround.lua` se centra en la manipulación de pares de caracteres. `mini.ai` ofrece una mayor flexibilidad para definir textobjetos personalizados y proporciona algunos textobjetos predefinidos útiles. La elección de cuál usar dependerá de la tarea específica que necesites realizar.
+
+
+
+## Configuración Avanzada de Neovim: Acciones de Nodos con ts-node-action
+
+### `ts-node-action` (Sin archivo de configuración)
+
+Este plugin no tiene un archivo de configuración dedicado. En cambio, se configura a través de comandos y mapeos de teclas. Permite realizar acciones específicas en nodos de código seleccionados utilizando Treesitter.
+
+**Funcionalidades:**
+
+-   **Ejecutar Acciones:** Ejecuta acciones como "Extract Function", "Extract Variable", "Rename", etc., en nodos de código seleccionados.
+-   **Menú de Acciones:** Muestra un menú flotante con las acciones disponibles para el nodo de código actual.
+
+**Dependencias:**
+
+-   "nvim-treesitter" (requerido)
+
+**Atajos de Teclado (Ejemplo no implementados):**
+```lua
+vim.keymap.set("n", "<leader>ef", function() require("ts-node-action").node_action("Extract Function") end, { desc = "Extract Function" })
+vim.keymap.set("n", "<leader>ev", function() require("ts-node-action").node_action("Extract Variable") end, { desc = "Extract Variable" })
+vim.keymap.set("n", "<leader>am", function() require("ts-node-action").node_action_menu() end, { desc = "Node Actions Menu" })
+```
+
+explicación de los atajos de teclado que te sugerí para usar con `ts-node-action`:
+
+Atajo
+
+Acción
+
+`<leader>ef`
+
+**Extract Function:** Extrae el bloque de código actual (por ejemplo, una función) en una nueva función. El plugin te pedirá que ingreses el nombre de la nueva función y realizará automáticamente los cambios necesarios en el código.
+
+`<leader>ev`
+
+**Extract Variable:** Extrae una expresión o valor seleccionado en una nueva variable. El plugin te pedirá que ingreses el nombre de la nueva variable y reemplazará la expresión original por la variable.
+
+`<leader>am`
+
+**Node Actions Menu:** Abre un menú flotante que muestra todas las acciones disponibles para el nodo de código actual (el nodo donde se encuentra el cursor). Puedes navegar por el menú con las teclas de flecha y seleccionar una acción presionando Enter.
+
+
+Imagina que tienes el siguiente código JavaScript:
+
+
+
+```JavaScript
+function calcularArea(base, altura) {
+  return base * altura / 2;
+}
+```
+
+
+
+1.  **`<leader>ef` (Extract Function):**
+
+    -   Colocas el cursor dentro de la función `calcularArea`.
+    -   Presionas `<leader>ef`.
+    -   El plugin te pide que ingreses un nombre para la nueva función (por ejemplo,  `calcularAreaTriangulo`).
+    -   El plugin extrae el código de la función a una nueva función llamada `calcularAreaTriangulo` y reemplaza el código original con una llamada a la nueva función.
+2.  **`<leader>ev` (Extract Variable):**
+
+    -   Seleccionas la expresión `base * altura / 2`.
+    -   Presionas `<leader>ev`.
+    -   El plugin te pide que ingreses un nombre para la nueva variable (por ejemplo,  `area`).
+    -   El plugin crea una nueva variable llamada `area` y asigna el valor de la expresión a esa variable. El código original se reemplaza por la variable `area`.
+3.  **`<leader>am` (Node Actions Menu):**
+
+    -   Colocas el cursor en cualquier parte del código.
+    -   Presionas `<leader>am`.
+    -   Aparece un menú flotante con acciones como "Extract Function", "Extract Variable", "Rename", etc.
+    -   Navegas por el menú con las teclas de flecha y seleccionas la acción que deseas realizar.
+
+**Nota:**
+
+-   Recuerda que estos son solo ejemplos de atajos de teclado. Puedes personalizarlos según tus preferencias en tu archivo `core/keys.lua`.
+-   La disponibilidad de acciones específicas dependerá del lenguaje de programación y del tipo de nodo de código en el que te encuentres. El menú de acciones (`<leader>am`) te mostrará las acciones disponibles en cada caso.
+
+
+
+---
+# Entrando a la seccion LSP
+---
+
+

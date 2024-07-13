@@ -138,6 +138,11 @@ local plugins = {
 		config = load_config("lang.treesitter"),
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	{
+		"ckolkey/ts-node-action",
+		dependencies = { "nvim-treesitter" },
+		enabled = false,
+	},
 }
 
 return {
