@@ -5,6 +5,8 @@
   Instalar fd [ ]
   Instalar rg [ ]
   Instalar fzf [ ]
+  Instalar debugpy [ ] requerido por dap.lua
+  Instalar readapt [ ] requerido por dap.lua
 
 Este proyecto tiene como objetivo replicar y documentar una configuración avanzada de Neovim, detallando cada paso en un formato similar a un libro. La meta es crear un entorno de desarrollo potente, personalizado y eficiente.
 
@@ -448,3 +450,49 @@ vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")  -- Activar/desactivar Zen 
 vim.keymap.set("n", "<leader>t", "<cmd>Twilight<CR>") -- Activar/desactivar Twilight
 
 ```
+---
+# Entrando a la seccion tools
+---
+
+# Decimo
+
+## Configuración Avanzada de Neovim: Depuración con nvim-dap
+
+### `dap.lua`
+
+* [lua/plugins/lang/dap.lua](https://github.com/FQ211776/neovim/blob/master/[lua/plugins/lang/dap.lua)
+
+Este archivo configura el plugin "nvim-dap" para habilitar la depuración de código en Neovim, utilizando la interfaz de usuario proporcionada por "dapui".
+
+**Funcionalidades:**
+
+-   **Adaptadores de Depuración:** Configura adaptadores para Python y Ruby (Rails).
+-   **Interfaz de Usuario:** Proporciona una interfaz visual para interactuar con la sesión de depuración, incluyendo visualización de variables, pila de llamadas, puntos de interrupción, etc.
+-   **Atajos de Teclado:** Define atajos de teclado dentro de la interfaz de depuración para navegar y controlar la sesión.
+
+**Dependencias:**
+
+-   "nvim-dap" (requerido)
+-   "dapui" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+-   Dependencias opcionales para los adaptadores de Python y Ruby, como `debugpy` y `readapt`.
+
+**Atajos de Teclado:**
+
+Atajo Acción
+
+`<CR>` Expandir/Contraer
+
+`<2-LeftMouse>` Expandir/Contraer
+
+`o` Abrir
+
+`d` Eliminar
+
+`e` Editar
+
+`r` REPL
+
+`t` Alternar
+
+`q`, `<Esc>` Cerrar (en ventana flotante)

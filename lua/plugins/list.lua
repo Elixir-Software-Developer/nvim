@@ -69,6 +69,14 @@ local plugins = {
 	},
 
 	-- Language
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = {
+			"rcarriga/nvim-dap-ui",
+		},
+		config = load_config("lang.dap"),
+		cmd = { "DapUIToggle", "DapToggleRepl", "DapToggleBreakpoint" },
+	},
 }
 
 return {
