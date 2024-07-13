@@ -123,7 +123,21 @@ local plugins = {
 		config = load_config("lang.ai"),
 		event = { "BufReadPre", "BufNewFile" },
 	},
-  
+
+	-- Tresitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-refactor",
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			"RRethy/nvim-treesitter-endwise",
+			"RRethy/nvim-treesitter-textsubjects",
+			"windwp/nvim-ts-autotag",
+		},
+		config = load_config("lang.treesitter"),
+		event = { "BufReadPre", "BufNewFile" },
+	},
 }
 
 return {

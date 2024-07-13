@@ -53,3 +53,59 @@ Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
 `gsnl` Buscar el último entorno y actualizar el número de líneas a incluir.
 
 `gsnn`  Buscar el siguiente entorno y actualizar el número de líneas a incluir.
+
+`ao` Selecciona alrededor de un bloque de código (función, condicional, bucle), clase, o etiqueta HTML.
+
+`ai` Selecciona dentro de un bloque de código (función, condicional, bucle), clase, o etiqueta HTML.
+
+`af` Selecciona alrededor de una función.
+
+`ai` Selecciona dentro de una función.
+
+`ac` Selecciona alrededor de una clase.
+
+`ic` Selecciona dentro de una clase.
+
+`at` Selecciona alrededor de una etiqueta HTML (`<([%p%w]-)%f[^<%w][^<>]->.-</%1>`, `^<.->().*()</[^/]->$`).
+
+`it` Selecciona dentro de una etiqueta HTML (`<([%p%w]-)%f[^<%w][^<>]->.-</%1>`, `^<.->().*()</[^/]->$`).
+
+`an` Selecciona alrededor del siguiente bloque de código, función, clase o etiqueta HTML.
+
+`in` Selecciona dentro del siguiente bloque de código, función, clase o etiqueta HTML.
+
+`al` Selecciona alrededor del último bloque de código, función, clase o etiqueta HTML.
+
+`il` Selecciona dentro del último bloque de código, función, clase o etiqueta HTML.
+
+`g[` Mueve el cursor al borde izquierdo del textobjeto 'a' (alrededor).
+
+`g]` Mueve el cursor al borde derecho del textobjeto 'a' (alrededor).
+
+(En modo visual u operador-pendiente) + 'a' o 'i'
+
+
+# treeseeter
+
+`<c-space>` Iniciar/incrementar selección incremental de nodos de Treesitter.
+
+`<bs>` Disminuir selección incremental de nodos de Treesitter (retroceso).
+
+`.` Seleccionar el "asunto de texto" actual.
+
+`a;` Seleccionar el contenedor exterior (clase, función, etc.).
+
+`i;` Seleccionar el interior de un contenedor (clase, función, etc.).
+
+`<leader>rr` Renombrar inteligentemente un símbolo (variable, función, etc.).
+
+`<leader>rd` Ir a la definición de un símbolo.
+
+`<leader>rl` Listar todas las definiciones de un símbolo.
+
+`<leader>rh` Mostrar un índice de las definiciones de un símbolo (Tabla de Contenido).
+
+`<leader>rj` Ir al siguiente uso de un símbolo.
+
+`<leader>rk` Ir al uso anterior de un símbolo.
+

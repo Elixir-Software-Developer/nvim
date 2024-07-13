@@ -897,3 +897,77 @@ En algunos casos, puedes iniciar una acción en modo normal y luego cambiar a mo
 ---
 
 
+## Configuración Avanzada de Neovim: Análisis de Código y Refactorización con Treesitter
+
+### `treesitter.lua`
+
+Este archivo configura el plugin `nvim-treesitter`, que proporciona un potente análisis del código fuente basado en la gramática del lenguaje. Treesitter permite a Neovim comprender la estructura del código de forma más precisa, lo que se traduce en mejoras significativas en funciones como el resaltado de sintaxis, la indentación, el plegado de código y la refactorización.
+
+**Funcionalidades:**
+
+-   **Resaltado de Sintaxis Mejorado:** Proporciona un resaltado de sintaxis más preciso y consistente que los métodos basados en expresiones regulares.
+-   **Indentación Inteligente:** Indenta el código de manera más inteligente, teniendo en cuenta la estructura del lenguaje.
+-   **Plegado de Código:** Permite plegar y desplegar bloques de código de forma más precisa y granular.
+-   **Textobjects Mejorados:** Proporciona textobjetos adicionales que permiten seleccionar y manipular elementos de código específicos (funciones, clases, bloques, etc.).
+-   **Refactorización:** Habilita funciones de refactorización como renombrar símbolos, extraer funciones y variables, ir a la definición de un símbolo, etc.
+-   **Autocompletado de Etiquetas:** Autocompleta etiquetas HTML y XML.
+
+**Dependencias:**
+
+-   "nvim-treesitter" (requerido)
+-   "nvim-treesitter-refactor" (opcional)
+-   "nvim-treesitter-textobjects" (opcional)
+-   "nvim-treesitter-endwise" (opcional)
+-   "nvim-treesitter-textsubjects" (opcional)
+-   "nvim-ts-autotag" (opcional)
+-   "lib/util.lua"
+
+**Atajos de Teclado:**
+
+
+`<c-space>` Iniciar/incrementar selección incremental de nodos de Treesitter.
+
+`<bs>` Disminuir selección incremental de nodos de Treesitter (retroceso).
+
+`.` Seleccionar el "asunto de texto" actual.
+
+`a;` Seleccionar el contenedor exterior (clase, función, etc.).
+
+`i;` Seleccionar el interior de un contenedor (clase, función, etc.).
+
+`<leader>rr` Renombrar inteligentemente un símbolo (variable, función, etc.).
+
+`<leader>rd` Ir a la definición de un símbolo.
+
+`<leader>rl` Listar todas las definiciones de un símbolo.
+
+`<leader>rh` Mostrar un índice de las definiciones de un símbolo (Tabla de Contenido).
+
+`<leader>rj` Ir al siguiente uso de un símbolo.
+
+`<leader>rk` Ir al uso anterior de un símbolo.
+
+
+Gran pregunta! Veamos cómo se diferencian `a;` (seleccionar el contenedor exterior) e `i;` (seleccionar el interior de un contenedor) en Treesitter de `surround.lua` y `ai.lua`.
+
+**Diferencias Clave:**
+
+| Característica           | a; / i; (Treesitter)                                                                                                                                                                                  | surround.lua                                                                                                                                                                                               | ai.lua                                                                                                                                                                                                                                                   |
+| :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Enfoque Principal**    | Seleccionar contenedores de código (clases, funciones, bloques `if`, bucles `for`, etc.) basándose en la estructura sintáctica del lenguaje proporcionada por Treesitter.                             | Manipular "entornos" de texto, que son pares de caracteres que rodean el texto (paréntesis, corchetes, comillas, etiquetas HTML, etc.).                                                                    | Extender textobjetos para seleccionar texto en función de criterios más complejos, como bloques de código (funciones, condicionales, bucles), clases y etiquetas HTML.                                                                                   |
+| **Nivel de Precisión**   | Muy preciso. Treesitter analiza el código fuente y entiende la estructura sintáctica del lenguaje, lo que permite identificar con precisión los límites de los contenedores de código.                | Menos preciso. Se basa en patrones de texto para identificar los entornos, lo que puede llevar a errores si los patrones no son lo suficientemente específicos o si el texto no sigue un formato estricto. | Preciso para textobjetos basados en Treesitter (bloques, funciones, clases). Menos preciso para textobjetos basados en patrones de texto (etiquetas HTML), ya que depende de la calidad del patrón.                                                      |
+| **Acciones Principales** | Seleccionar el contenedor completo (`a;`) o solo el contenido interior (`i;`).                                                                                                                        | Agregar, eliminar, reemplazar y resaltar entornos.                                                                                                                                                         | Seleccionar texto "alrededor" (`a`) o "dentro" (`i`) de un elemento de código, así como el siguiente (`an`, `in`) o último (`al`, `il`) elemento del mismo tipo. También permite mover el cursor al principio o al final del textobjeto 'a' (alrededor). |
+| **Ejemplo de Uso**       | En un archivo Python: `dai;` (eliminar el contenido de la función actual), `ca;{` (cambiar el bloque de código actual por llaves), `vi;` (seleccionar visualmente el contenido de la función actual). | En un archivo Markdown: `gsa"` (agregar comillas dobles alrededor del texto seleccionado), `gsd` (eliminar las comillas que rodean el cursor), `gsr{]` (reemplazar las comillas por corchetes).            | En un archivo JavaScript: `daf` (eliminar una función), `cit` (cambiar el contenido dentro de una etiqueta HTML), `van` (seleccionar visualmente el siguiente bloque de código).                                                                         |
+
+**Cuándo usar cada uno:**
+
+*   **`a;` / `i;` (Treesitter):** Úsalos cuando quieras seleccionar bloques de código completos o su contenido interno de manera precisa y basada en la estructura del lenguaje.
+
+*   **`surround.lua`:** Úsalo cuando quieras manipular pares de caracteres que rodean texto, como paréntesis, corchetes o comillas.
+
+*   **`ai.lua`:** Úsalo cuando necesites textobjetos más avanzados que los proporcionados por defecto en Neovim, como seleccionar bloques de código, clases o etiquetas HTML.
+
+**En resumen:**
+
+Los textobjetos de Treesitter (`a;` e `i;`) son más precisos y específicos para la selección de código, mientras que `surround.lua` se centra en la manipulación de pares de caracteres. `mini.ai` ofrece una mayor flexibilidad para definir textobjetos personalizados y proporciona algunos textobjetos predefinidos útiles. La elección de cuál usar dependerá de la tarea específica que necesites realizar.
+
