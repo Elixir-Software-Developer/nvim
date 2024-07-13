@@ -2,6 +2,9 @@
 
 # TODO
   Instalar tdo [ ]
+  Instalar fd [ ]
+  Instalar rg [ ]
+  Instalar fzf [ ]
 
 Este proyecto tiene como objetivo replicar y documentar una configuración avanzada de Neovim, detallando cada paso en un formato similar a un libro. La meta es crear un entorno de desarrollo potente, personalizado y eficiente.
 
@@ -379,3 +382,29 @@ Acción
 `d` Ejecutar el comando `Tdo`.
 
 `q` Salir de Neovim.
+
+
+# Octavo
+
+## Configuración Avanzada de Neovim: Mejoras en el Wildmenu
+
+### `wilder.nvim`
+
+* [lua/plugins/ui/dashboard.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/ui/dashboard.lua)
+* [lua/lib/icons.lua](https://github.com/FQ211776/neovim/blob/master/lua/lib/icons.lua)
+
+Este archivo configura el plugin Wilder.nvim, que mejora la experiencia de autocompletado y búsqueda en la línea de comandos (wildmenu) de Neovim.
+
+**Funcionalidades:**
+
+-   **Sugerencias en Tiempo Real:** Proporciona sugerencias inteligentes mientras escribes comandos, búsquedas o expresiones.
+-   **Búsqueda Difusa:** Permite realizar búsquedas difusas en archivos, directorios, buffers y comandos.
+-   **Ordenación Inteligente:** Ordena los resultados de búsqueda según su relevancia y similitud con la consulta.
+-   **Pipelines Personalizables:** Te permite personalizar la lógica de búsqueda y autocompletado para diferentes modos y tipos de datos.
+-   **Integración con Iconos:** Utiliza iconos de `lib/icons.lua` para mejorar la presentación visual de los resultados.
+
+**Dependencias:**
+
+-   "wilder.nvim" (requerido)
+-   "fd" y "rg" (opcional, pero recomendado para una búsqueda más rápida)
+-   "lib/icons.lua" (opcional, pero se recomienda para una mejor presentación visual)

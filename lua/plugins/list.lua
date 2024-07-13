@@ -50,6 +50,14 @@ local plugins = {
 		end,
 		cmd = "Dashboard",
 	},
+	{
+		"gelguy/wilder.nvim",
+		build = function()
+			vim.cmd([[silent UpdateRemotePlugins]])
+		end,
+		config = load_config("ui.wilder"),
+		keys = { ":", "/", "?" },
+	},
 }
 
 return {

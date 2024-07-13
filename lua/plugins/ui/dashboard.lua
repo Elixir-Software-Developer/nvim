@@ -14,7 +14,7 @@ dashboard.setup({
 	config = {
 		week_header = {
 			enable = true,
-			append = { "", icons.ui.Circle .. " nvim2K: Learn, Make, Explore! " .. icons.ui.Circle },
+			append = { "", icons.ui.Circle .. " RobertVim: Roberto Carlos Flores Quintanilla " .. icons.ui.Circle },
 		},
 		packages = { enable = true },
 		project = { enable = true, limit = 8 },
