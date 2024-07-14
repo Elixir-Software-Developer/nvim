@@ -2408,3 +2408,18 @@ Este archivo tiene tres secciones principales:
 ### plugin/after/
 
 El directorio `plugin/after/` contiene archivos de configuración que se cargan después de que se hayan inicializado todos los plugins. En este caso, `highlights.lua` se utiliza para personalizar los resaltados de sintaxis después de que los plugins hayan definido sus propios grupos de resaltado.
+
+# CUADRAGESIMO CUARTO
+
+## Configuración Avanzada de Neovim: Ejecutar Archivos Python
+
+### `ftplugin/python.lua`
+
+[/ftplugin/python.lua](https://github.com/FQ211776/neovim/blob/master//ftplugin/python.lua)
+
+Este archivo proporciona una configuración específica para archivos Python (`.py`). Define un atajo de teclado para ejecutar el archivo actual en un terminal integrado de Neovim.
+
+**Atajo de Teclado python:**
+
+
+`<A-r>` Ejecuta el archivo Python actual en un terminal integrado.
