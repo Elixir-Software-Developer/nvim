@@ -229,6 +229,11 @@ local plugins = {
         config = load_config('tools.nvim-tree'),
         cmd = 'NvimTreeToggle',
     },
+    {
+        'windwp/nvim-spectre',
+        config = load_config('tools.spectre'),
+        cmd = 'Spectre',
+    },
 }
 
 return {

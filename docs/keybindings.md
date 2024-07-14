@@ -226,3 +226,25 @@ auto completion
 `v` Abrir el archivo o directorio seleccionado en una división vertical.
 
 `o` Abrir el archivo o directorio seleccionado en una división horizontal.
+
+
+**Atajos de Teclado Spectree:**
+
+
+`t` Activar/desactivar la línea actual en los resultados de búsqueda.
+
+`<CR>` Ir al archivo y línea de la entrada seleccionada.
+
+`Q` Enviar todos los resultados de búsqueda a la lista de coincidencias rápidas (`quickfix`).
+
+`c` Abrir un prompt para introducir un comando de reemplazo de Vim.
+
+`o` Mostrar el menú de opciones de Spectre.
+
+`R` Ejecutar el reemplazo en todos los resultados de búsqueda.
+
+`m` Cambiar el modo de vista de los resultados.
+
+`I` Activar/desactivar la opción "ignorar mayúsculas/minúsculas" en la búsqueda.
+
+`H` Activar/desactivar la opción "buscar en archivos ocultos".

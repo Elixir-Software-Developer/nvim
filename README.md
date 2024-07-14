@@ -3,7 +3,7 @@
 # TODO
   Instalar tdo [ ]
   Instalar fd [ ]
-  Instalar rg [ ]
+  Instalar rg [ ] requerido por spectree
   Instalar fzf [ ]
   Instalar debugpy [ ] requerido por dap.lua
   Instalar readapt [ ] requerido por dap.lua
@@ -1405,6 +1405,50 @@ Este archivo configura el plugin `nvim-tree.lua`, que proporciona un explorador 
 `o` Abrir el archivo o directorio seleccionado en una división horizontal.
 
 
-**Comando para Abrir/Cerrar:**
+# VIGESIMO CUARTO
 
-`:NvimTreeToggle`
+
+
+
+## Configuración Avanzada de Neovim: Búsqueda y Reemplazo Potente con Spectre
+
+### `spectre.lua`
+
+
+* [lua/plugins/tools/spectree.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/spectree.lua)
+
+Este archivo configura el plugin Spectre, una herramienta de búsqueda y reemplazo de texto altamente personalizable para Neovim. Spectre ofrece una interfaz interactiva y eficiente para buscar y reemplazar texto en tus proyectos.
+
+**Funcionalidades:**
+
+-   **Búsqueda Rápida y Potente:** Utiliza motores de búsqueda como `ripgrep` (`rg`) o `The Silver Searcher` (`ag`) para realizar búsquedas rápidas y eficientes.
+-   **Reemplazo Interactivo:** Permite revisar y confirmar cada reemplazo antes de aplicarlo.
+-   **Integración con la Lista de Coincidencias Rápidas:** Envía los resultados de búsqueda a la lista de coincidencias rápidas de Neovim para una fácil navegación.
+-   **Opciones de Búsqueda Personalizables:** Puedes ajustar opciones como ignorar mayúsculas/minúsculas, buscar en archivos ocultos, usar expresiones regulares, etc.
+-   **Atajos de Teclado Intuitivos:** Proporciona atajos de teclado para navegar por los resultados, realizar reemplazos, cambiar opciones de búsqueda, etc.
+
+**Dependencias:**
+
+-   "spectre.nvim" (requerido)
+-   "rg" o "ag" (recomendado para un mejor rendimiento en las búsquedas)
+
+**Atajos de Teclado Spectree:**
+
+
+`t` Activar/desactivar la línea actual en los resultados de búsqueda.
+
+`<CR>` Ir al archivo y línea de la entrada seleccionada.
+
+`Q` Enviar todos los resultados de búsqueda a la lista de coincidencias rápidas (`quickfix`).
+
+`c` Abrir un prompt para introducir un comando de reemplazo de Vim.
+
+`o` Mostrar el menú de opciones de Spectre.
+
+`R` Ejecutar el reemplazo en todos los resultados de búsqueda.
+
+`m` Cambiar el modo de vista de los resultados.
+
+`I` Activar/desactivar la opción "ignorar mayúsculas/minúsculas" en la búsqueda.
+
+`H` Activar/desactivar la opción "buscar en archivos ocultos".
