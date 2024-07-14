@@ -1827,6 +1827,10 @@ Este archivo configura Telescope, un plugin altamente flexible y extensible que 
 
 ### `marks.lua`
 
+
+[lua/plugins/tools/marks.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/marks.nvim)
+
+
 Este archivo configura el plugin `marks.nvim`, que mejora la gestión de marcadores de texto en Neovim. Los marcadores te permiten guardar posiciones en el texto para poder volver a ellas rápidamente más tarde.
 
 **Funcionalidades:**
@@ -1859,3 +1863,40 @@ La configuración define cuatro grupos de marcadores personalizados:
 -   **`bookmark_4`:** Usa el icono de un bicho (bug).
 
 Puedes personalizar estos grupos o crear nuevos según tus necesidades.
+
+
+
+# TRIGESIMO QUINTO
+
+## Configuración Avanzada de Neovim: Enlaces Compartibles con gitlinker.nvim
+
+### `gitlinker.lua`
+
+[lua/plugins/tools/gitlinker.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/gitlinker.lua)
+
+
+
+Este archivo configura el plugin `gitlinker.nvim`, que permite generar enlaces compartibles (permalinks) a archivos y líneas de código específicos en repositorios de Git. Estos enlaces se pueden compartir fácilmente con otros para que puedan ver el código exacto al que te refieres.
+
+**Funcionalidades:**
+
+-   **Generación de Enlaces:** Crea enlaces que apuntan a archivos y líneas de código en diferentes plataformas de alojamiento de Git, como GitHub, GitLab, Bitbucket, etc.
+-   **Copiado Automático:** Copia automáticamente el enlace generado al portapapeles para facilitar su uso.
+-   **Personalización:** Permite personalizar el comportamiento del plugin, como elegir el remoto de Git a utilizar o añadir el número de línea actual al enlace.
+
+**Dependencias:**
+
+-   "gitlinker.nvim" (requerido)
+
+**Atajos de Teclado:**
+
+Atajo
+
+Acción
+
+`<leader>yg`
+
+Copia al portapapeles el enlace al archivo actual (o a la línea actual si la opción `add_current_line_on_normal_mode` está habilitada).
+
+
+

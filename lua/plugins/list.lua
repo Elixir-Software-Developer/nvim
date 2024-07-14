@@ -364,6 +364,11 @@ local plugins = {
         dependencies = { 'stevearc/dressing.nvim' },
         cmd = 'CoAuthor',
     },
+    {
+        'ruifm/gitlinker.nvim',
+        config = load_config('tools.gitlinker'),
+        keys = '<leader>yg',
+    },
 }
 
 return {
