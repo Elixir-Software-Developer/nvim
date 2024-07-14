@@ -5,3 +5,4 @@ navigator.setup({
     disable_on_zoom = false,
     mux = 'auto',
 })
+

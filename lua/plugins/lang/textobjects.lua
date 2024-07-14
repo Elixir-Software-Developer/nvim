@@ -52,13 +52,13 @@ local textobjects = {
         enable = true,
         swap_next = {
             ['<leader>rna'] = '@parameter.inner', -- swap object property with next
-            ['<leader>rn:'] = '@property.outer', -- swap parameters/argument with next
-            ['<leader>rnm'] = '@function.outer', -- swap function with next
+            ['<leader>rn:'] = '@property.outer',  -- swap parameters/argument with next
+            ['<leader>rnm'] = '@function.outer',  -- swap function with next
         },
         swap_previous = {
             ['<leader>rpa'] = '@parameter.inner', -- swap parameters/argument with prev
-            ['<leader>rp:'] = '@property.outer', -- swap object property with prev
-            ['<leader>rpm'] = '@function.outer', -- swap function with previous
+            ['<leader>rp:'] = '@property.outer',  -- swap object property with prev
+            ['<leader>rpm'] = '@function.outer',  -- swap function with previous
         },
     },
     move = {

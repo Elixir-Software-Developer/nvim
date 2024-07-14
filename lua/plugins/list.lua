@@ -173,6 +173,7 @@ local plugins = {
         config = load_config('lang.null-ls'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
+
     -- Completion
     {
         'hrsh7th/nvim-cmp',
@@ -220,6 +221,7 @@ local plugins = {
         },
         config = load_config('lang.copilot-chat'),
     },
+
     -- Tools
     {
         'nvim-tree/nvim-tree.lua',
@@ -247,8 +249,7 @@ local plugins = {
                 's',
                 mode = { 'n', 'x', 'o' },
                 function()
-                    --[[  ]]
-                    require('flash').jump()
+                --[[  ]]    require('flash').jump()
                 end,
                 desc = 'Flash',
             },
