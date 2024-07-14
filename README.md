@@ -2091,3 +2091,133 @@ El archivo `textobjects.lua` se utiliza principalmente en la configuración de T
 | Normal, Visual, Operator-pending | `[L`          | Ir al final del bucle anterior.                                                                                             |
 | Normal, Visual, Operator-pending | `;`           | Repetir el último movimiento de textobjeto de Treesitter.                                                                   |
 | Normal, Visual, Operator-pending | `,`           | Repetir el último movimiento de textobjeto de Treesitter en la dirección opuesta.                                           |
+
+# TRIGESIMO NOVENO
+
+## onfiguración Avanzada de Neovim: Opciones Globales y de Buffer
+
+### `options.lua`
+
+
+
+[lua/core/langs/options.lua](https://github.com/FQ211776/neovim/blob/master/lua/core/langs/options.lua)
+
+
+Este archivo es el centro de control para establecer opciones globales y locales (a nivel de buffer) en Neovim. Define cómo se comporta el editor en general y cómo se comportará en tipos de archivos específicos.
+
+**Opciones Globales:**
+
+-   **`ai` (Auto Indent):** Habilitado (`true`). Activa la indentación automática al comenzar una nueva línea.
+
+-   **`autoindent`:** Habilitado (`true`). Similar a `ai`, pero más específico para algunos lenguajes.
+
+-   **`autowrite`:** Habilitado (`true`). Guarda automáticamente el archivo actual al cambiar de buffer, lo que ayuda a prevenir la pérdida de trabajo.
+
+-   **`backspace`:** Establecido en `'indent,eol,start'`. Permite usar la tecla de retroceso (`backspace`) para eliminar indentaciones, saltos de línea y caracteres al inicio de la línea de manera más intuitiva.
+
+-   **`backup`:** Deshabilitado (`false`). Evita la creación de archivos de respaldo (copias de seguridad) al guardar.
+
+-   **`breakindent`:** Habilitado (`true`). Permite que las líneas largas se dividan automáticamente en varias líneas al llegar al límite de la ventana, manteniendo la indentación correcta.
+
+-   **`clipboard`:** Establecido en `'unnamedplus'`. Permite que Neovim acceda y utilice el portapapeles del sistema operativo, lo que facilita copiar y pegar entre Neovim y otras aplicaciones.
+
+-   **`cmdheight`:** Establecido en `1`. Define la altura de la línea de comandos de Neovim.
+
+-   **`completeopt`:** Establecido en `'menu,menuone,noselect'`. Configura las opciones de autocompletado. En este caso, se muestra un menú emergente con una sola opción seleccionada automáticamente, pero sin insertarla directamente.
+
+-   **`conceallevel`:** Establecido en `0`. Desactiva la ocultación de caracteres especiales en Markdown, lo que permite ver los acentos graves (backticks) utilizados para el código.
+
+-   **`confirm`:** Habilitado (`true`). Solicita confirmación antes de salir de un buffer con cambios no guardados.
+
+-   **`cursorline`:** Habilitado (`true`). Resalta la línea donde se encuentra el cursor.
+
+-   **`expandtab`:** Habilitado (`true`). Convierte las tabulaciones en espacios al insertarlas.
+
+-   **`fileencoding`:** Establecido en `'utf-8'`. Define la codificación de caracteres utilizada para leer y escribir archivos.
+
+-   **`formatoptions`:** Establecido en `'jlnqt'`. Configura las opciones de formateo automático de texto. Consulta `:help fo-table` para obtener más detalles sobre cada opción.
+
+-   **`grepformat` y `grepprg`:** Configuran el formato de salida y el programa utilizado para la búsqueda de texto con comandos como `:grep`. En este caso, se utiliza `rg` (ripgrep) como herramienta de búsqueda.
+
+-   **`hlsearch`:** Habilitado (`true`). Resalta todas las coincidencias de la última búsqueda.
+
+-   **`ignorecase`:** Habilitado (`true`). Ignora mayúsculas y minúsculas en las búsquedas.
+
+-   **`inccommand`:** Establecido en `'split'`. Muestra una vista previa en tiempo real de los resultados de los comandos de sustitución.
+
+-   **`laststatus`:** Establecido en `3`. Muestra la barra de estado en todas las ventanas.
+
+-   **`list`:** Habilitado (`true`). Muestra caracteres invisibles como espacios en blanco y tabulaciones.
+
+-   **`mouse`:** Establecido en `'a'`. Habilita el uso del ratón en todas las modalidades.
+
+-   **`number` y `relativenumber`:** Habilitados (`true`). Muestran los números de línea absolutos y relativos, respectivamente.
+
+-   **`numberwidth`:** Establecido en `4`. Define el ancho de la columna de números de línea.
+
+-   **`pumblend`:** Establecido en `10`. Controla la transparencia del menú emergente.
+
+-   **`pumheight`:** Establecido en `10`. Define la altura máxima del menú emergente.
+
+-   **`scrolloff`:** Establecido en `10`. Mantiene al menos 10 líneas visibles por encima y por debajo del cursor al desplazarse.
+
+-   **`sessionoptions`:** Establecido en `'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'`. Define qué opciones se guardan en la sesión de Neovim.
+
+-   **`shiftround`:** Habilitado (`true`). Redondea la indentación al múltiplo más cercano de `shiftwidth`.
+
+-   **`shiftwidth`:** Establecido en `4`. Define el número de espacios utilizados para la indentación.
+
+-   **`showcmd`:** Deshabilitado (`false`). Oculta la línea de comandos mientras se escribe un comando.
+
+-   **`showtabline`:** Establecido en `0`. Siempre muestra la barra de pestañas.
+
+-   **`sidescrolloff`:** Establecido en `8`. Mantiene al menos 8 columnas visibles a la izquierda y a la derecha del cursor al desplazarse horizontalmente.
+
+-   **`smartcase`:** Habilitado (`true`). Ignora mayúsculas y minúsculas en las búsquedas si el patrón de búsqueda no contiene letras mayúsculas.
+
+-   **`smartindent`:** Habilitado (`true`). Intenta deducir la indentación correcta basándose en el código existente.
+
+-   **`smarttab`:** Habilitado (`true`). Utiliza espacios en lugar de tabulaciones al presionar la tecla Tab, a menos que estés al principio de la línea.
+
+-   **`splitbelow` y `splitright`:** Habilitados (`true`). Fuerza a que las divisiones horizontales se abran debajo y las divisiones verticales a la derecha de la ventana actual.
+
+-   **`tabstop`:** Establecido en `4`. Define el ancho de una tabulación en espacios.
+
+-   **`timeoutlen`:** Establecido en `300`. Tiempo en milisegundos que se espera a que se complete una secuencia de teclas mapeada.
+
+-   **`undolevels`:** Establecido en `10000`. Número máximo de cambios que se pueden deshacer.
+
+-   **`wildmenu`:** Habilitado (`true`). Muestra un menú de opciones al completar comandos en la línea de comandos.
+
+-   **`wildmode`:** Establecido en `'longest:full,full'`. Configura el modo de completado en la línea de comandos.
+
+-   **`winminwidth`:** Establecido en `5`. Define el ancho mínimo de una ventana.
+
+-   **`writebackup`:** Deshabilitado (`false`). Evita crear un archivo de respaldo al guardar un archivo que ya tiene un respaldo.
+
+
+**Opciones Adicionales:**
+
+Además de las opciones anteriores, el archivo también incluye comandos de Vim para:
+
+-   Configurar el idioma de revisión ortográfica a inglés.
+-   Habilitar plugins e indentación automática según el tipo de archivo.
+-   Establecer la ruta al ejecutable de Python en Windows si es necesario.
+-   Agregar el directorio actual y sus subdirectorios a la ruta de búsqueda de archivos.
+-   Configurar el subrayado en la terminal.
+-   Ajustar el comportamiento de los mensajes cortos de Vim.
+-   Corregir la indentación en archivos Markdown.
+-   Ocultar el carácter `~` al final de los archivos.
+
+**Integración con Plugins:**
+
+El archivo `options.lua` interactúa con varios plugins, como `cmp.lua` (autocompletado),  `telescope.nvim` (búsqueda y navegación), y otros.
+
+**Personalización:**
+
+Puedes personalizar las opciones en `options.lua` para adaptar Neovim a tus preferencias y necesidades específicas.
+
+**Dependencias:**
+
+-   `lib/util.lua`: Se utiliza para obtener la configuración de Python del usuario si está disponible.
+-   Plugins: El archivo `options.lua` interactúa con varios plugins, como `cmp.lua` (autocompletado),  `telescope.nvim` (búsqueda y navegación), y otros.
