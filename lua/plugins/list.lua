@@ -307,6 +307,13 @@ local plugins = {
         cmd = { 'Fterm', 'FTerm', 'Sterm', 'STerm', 'Vterm', 'VTerm' },
         -- dir = '~/Projects/GitHub/Maintain/termim.nvim',
     },
+    {
+        '2kabhishek/tdo.nvim',
+        dependencies = 'nvim-telescope/telescope.nvim',
+        cmd = { 'Tdo', 'TdoEntry', 'TdoNote', 'TdoTodos', 'TdoToggle', 'TdoFind', 'TdoFiles' },
+        keys = { '[t', ']t' },
+        -- dir = '~/Projects/GitHub/Maintain/tdo.nvim',
+    },
 }
 
 return {
