@@ -1521,3 +1521,55 @@ Este archivo configura el plugin `flash.nvim`, que permite navegar por el códig
 `R` Activa el modo de búsqueda de Treesitter de Flash en modo operador-pendiente y visual.
 
 `<c-s>` Activa/desactiva la búsqueda de Flash en modo comando.
+
+# VIGESIMO OCTAVO
+
+
+## Configuración Avanzada de Neovim: Navegación de Código con Navigator.nvim
+
+### `navigator.lua`
+
+* [lua/plugins/tools/navigator.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/navigator.lua)
+
+Este archivo configura el plugin `Navigator.nvim`, que facilita la navegación por símbolos, errores de diagnóstico y referencias de código en Neovim.
+
+**Funcionalidades:**
+
+-   **Navegación por Símbolos:** Permite moverse rápidamente entre los símbolos (funciones, clases, variables, etc.) definidos en tu código.
+-   **Navegación por Errores de Diagnóstico:** Salta a los errores, advertencias y sugerencias que reporta el LSP en tus archivos.
+-   **Navegación por Referencias:** Encuentra todas las referencias a un símbolo en tu proyecto.
+-   **Guardar Automático:** Puedes configurar Navigator para que guarde automáticamente el archivo actual al cambiar de ubicación.
+-   **Deshabilitar en Zoom:** Puedes desactivar Navigator temporalmente cuando estás en modo de zoom.
+-   **Multiplexación LSP:** Utiliza multiplexores para optimizar la comunicación con los servidores LSP si están disponibles.
+
+**Dependencias:**
+
+-   "Navigator.nvim" (requerido)
+
+**Atajos de Teclado:**
+
+Consulta la documentación de Navigator.nvim para obtener la lista completa de atajos de teclado y cómo personalizarlos:
+
+-   **Documentación de Navigator.nvim:**  [https://github.com/numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
+
+**Ejemplo de configuración personalizada en `core/keys.lua`:**
+
+Lua
+
+```
+-- Navegación por símbolos
+vim.keymap.set("n", "<C-h>", require('Navigator').left)
+vim.keymap.set("n", "<C-j>", require('Navigator').down)
+vim.keymap.set("n", "<C-k>", require('Navigator').up)
+vim.keymap.set("n", "<C-l>", require('Navigator').right)
+
+-- Navegación por errores de diagnóstico
+vim.keymap.set("n", "<Leader>dn", require('Navigator').diagnostics.goto_next)
+vim.keymap.set("n", "<Leader>dp", require('Navigator').diagnostics.goto_prev)
+
+-- Navegación por referencias
+vim.keymap.set("n", "gr", require('Navigator').reference)
+
+```
+
+Use code [with caution.](/faq#coding)

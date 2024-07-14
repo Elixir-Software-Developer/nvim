@@ -262,6 +262,15 @@ local plugins = {
             },
         },
     },
+    {
+        'numToStr/Navigator.nvim',
+        config = load_config('tools.navigator'),
+        event = function()
+            if vim.fn.exists('$TMUX') == 1 then
+                return 'VeryLazy'
+            end
+        end,
+    },
 }
 
 return {
