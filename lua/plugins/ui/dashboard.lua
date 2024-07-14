@@ -2,7 +2,6 @@ local dashboard = require('dashboard')
 local icons = require('lib.icons')
 
 dashboard.setup({
-			append = { "", icons.ui.Circle .. " RobertVim: Roberto Carlos Flores Quintanilla " .. icons.ui.Circle },
     theme = 'hyper',
     disable_move = false,
     shortcut_type = 'letter',
