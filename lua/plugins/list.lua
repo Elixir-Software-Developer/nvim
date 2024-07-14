@@ -302,6 +302,11 @@ local plugins = {
         config = load_config('tools.ccc'),
         cmd = { 'CccHighlighterToggle', 'CccConvert', 'CccPick' },
     },
+    {
+        '2kabhishek/termim.nvim',
+        cmd = { 'Fterm', 'FTerm', 'Sterm', 'STerm', 'Vterm', 'VTerm' },
+        -- dir = '~/Projects/GitHub/Maintain/termim.nvim',
+    },
 }
 
 return {

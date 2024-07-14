@@ -14,7 +14,11 @@ paru -S luarocks
 pip install flake8 black
 
 
-
+'2kabhishek/termim.nvim',
+'2kabhishek/tdo.nvim',
+'2kabhishek/markit.nvim',
+'2kabhishek/nerdy.nvim',
+'2kabhishek/co-author.nvim',
 
 Este proyecto tiene como objetivo replicar y documentar una configuración avanzada de Neovim, detallando cada paso en un formato similar a un libro. La meta es crear un entorno de desarrollo potente, personalizado y eficiente.
 
