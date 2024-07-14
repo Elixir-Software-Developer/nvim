@@ -1940,7 +1940,7 @@ Este archivo configura el plugin `gitsigns.nvim`, que integra información de Gi
 
 ### `ror.lua`
 
-[lua/plugins/tools/ror.lua.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/ror.lua)
+[lua/plugins/tools/ror.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/ror.lua)
 
 
 Este archivo configura el plugin `ror.nvim`, diseñado para mejorar la experiencia de desarrollo con Ruby on Rails (RoR) en Neovim. El plugin ofrece funcionalidades como la ejecución de pruebas, navegación por el código de Rails, y más.
@@ -1967,3 +1967,125 @@ Lua
 vim.keymap.set("n", "<leader>rc", ":RorCommands<CR>") -- Abrir el menú de comandos de Rails.
 
 ```
+
+
+[lua/plugins/langs/textobjects.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/langs/textobjects.lua)
+
+
+
+# TRIGESIMO OCTAVO:
+El archivo `textobjects.lua` es crucial para personalizar y extender los "textobjects" en Neovim, aprovechando la estructura de código proporcionada por Treesitter.
+
+**¿Qué son los textobjects?**
+
+En Neovim, los textobjects son una forma poderosa de seleccionar texto de manera rápida y precisa. Se utilizan en combinación con verbos (acciones) para realizar operaciones en el texto seleccionado. Por ejemplo,  `diw` (delete inner word) elimina la palabra actual,  `ci(` (change inside parentheses) cambia el texto dentro de los paréntesis, etc.
+
+Neovim viene con algunos textobjects integrados, pero `textobjects.lua` te permite definir textobjects personalizados que se adaptan mejor a tu flujo de trabajo y a los lenguajes que utilizas.
+
+**¿Por qué usar textobjects.lua?**
+
+-   **Selección más precisa:** Los textobjects de Treesitter te permiten seleccionar elementos de código completos, como funciones, clases, bloques condicionales, bucles, etc., en lugar de solo palabras o caracteres. Esto es mucho más preciso y útil para la edición de código.
+
+-   **Mayor productividad:** Al poder seleccionar rápidamente bloques de código completos, puedes realizar acciones como eliminar, copiar, pegar o formatear el código de manera más eficiente.
+
+-   **Personalización:** Puedes definir textobjects personalizados para los lenguajes y estructuras de código que utilizas con más frecuencia, lo que te permite adaptar Neovim a tu estilo de trabajo.
+
+
+**Ejemplos con Código:**
+
+Imagina que tienes el siguiente código Python:
+
+Python
+
+```
+def calcular_area(base, altura):
+    """Calcula el área de un triángulo."""
+    area = base * altura / 2
+    return area
+
+resultado = calcular_area(10, 5)
+print(resultado)
+
+```
+
+**Ejemplos de Uso de textobjects.lua:**
+
+-   **Seleccionar una función:**
+
+    -   Coloca el cursor en cualquier parte de la función `calcular_area`.
+    -   Presiona `vaf` (visual select around function). Esto seleccionará toda la función, incluyendo su definición y el docstring.
+    -   Ahora puedes realizar acciones como `d` (eliminar) o `y` (copiar) para manipular la función completa.
+-   **Seleccionar un parámetro de función:**
+
+    -   Coloca el cursor en cualquier parte de los parámetros de la función (`base, altura`).
+    -   Presiona `via` (visual select inside parameter). Esto seleccionará solo los parámetros `base, altura`.
+    -   Puedes usar esto para cambiar los nombres de los parámetros, eliminarlos, etc.
+-   **Seleccionar el cuerpo de una función:**
+
+    -   Coloca el cursor dentro del cuerpo de la función.
+    -   Presiona `vif` (visual select inside function). Esto seleccionará solo el contenido del cuerpo de la función, sin incluir la definición ni el docstring.
+-   **Navegar entre funciones:**
+
+    -   Presiona `]m` para ir al inicio de la siguiente función en el archivo.
+    -   Presiona `[m` para ir al inicio de la función anterior.
+    -   Puedes repetir estos movimientos usando `;` y `,`.
+
+**¿Dónde se Utiliza?**
+
+El archivo `textobjects.lua` se utiliza principalmente en la configuración de Treesitter en Neovim. Al definir textobjects personalizados, estás ampliando las capacidades de selección de texto de Treesitter para que sean más específicas y útiles para tu trabajo.
+
+
+**Atajos de Teclado: OBJECT OPERATOR**
+
+| Modo                             | Atajo         | Acción                                                                                                                      |
+| :------------------------------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------- |
+| Normal, Visual, Operator-pending | `a=`          | Seleccionar la parte externa de una asignación (por ejemplo, `x = 10`).                                                     |
+| Normal, Visual, Operator-pending | `i=`          | Seleccionar la parte interna de una asignación (por ejemplo, `10` en `x = 10`).                                             |
+| Normal, Visual, Operator-pending | `al=`         | Seleccionar el lado izquierdo de una asignación (por ejemplo, `x` en `x = 10`).                                             |
+| Normal, Visual, Operator-pending | `ar=`         | Seleccionar el lado derecho de una asignación (por ejemplo, `10` en `x = 10`).                                              |
+| Normal, Visual, Operator-pending | `a:`          | Seleccionar la parte externa de una propiedad de objeto (por ejemplo, `nombre: "Juan"` en JavaScript).                      |
+| Normal, Visual, Operator-pending | `i:`          | Seleccionar la parte interna de una propiedad de objeto (por ejemplo, `"Juan"` en `nombre: "Juan"` en JavaScript).          |
+| Normal, Visual, Operator-pending | `l:`          | Seleccionar la parte izquierda de una propiedad de objeto (por ejemplo, `nombre` en `nombre: "Juan"` en JavaScript).        |
+| Normal, Visual, Operator-pending | `r:`          | Seleccionar la parte derecha de una propiedad de objeto (por ejemplo, `"Juan"` en `nombre: "Juan"` en JavaScript).          |
+| Normal, Visual, Operator-pending | `aa`          | Seleccionar la parte externa de un parámetro/argumento de función (por ejemplo, `(x, y)` en `function suma(x, y)`).         |
+| Normal, Visual, Operator-pending | `ia`          | Seleccionar la parte interna de un parámetro/argumento de función (por ejemplo, `x, y` en `function suma(x, y)`).           |
+| Normal, Visual, Operator-pending | `ai`          | Seleccionar la parte externa de una sentencia condicional (por ejemplo, `if (x > 0) { ... }`).                              |
+| Normal, Visual, Operator-pending | `ii`          | Seleccionar la parte interna de una sentencia condicional (por ejemplo, `x > 0` en `if (x > 0) { ... }`).                   |
+| Normal, Visual, Operator-pending | `al`          | Seleccionar la parte externa de un bucle (por ejemplo, `for (let i = 0; i < 10; i++) { ... }`).                             |
+| Normal, Visual, Operator-pending | `il`          | Seleccionar la parte interna de un bucle (por ejemplo, `let i = 0; i < 10; i++` en `for (let i = 0; i < 10; i++) { ... }`). |
+| Normal, Visual, Operator-pending | `af`          | Seleccionar la parte externa de una llamada a función (por ejemplo, `suma(5, 3)`).                                          |
+| Normal, Visual, Operator-pending | `if`          | Seleccionar la parte interna de una llamada a función (por ejemplo, `5, 3` en `suma(5, 3)`).                                |
+| Normal, Visual, Operator-pending | `am`          | Seleccionar la parte externa de la definición de una función o método.                                                      |
+| Normal, Visual, Operator-pending | `im`          | Seleccionar la parte interna de la definición de una función o método.                                                      |
+| Normal, Visual, Operator-pending | `ac`          | Seleccionar la parte externa de una clase.                                                                                  |
+| Normal, Visual, Operator-pending | `ic`          | Seleccionar la parte interna de una clase.                                                                                  |
+| Normal, Visual, Operator-pending | `<leader>rna` | Intercambiar el parámetro/argumento actual con el siguiente.                                                                |
+| Normal, Visual, Operator-pending | `<leader>rn:` | Intercambiar la propiedad del objeto actual con la siguiente.                                                               |
+| Normal, Visual, Operator-pending | `<leader>rnm` | Intercambiar la función actual con la siguiente.                                                                            |
+| Normal, Visual, Operator-pending | `<leader>rpa` | Intercambiar el parámetro/argumento actual con el anterior.                                                                 |
+| Normal, Visual, Operator-pending | `<leader>rp:` | Intercambiar la propiedad del objeto actual con la anterior.                                                                |
+| Normal, Visual, Operator-pending | `<leader>rpm` | Intercambiar la función actual con la anterior.                                                                             |
+| Normal, Visual, Operator-pending | `]f`          | Ir al inicio de la siguiente llamada a función.                                                                             |
+| Normal, Visual, Operator-pending | `]m`          | Ir al inicio de la siguiente definición de método/función.                                                                  |
+| Normal, Visual, Operator-pending | `]c`          | Ir al inicio de la siguiente clase.                                                                                         |
+| Normal, Visual, Operator-pending | `]i`          | Ir al inicio de la siguiente sentencia condicional.                                                                         |
+| Normal, Visual, Operator-pending | `]l`          | Ir al inicio del siguiente bucle.                                                                                           |
+| Normal, Visual, Operator-pending | `]S`          | Ir al siguiente ámbito (scope).                                                                                             |
+| Normal, Visual, Operator-pending | `]z`          | Ir al siguiente pliegue (fold).                                                                                             |
+| Normal, Visual, Operator-pending | `]F`          | Ir al final de la siguiente llamada a función.                                                                              |
+| Normal, Visual, Operator-pending | `]M`          | Ir al final de la siguiente definición de método/función.                                                                   |
+| Normal, Visual, Operator-pending | `]C`          | Ir al final de la siguiente clase.                                                                                          |
+| Normal, Visual, Operator-pending | `]I`          | Ir al final de la siguiente sentencia condicional.                                                                          |
+| Normal, Visual, Operator-pending | `]L`          | Ir al final del siguiente bucle.                                                                                            |
+| Normal, Visual, Operator-pending | `[f`          | Ir al inicio de la llamada a función anterior.                                                                              |
+| Normal, Visual, Operator-pending | `[m`          | Ir al inicio de la definición de método/función anterior.                                                                   |
+| Normal, Visual, Operator-pending | `[c`          | Ir al inicio de la clase anterior.                                                                                          |
+| Normal, Visual, Operator-pending | `[i`          | Ir al inicio de la sentencia condicional anterior.                                                                          |
+| Normal, Visual, Operator-pending | `[l`          | Ir al inicio del bucle anterior.                                                                                            |
+| Normal, Visual, Operator-pending | `[F`          | Ir al final de la llamada a función anterior.                                                                               |
+| Normal, Visual, Operator-pending | `[M`          | Ir al final de la definición de método/función anterior.                                                                    |
+| Normal, Visual, Operator-pending | `[C`          | Ir al final de la clase anterior.                                                                                           |
+| Normal, Visual, Operator-pending | `[I`          | Ir al final de la sentencia condicional anterior.                                                                           |
+| Normal, Visual, Operator-pending | `[L`          | Ir al final del bucle anterior.                                                                                             |
+| Normal, Visual, Operator-pending | `;`           | Repetir el último movimiento de textobjeto de Treesitter.                                                                   |
+| Normal, Visual, Operator-pending | `,`           | Repetir el último movimiento de textobjeto de Treesitter en la dirección opuesta.                                           |
