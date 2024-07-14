@@ -284,6 +284,11 @@ local plugins = {
         config = load_config('tools.spider'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
+    {
+        'folke/which-key.nvim',
+        config = load_config('tools.which-key'),
+        event = 'VeryLazy',
+    },
 }
 
 return {

@@ -1606,3 +1606,30 @@ Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
 `b` Mover el cursor al principio de la palabra anterior, saltando la puntuación insignificante.
 
 `ge` Mover el cursor al final de la palabra anterior, saltando la puntuación insignificante.
+
+
+
+# TRIGESIMO
+
+## Configuración Avanzada de Neovim: Menú de Atajos de Teclado con which-key.nvim
+
+### `which-key.lua`
+
+Este archivo configura el plugin `which-key.nvim`, que muestra un menú emergente con las teclas disponibles y sus descripciones al presionar una tecla de prefijo (como `<leader>`). Esto te permite descubrir y recordar fácilmente los atajos de teclado disponibles en tu configuración de Neovim.
+
+**Funcionalidades:**
+
+-   **Menú Emergente Informativo:** Muestra un menú emergente con las teclas disponibles y sus descripciones al presionar una tecla de prefijo.
+-   **Iconos Personalizables:** Utiliza iconos de `lib/icons.lua` para mejorar la presentación visual del menú.
+-   **Navegación por el Menú:** Permite navegar por el menú emergente utilizando atajos de teclado.
+-   **Personalización de Atajos:** Te permite definir y organizar tus propios atajos de teclado en grupos lógicos.
+-   **Integración con Plugins:** Se integra con otros plugins como `telescope.nvim`,  `lspsaga.nvim`, etc., para mostrar atajos relevantes en el menú.
+
+**Dependencias:**
+
+-   "which-key.nvim" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+
+**Atajos de Teclado:**
+
+La configuración de `which-key.lua` define una gran cantidad de atajos de teclado personalizados. Puedes consultar el archivo `docs/keybindings.md` para obtener una lista completa y actualizada.
