@@ -248,3 +248,9 @@ auto completion
 `I` Activar/desactivar la opción "ignorar mayúsculas/minúsculas" en la búsqueda.
 
 `H` Activar/desactivar la opción "buscar en archivos ocultos".
+
+
+**Atajos de Teclado TABOUT:**
+
+
+`<Tab>` Si el cursor está dentro de un par de caracteres configurable, salta fuera de ellos. De lo contrario, inserta una tabulación o realiza la acción de tabulación predeterminada (`<C-t>` en este caso).

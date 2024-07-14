@@ -234,6 +234,11 @@ local plugins = {
         config = load_config('tools.spectre'),
         cmd = 'Spectre',
     },
+    {
+        'abecodes/tabout.nvim',
+        config = load_config('tools.tabout'),
+        event = 'InsertEnter',
+    },
 }
 
 return {

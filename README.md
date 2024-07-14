@@ -1452,3 +1452,32 @@ Este archivo configura el plugin Spectre, una herramienta de búsqueda y reempla
 `I` Activar/desactivar la opción "ignorar mayúsculas/minúsculas" en la búsqueda.
 
 `H` Activar/desactivar la opción "buscar en archivos ocultos".
+
+
+
+# VIGESIMO QUINTO
+
+## Configuración Avanzada de Neovim: Salto de caracteres con tabout.nvim
+
+### `tabout.lua`
+
+* [lua/plugins/tools/tabout.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/tabout.lua)
+
+Este archivo configura el plugin `tabout.nvim`, que permite saltar fuera de pares de caracteres como comillas, paréntesis, corchetes y etiquetas HTML al presionar la tecla Tab.
+
+**Funcionalidades:**
+
+-   **Salto de caracteres:** Salta automáticamente fuera de los caracteres configurados al presionar Tab.
+-   **Salto hacia atrás:** Opcionalmente permite saltar hacia atrás con Shift + Tab.
+-   **Comportamiento de Tabulación Normal:** Se comporta como una tabulación normal o una tabulación hacia atrás cuando el cursor no está dentro de un par de caracteres configurado.
+-   **Completado:** Se puede configurar para saltar automáticamente después de completar el código.
+-   **Personalización:** Permite personalizar los caracteres de salto, los tipos de archivo excluidos y el comportamiento general.
+
+**Dependencias:**
+
+-   "tabout.nvim" (requerido)
+
+**Atajos de Teclado TABOUT:**
+
+
+`<Tab>` Si el cursor está dentro de un par de caracteres configurable, salta fuera de ellos. De lo contrario, inserta una tabulación o realiza la acción de tabulación predeterminada (`<C-t>` en este caso).
