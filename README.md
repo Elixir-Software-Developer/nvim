@@ -1550,7 +1550,7 @@ Este archivo configura el plugin `Navigator.nvim`, que facilita la navegación p
 
 Consulta la documentación de Navigator.nvim para obtener la lista completa de atajos de teclado y cómo personalizarlos:
 
--   **Documentación de Navigator.nvim:**  [https://github.com/numToStr/Navigator.nvim](https://github.com/numToStr/Navigator.nvim)
+-   **Documentación de Navigator.nvim:**  [lua/plugins/tools/Navigator.nvim](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/Navigator.nvim)
 
 **Ejemplo de configuración personalizada en `core/keys.lua`:**
 
@@ -1578,7 +1578,7 @@ vim.keymap.set("n", "gr", require('Navigator').reference)
 ### `spider.lua`
 
 
-[https://github.com/numToStr/spider.nvim](https://github.com/numToStr/spider.nvim)
+[lua/plugins/tools/spider.nvim](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/spider.nvim)
 
 Este archivo configura el plugin `spider.nvim`, que introduce nuevos movimientos del cursor en Neovim para una navegación más rápida y eficiente.
 
@@ -1615,6 +1615,9 @@ Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
 
 ### `which-key.lua`
 
+[lua/plugins/tools/which-key.nvim](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/which-key.nvim)
+
+
 Este archivo configura el plugin `which-key.nvim`, que muestra un menú emergente con las teclas disponibles y sus descripciones al presionar una tecla de prefijo (como `<leader>`). Esto te permite descubrir y recordar fácilmente los atajos de teclado disponibles en tu configuración de Neovim.
 
 **Funcionalidades:**
@@ -1633,3 +1636,26 @@ Este archivo configura el plugin `which-key.nvim`, que muestra un menú emergent
 **Atajos de Teclado:**
 
 La configuración de `which-key.lua` define una gran cantidad de atajos de teclado personalizados. Puedes consultar el archivo `docs/keybindings.md` para obtener una lista completa y actualizada.
+
+# TRIGESIMO PRIMERO
+
+## Configuración Avanzada de Neovim: Resaltado de Colores con ccc.nvim
+
+### `ccc.lua`
+
+[lua/plugins/tools//which-key.nvim](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/ccc.nvim)
+
+
+
+Este archivo configura el plugin `ccc.nvim`, que resalta los colores en el código fuente de Neovim y permite convertir colores entre diferentes formatos (hexadecimal, RGB, HSL, etc.).
+
+**Funcionalidades:**
+
+-   **Resaltado de Colores:** Muestra los colores directamente en el editor, lo que facilita la visualización y elección de colores.
+-   **Conversión de Colores:** Permite convertir fácilmente entre diferentes formatos de color.
+-   **Selector de Colores:** Abre un selector de colores para elegir un color y reemplazar el color bajo el cursor.
+-   **Integración con LSP:** Puede utilizar información del LSP para determinar los colores en el código.
+
+**Dependencias:**
+
+-   "ccc.nvim" (requerido)

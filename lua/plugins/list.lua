@@ -297,6 +297,11 @@ local plugins = {
         ft = 'markdown',
         cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview' },
     },
+    {
+        'uga-rosa/ccc.nvim',
+        config = load_config('tools.ccc'),
+        cmd = { 'CccHighlighterToggle', 'CccConvert', 'CccPick' },
+    },
 }
 
 return {
