@@ -2280,6 +2280,8 @@ Este archivo define varios autocomandos que automatizan tareas comunes en Neovim
 
 ### `functions.lua`
 
+[lua/core/functions.lua](https://github.com/FQ211776/neovim/blob/master/lua/core/functions.lua)
+
 Este archivo define varios comandos personalizados de Neovim para realizar tareas comunes de manera más eficiente.
 
 **Comandos Disponibles:**
@@ -2308,4 +2310,66 @@ vim.keymap.set("n", "<leader>cd", ":RootDir<CR>")
 
 ```
 
-Use code [with caution.](/faq#coding)
+
+# CUADRAGESIMO SEGUNDO
+
+
+
+Configuración Avanzada de Neovim: Mapeos de Teclas Básicos
+
+
+[lua/core/keys.lua](https://github.com/FQ211776/neovim/blob/master/lua/core/keys.lua)
+
+`keys.lua` no tiene dependencias directas de plugins externos. Utiliza la API de Neovim (`vim.keymap.set`) para definir los atajos de teclado y la variable global `vim.g` para establecer el líder (`mapleader` y `maplocalleader`).
+
+**xplicación del Código:**
+
+1.  **`map` function:** Esta es una función auxiliar que simplifica la creación de mapeos de teclas. Recibe el modo, la tecla, el comando y opciones opcionales.
+
+2.  **Space as leader:**
+
+    -   `map('n', '<Space>', '', opts)`: Mapea la barra espaciadora (`<Space>`) a una acción vacía en modo normal. Esto es necesario para que pueda ser utilizada como tecla líder.
+    -   `vim.g.mapleader = ' '` y `vim.g.maplocalleader = ' '`: Establecen la barra espaciadora como la tecla líder global y local.
+3.  **Use `jj` as escape:**
+
+    -   `map('i', 'jj', '<Esc>', opts)`: Mapea la secuencia `jj` a `<Esc>` en modo de inserción, lo que permite salir del modo de inserción de forma más rápida y cómoda.
+    -   `map('t', 'JJ', '<C-\\><C-n>', opts)`: Mapea la secuencia `JJ` a `<C-\\><C-n>` en modo de terminal. Esto permite salir del modo de terminal y volver al modo normal en Neovim cuando se está utilizando dentro de un terminal externo (como tmux).
+4.  **Visual overwrite paste:**
+
+    -   `map({ 'v', 'x' }, 'p', '"_dP', opts)`: Mapea `p` en los modos visual y visual de bloque para pegar sin reemplazar el texto seleccionado. El uso de `"d` antes de `p` indica que el texto cortado o eliminado previamente no se copiará al portapapeles sin nombre (`""`).
+5.  **Do not copy on x:**
+
+    -   `map({ 'v', 'x' }, 'x', '"_x', opts)`: En los modos visual y visual de bloque, el comando `x` cortará el texto seleccionado sin copiarlo al portapapeles. El `"_` antes de `x` especifica que el contenido cortado o eliminado no se debe almacenar en ningún registro específico, por lo que no se podrá pegar con "p" después.
+6.  **Increment/decrement:**
+
+    -   `map({ 'n', 'v', 'x' }, '-', '<C-x>', opts)`: En los modos normal, visual y visual de bloque, el guion (`-`) se mapea a `<C-x>`, que generalmente se usa para disminuir un número.
+    -   `map({ 'n', 'v', 'x' }, '=', '<C-a>', opts)`: En los modos normal, visual y visual de bloque, el signo igual (`=`) se mapea a `<C-a>`, que generalmente se usa para aumentar un número.
+
+
+
+-   **Movimiento del Cursor:** Se añaden mapeos para ir al inicio y al final de la línea (`gl`,  `gh`) y para desplazarse por la pantalla y mantener el cursor centrado (`J`,  `<C-d>`,  `<C-u>`,  `n`,  `N`). También se mejoran los movimientos `j` y `k` para considerar el modo visual.
+
+-   **Edición de Texto:** Se modifica el comportamiento de `p` y `x` en modos visuales para evitar copiar al portapapeles.
+
+-   **Búsqueda:** Se modifican los mapeos de `n` y `N` para que siempre busquen en la misma dirección, independientemente de la dirección de la búsqueda original.
+
+-   **Indentación:** Se agregan mapeos en modo visual para indentar y desindentar selecciones.
+
+-   **Puntos de Deshacer:** Se crean puntos de deshacer después de insertar ciertos caracteres en modo de inserción, lo que permite deshacer más granularmente.
+
+
+| Modo | Atajo | Acción | | :---------- | :------- | :-------------------------------------------------------- | | Normal | `<Space>` | Configura la barra espaciadora como la tecla líder (`<leader>`). | | Insert | `jj` | Salir del modo de inserción (equivalente a `<Esc>`). | | Terminal | `JJ` | Salir del modo de terminal y volver al modo normal. | | Visual/Block | `p` | Pegar sin reemplazar el texto seleccionado ("overwrite paste"). | | Visual/Block | `x` | Cortar sin copiar el texto seleccionado. | | Normal, Visual, Block | `-` | Disminuir un número (equivalente a `<C-x>`). | | Normal, Visual, Block | `=` | Aumentar un número (equivalente a `<C-a>`). |
+| Modo                | Atajo         | Acción                                                                                                                       |
+| :------------------ | :------------ | :--------------------------------------------------------------------------------------------------------------------------- |
+| Normal/Visual/Block | `gl`          | Ir al final de la línea.                                                                                                     |
+| Normal/Visual/Block | `gh`          | Ir al inicio de la línea.                                                                                                    |
+| Normal              | `J`           | Unir la línea actual con la siguiente y mantener el cursor en el centro de la pantalla.                                      |
+| Normal              | `<C-d>`       | Desplazar media pantalla hacia abajo y centrar el cursor.                                                                    |
+| Normal              | `<C-u>`       | Desplazar media pantalla hacia arriba y centrar el cursor.                                                                   |
+| Normal              | `n`, `N`      | Buscar la siguiente/anterior coincidencia y centrar el cursor en la pantalla.                                                |
+| Normal              | `j`, `k`      | Moverse una línea hacia abajo/arriba, visualmente si el contador es 0 (`gj`, `gk`) o normalmente (`j`, `k`) de lo contrario. |
+| Visual, Block       | `J`, `K`      | Mover la selección una línea hacia abajo/arriba.                                                                             |
+| Insert, Normal      | `<Esc>`       | Salir del modo de inserción/limpiar el resaltado de búsqueda.                                                                |
+| Visual              | `<`           | Indentar la selección visual hacia la izquierda.                                                                             |
+| Visual              | `>`           | Indentar la selección visual hacia la derecha.                                                                               |
+| Insert              | `,`, `.`, `;` | Insertar el carácter y crear un punto de deshacer (`<c-g>u`).                                                                |

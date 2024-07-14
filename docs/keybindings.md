@@ -451,3 +451,23 @@ Copia al portapapeles el enlace al archivo actual (o a la línea actual si la op
 | Normal, Visual, Operator-pending | `[L`          | Ir al final del bucle anterior.                                                                                             |
 | Normal, Visual, Operator-pending | `;`           | Repetir el último movimiento de textobjeto de Treesitter.                                                                   |
 | Normal, Visual, Operator-pending | `,`           | Repetir el último movimiento de textobjeto de Treesitter en la dirección opuesta.                                           |
+
+ATAJOS KEYS.LUA
+
+| Modo | Atajo | Acción | | :---------- | :------- | :-------------------------------------------------------- | | Normal | `<Space>` | Configura la barra espaciadora como la tecla líder (`<leader>`). | | Insert | `jj` | Salir del modo de inserción (equivalente a `<Esc>`). | | Terminal | `JJ` | Salir del modo de terminal y volver al modo normal. | | Visual/Block | `p` | Pegar sin reemplazar el texto seleccionado ("overwrite paste"). | | Visual/Block | `x` | Cortar sin copiar el texto seleccionado. | | Normal, Visual, Block | `-` | Disminuir un número (equivalente a `<C-x>`). | | Normal, Visual, Block | `=` | Aumentar un número (equivalente a `<C-a>`). |
+
+| Modo                | Atajo         | Acción                                                                                                                       |
+| :------------------ | :------------ | :--------------------------------------------------------------------------------------------------------------------------- |
+| Normal/Visual/Block | `gl`          | Ir al final de la línea.                                                                                                     |
+| Normal/Visual/Block | `gh`          | Ir al inicio de la línea.                                                                                                    |
+| Normal              | `J`           | Unir la línea actual con la siguiente y mantener el cursor en el centro de la pantalla.                                      |
+| Normal              | `<C-d>`       | Desplazar media pantalla hacia abajo y centrar el cursor.                                                                    |
+| Normal              | `<C-u>`       | Desplazar media pantalla hacia arriba y centrar el cursor.                                                                   |
+| Normal              | `n`, `N`      | Buscar la siguiente/anterior coincidencia y centrar el cursor en la pantalla.                                                |
+| Normal              | `j`, `k`      | Moverse una línea hacia abajo/arriba, visualmente si el contador es 0 (`gj`, `gk`) o normalmente (`j`, `k`) de lo contrario. |
+| Visual, Block       | `J`, `K`      | Mover la selección una línea hacia abajo/arriba.                                                                             |
+| Insert, Normal      | `<Esc>`       | Salir del modo de inserción/limpiar el resaltado de búsqueda.                                                                |
+| Visual              | `<`           | Indentar la selección visual hacia la izquierda.                                                                             |
+| Visual              | `>`           | Indentar la selección visual hacia la derecha.                                                                               |
+| Insert              | `,`, `.`, `;` | Insertar el carácter y crear un punto de deshacer (`<c-g>u`).                                                                |
+
