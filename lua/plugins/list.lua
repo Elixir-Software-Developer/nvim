@@ -375,8 +375,111 @@ local plugins = {
         cmd = 'Gitsigns',
         event = { 'BufReadPre', 'BufNewFile' },
     },
+    {
+        'tpope/vim-fugitive',
+        cmd = 'Git',
+    },
 }
+
+local ts_parsers = {
+    'bash',
+    'css',
+    'dart',
+    'elixir',
+    'gitcommit',
+    'go',
+    'html',
+    'java',
+    'javascript',
+    'json',
+    'lua',
+    'markdown',
+    'markdown_inline', -- markdown code blocks
+    'python',
+    'ruby',
+    'rust',
+    'typescript',
+    'vim',
+    'vimdoc',
+    'yaml',
+}
+
+local null_ls_sources = {
+    'shellcheck', -- bash lint
+}
+
+local lsp_servers = {
+    'bashls',
+    'jsonls',
+    'lua_ls',
+    'typos_lsp', -- check typos
+    'vimls',
+}
+
+local util = require('lib.util')
+
+if util.is_present('npm') then
+    table.insert(lsp_servers, 'eslint')
+    table.insert(lsp_servers, 'tsserver')
+end
+
+if util.is_present('gem') then
+    local ror_nvim = {
+        'weizheheng/ror.nvim',
+        branch = 'main',
+        ft = 'ruby',
+        config = load_config('lang.ror'),
+        keys = {
+            {
+                '<leader>rc',
+                mode = { 'n' },
+                function()
+                    vim.cmd('RorCommands')
+                end,
+                desc = 'Rails Commands',
+            },
+        },
+    }
+    local vim_rails = {
+        'tpope/vim-rails',
+        ft = 'ruby',
+    }
+
+    table.insert(lsp_servers, 'solargraph')
+    -- table.insert(lsp_servers, 'ruby_lsp')
+    table.insert(lsp_servers, 'rubocop')
+    table.insert(plugins, ror_nvim)
+    table.insert(plugins, vim_rails)
+end
+
+if util.is_present('go') then
+    table.insert(lsp_servers, 'gopls')
+end
+
+if util.is_present('dart') then
+    table.insert(lsp_servers, 'dartls')
+end
+
+if util.is_present('java') then
+    table.insert(lsp_servers, 'jdtls')
+end
+
+if util.is_present('pip') then
+    table.insert(lsp_servers, 'ruff_lsp')
+    table.insert(lsp_servers, 'pylsp')
+end
+
+if util.is_present('mix') then
+    table.insert(lsp_servers, 'elixirls')
+end
+
+if util.is_present('cargo') then
+    table.insert(lsp_servers, 'rust_analyzer')
+end
 
 return {
     plugins = plugins,
+    lsp_servers = lsp_servers,
+    null_ls_sources = null_ls_sources,
+    ts_parsers = ts_parsers,
 }

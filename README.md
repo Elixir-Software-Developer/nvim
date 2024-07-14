@@ -1926,12 +1926,44 @@ Este archivo configura el plugin `gitsigns.nvim`, que integra información de Gi
 
 **Atajos de Teclado GITSIGNS:**
 
-Atajo
-
-Acción
 
 `]c` Ir al siguiente cambio (hunk) en el archivo (solo funciona si no estás en modo diff).
 
 `[c` Ir al cambio anterior (hunk) en el archivo (solo funciona si no estás en modo diff).
 
 `ih` (En modo normal, visual u operador-pendiente) Seleccionar el hunk actual.
+
+
+# TRIGESIMO SEPTIMO
+
+## Configuración Avanzada de Neovim: Desarrollo con Ruby on Rails usando ror.nvim
+
+### `ror.lua`
+
+[lua/plugins/tools/ror.lua.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/ror.lua)
+
+
+Este archivo configura el plugin `ror.nvim`, diseñado para mejorar la experiencia de desarrollo con Ruby on Rails (RoR) en Neovim. El plugin ofrece funcionalidades como la ejecución de pruebas, navegación por el código de Rails, y más.
+
+**Funcionalidades:**
+
+-   **Ejecución de Pruebas:** Facilita la ejecución de pruebas de Rails (RSpec) y muestra los resultados en el editor.
+-   **Resaltado de Cobertura:** Resalta las líneas de código cubiertas por las pruebas.
+-   **Notificaciones de Pruebas:** Muestra notificaciones con los resultados de las pruebas.
+-   **Comandos de Rails:** Proporciona comandos para generar modelos, controladores, migraciones y otras tareas comunes en RoR.
+-   **Navegación por el Código:** Permite navegar rápidamente entre modelos, controladores, vistas y otros componentes de una aplicación Rails.
+
+**Dependencias:**
+
+-   "ror.nvim" (requerido)
+
+**Ejemplo Atajos de Teclado:**
+
+Puedes definir tus propios atajos de teclado en `core/keys.lua` para interactuar con `ror.nvim`. Por ejemplo:
+
+Lua
+
+```
+vim.keymap.set("n", "<leader>rc", ":RorCommands<CR>") -- Abrir el menú de comandos de Rails.
+
+```
