@@ -1569,7 +1569,40 @@ vim.keymap.set("n", "<Leader>dp", require('Navigator').diagnostics.goto_prev)
 
 -- Navegación por referencias
 vim.keymap.set("n", "gr", require('Navigator').reference)
-
 ```
 
-Use code [with caution.](/faq#coding)
+# VIGESIMO NOVENO
+
+## Configuración Avanzada de Neovim: Movimientos de Palabras Mejorados con spider.nvim
+
+### `spider.lua`
+
+
+[https://github.com/numToStr/spider.nvim](https://github.com/numToStr/spider.nvim)
+
+Este archivo configura el plugin `spider.nvim`, que introduce nuevos movimientos del cursor en Neovim para una navegación más rápida y eficiente.
+
+**Funcionalidades:**
+
+-   **Movimientos de Palabras Mejorados:**
+    -   **`w`:** Mueve el cursor a la siguiente palabra, saltando la puntuación insignificante (como comas, puntos, etc.).
+    -   **`e`:** Mueve el cursor al final de la siguiente palabra, saltando la puntuación insignificante.
+    -   **`b`:** Mueve el cursor al principio de la palabra anterior, saltando la puntuación insignificante.
+    -   **`ge`:** Mueve el cursor al final de la palabra anterior, saltando la puntuación insignificante.
+-   **Personalización:** Puedes personalizar qué caracteres se consideran puntuación insignificante.
+
+**Dependencias:**
+
+-   "spider.nvim" (requerido)
+
+**Atajos de Teclado Spider:**
+
+
+`w`
+Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
+
+`e` Mover el cursor al final de la siguiente palabra, saltando la puntuación insignificante.
+
+`b` Mover el cursor al principio de la palabra anterior, saltando la puntuación insignificante.
+
+`ge` Mover el cursor al final de la palabra anterior, saltando la puntuación insignificante.

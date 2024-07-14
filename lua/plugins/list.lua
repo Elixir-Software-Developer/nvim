@@ -279,6 +279,11 @@ local plugins = {
         end,
         cmd = 'Hardtime',
     },
+    {
+        'chrisgrieser/nvim-spider',
+        config = load_config('tools.spider'),
+        event = { 'BufReadPre', 'BufNewFile' },
+    },
 }
 
 return {

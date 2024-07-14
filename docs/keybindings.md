@@ -268,3 +268,17 @@ auto completion
 `R` Activa el modo de búsqueda de Treesitter de Flash en modo operador-pendiente y visual.
 
 `<c-s>` Activa/desactiva la búsqueda de Flash en modo comando.
+
+
+
+**Atajos de Teclado Spider:**
+
+
+`w`
+Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
+
+`e` Mover el cursor al final de la siguiente palabra, saltando la puntuación insignificante.
+
+`b` Mover el cursor al principio de la palabra anterior, saltando la puntuación insignificante.
+
+`ge` Mover el cursor al final de la palabra anterior, saltando la puntuación insignificante.
