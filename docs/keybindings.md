@@ -1,473 +1,525 @@
-## Atajos de Teclado Personalizados
-
-| Atajo            | Acción                                                                        |
-| :--------------- | :---------------------------------------------------------------------------- |
-| `<leader>ot`     | Alterna entre diferentes estilos del tema Onedark.                            |
-| `<localleader>l` | Abre una ventana flotante de lazygit para ver el historial de Git del plugin. |
-| `<localleader>t` | Abre una ventana flotante de terminal en el directorio del plugin.            |
-
-**Nota:** `<leader>` generalmente se configura como la barra espaciadora (` `). `<localleader>` también es personalizable y puede tener un valor diferente.
-
-### Atajos de Teclado en la Interfaz de Depuración (dapui)
-
-`<CR>` Expandir/Contraer
-
-`<2-LeftMouse>` Expandir/Contraer
-
-`o` Abrir
-
-`d` Eliminar
-
-`e` Editar
-
-`r` REPL
-
-`t` Alternar
-
-`q`, `<Esc>` Cerrar (en ventana flotante)
-
-
-`<M-s>` `<alt-s>`
-
-Activa el fast wrap para los caracteres configurados `{`, `[`, `(`, `"`, `'`
-
-
-`gc` Comentar/descomentar un párrafo (textobjeto)
-
-`gcc` Comentar/descomentar la línea actual
-
-`gc` (modo visual) Comentar/descomentar la selección
-
-`gsa` Agregar un entorno alrededor del texto seleccionado o el cursor.
-
-`gsd` Eliminar el entorno que rodea al texto seleccionado o el cursor.
-
-`gsf` Buscar el siguiente entorno y mover el cursor al final del mismo.
-
-`gsF` Buscar el entorno anterior y mover el cursor al inicio del mismo.
-
-`gsh` Resaltar el entorno que rodea al texto seleccionado o el cursor.
-
-`gsr` Reemplazar el entorno que rodea al texto seleccionado o el cursor.
-
-`gsnl` Buscar el último entorno y actualizar el número de líneas a incluir.
-
-`gsnn`  Buscar el siguiente entorno y actualizar el número de líneas a incluir.
-
-`ao` Selecciona alrededor de un bloque de código (función, condicional, bucle), clase, o etiqueta HTML.
-
-`ai` Selecciona dentro de un bloque de código (función, condicional, bucle), clase, o etiqueta HTML.
-
-`af` Selecciona alrededor de una función.
-
-`ai` Selecciona dentro de una función.
-
-`ac` Selecciona alrededor de una clase.
-
-`ic` Selecciona dentro de una clase.
-
-`at` Selecciona alrededor de una etiqueta HTML (`<([%p%w]-)%f[^<%w][^<>]->.-</%1>`, `^<.->().*()</[^/]->$`).
-
-`it` Selecciona dentro de una etiqueta HTML (`<([%p%w]-)%f[^<%w][^<>]->.-</%1>`, `^<.->().*()</[^/]->$`).
-
-`an` Selecciona alrededor del siguiente bloque de código, función, clase o etiqueta HTML.
-
-`in` Selecciona dentro del siguiente bloque de código, función, clase o etiqueta HTML.
-
-`al` Selecciona alrededor del último bloque de código, función, clase o etiqueta HTML.
-
-`il` Selecciona dentro del último bloque de código, función, clase o etiqueta HTML.
-
-`g[` Mueve el cursor al borde izquierdo del textobjeto 'a' (alrededor).
-
-`g]` Mueve el cursor al borde derecho del textobjeto 'a' (alrededor).
-
-(En modo visual u operador-pendiente) + 'a' o 'i'
-
-
-# treeseeter
-
-`<c-space>` Iniciar/incrementar selección incremental de nodos de Treesitter.
-
-`<bs>` Disminuir selección incremental de nodos de Treesitter (retroceso).
-
-`.` Seleccionar el "asunto de texto" actual.
-
-`a;` Seleccionar el contenedor exterior (clase, función, etc.).
-
-`i;` Seleccionar el interior de un contenedor (clase, función, etc.).
-
-`<leader>rr` Renombrar inteligentemente un símbolo (variable, función, etc.).
-
-`<leader>rd` Ir a la definición de un símbolo.
-
-`<leader>rl` Listar todas las definiciones de un símbolo.
-
-`<leader>rh` Mostrar un índice de las definiciones de un símbolo (Tabla de Contenido).
-
-`<leader>rj` Ir al siguiente uso de un símbolo.
-
-`<leader>rk` Ir al uso anterior de un símbolo.
-
-
-interfaz de mason
-
-
-`<CR>` Expande o contrae la información de un paquete.
-
-`i` Instala el paquete seleccionado.
-
-`u` Actualiza el paquete seleccionado.
-
-`c` Verifica la versión del paquete seleccionado.
-
-`U` Actualiza todos los paquetes instalados.
-
-`C` Verifica si hay paquetes desactualizados.
-
-`x` Desinstala el paquete seleccionado.
-
-`<C-c>` Cancela la instalación en curso.
-
-`<C-f>` Aplica un filtro de lenguaje para mostrar solo los paquetes relevantes para el lenguaje actual.
-
-
-auto completion
-
-
-`<C-k>` Seleccionar el elemento anterior en la lista de autocompletado.
-
-`<C-j>` Seleccionar el siguiente elemento en la lista de autocompletado.
-
-`<C-b>` Desplazarse hacia arriba en la documentación del elemento seleccionado.
-
-`<C-f>` Desplazarse hacia abajo en la documentación del elemento seleccionado.
-
-`<C-Space>` Mostrar la lista de autocompletado.
-
-`<C-u>` Desplazarse 4 líneas hacia arriba en la documentación.
-
-`<C-d>` Desplazarse 4 líneas hacia abajo en la documentación.
-
-`<C-y>` Desactivar el autocompletado.
-
-`<C-c>` (En modo inserción) Cancelar el autocompletado. (En modo comando) Cerrar la ventana de autocompletado.
-
-`<CR>` Confirmar la selección y reemplazar el texto actual.
-
-`<Tab>` Seleccionar el siguiente elemento, expandir un snippet o saltar al siguiente punto de un snippet.
-
-`<S-Tab>` Seleccionar el elemento anterior o saltar al punto anterior de un snippet.
-
-
-**Copilot:**
-
-
-`<Tab>` (En modo inserción) Mostrar opciones de autocompletado en el prompt de chat.
-
-`/<Tab>`
-(En modo inserción) Mostrar opciones de autocompletado en el prompt de chat.
-
-`q` (En modo normal) Cerrar la ventana de chat.
-
-`<C-c>` (En modo inserción) Cerrar la ventana de chat.
-
-`<C-l>` (En modo normal e inserción) Reiniciar el chat (borrar el historial).
-
-`<CR>` (En modo normal) Enviar el prompt actual a Copilot.
-
-`<C-m>` (En modo inserción) Enviar el prompt actual a Copilot.
-
-`<C-y>` (En modo normal e inserción) Aceptar los cambios sugeridos por Copilot.
-
-`gy` (En modo normal) Copiar los cambios sugeridos por Copilot al portapapeles.
-
-`gd` (En modo normal) Mostrar los cambios sugeridos por Copilot en una vista de diferencias.
-
-`gp` (En modo normal) Mostrar el prompt del sistema generado por Copilot.
-
-`gs` (En modo normal) Mostrar la selección actual del usuario en la ventana de chat (útil para el contexto).
-
-
-**copilot.lua (Panel)**
-
-`[[` Ir a la sugerencia anterior de Copilot.
-
-`]]` Ir a la siguiente sugerencia de Copilot.
-
-`<CR>` Aceptar la sugerencia seleccionada de Copilot.
-
-`gr` Refrescar las sugerencias de Copilot.
-
-`<M-CR>` Abrir la sugerencia seleccionada en una ventana flotante.
-
-`copilot.lua` (Sugerencias)
-
-`<M-l>` Aceptar la sugerencia en línea actual de Copilot.
-
-`<M-]>` Ir a la siguiente sugerencia en línea.
-
-`<M-[>` Ir a la sugerencia en línea anterior.
-
-`<C-]>` Descartar la sugerencia en línea actual.
-
-
-**NVIM-TREE:**
-
-
-`Y` Copiar el nombre del archivo o directorio seleccionado al portapapeles.
-
-`y` Copiar la ruta relativa del archivo o directorio seleccionado al portapapeles.
-
-`l` o `<CR>` Abrir el archivo o directorio seleccionado.
-
-`h` Cerrar el directorio actual (o navegar al directorio padre si ya estás en la raíz).
-
-`v` Abrir el archivo o directorio seleccionado en una división vertical.
-
-`o` Abrir el archivo o directorio seleccionado en una división horizontal.
-
-
-**Atajos de Teclado Spectree:**
-
-
-`t` Activar/desactivar la línea actual en los resultados de búsqueda.
-
-`<CR>` Ir al archivo y línea de la entrada seleccionada.
-
-`Q` Enviar todos los resultados de búsqueda a la lista de coincidencias rápidas (`quickfix`).
-
-`c` Abrir un prompt para introducir un comando de reemplazo de Vim.
-
-`o` Mostrar el menú de opciones de Spectre.
-
-`R` Ejecutar el reemplazo en todos los resultados de búsqueda.
-
-`m` Cambiar el modo de vista de los resultados.
-
-`I` Activar/desactivar la opción "ignorar mayúsculas/minúsculas" en la búsqueda.
-
-`H` Activar/desactivar la opción "buscar en archivos ocultos".
-
-
-**Atajos de Teclado TABOUT:**
-
-
-`<Tab>` Si el cursor está dentro de un par de caracteres configurable, salta fuera de ellos. De lo contrario, inserta una tabulación o realiza la acción de tabulación predeterminada (`<C-t>` en este caso).
-
-
-
-**Atajos de Teclado: Flash NVIM**
-
-`s` Activa el modo de salto de Flash en modo normal, visual y operador-pendiente.
-
-`S` Activa el modo de salto de Flash basado en árboles de sintaxis de Treesitter en modo normal, visual y operador-pendiente.
-
-`r` Activa el modo de salto remoto de Flash en modo operador-pendiente.
-
-`R` Activa el modo de búsqueda de Treesitter de Flash en modo operador-pendiente y visual.
-
-`<c-s>` Activa/desactiva la búsqueda de Flash en modo comando.
-
-
-
-**Atajos de Teclado Spider:**
-
-
-`w`
-Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
-
-`e` Mover el cursor al final de la siguiente palabra, saltando la puntuación insignificante.
-
-`b` Mover el cursor al principio de la palabra anterior, saltando la puntuación insignificante.
-
-`ge` Mover el cursor al final de la palabra anterior, saltando la puntuación insignificante.
-
-
-## Atajos de Teclado para Telescope
-
-### Modo Inserción (i)
-
-
-`<Esc>` Cierra la ventana de Telescope.
-
-`<C-n>` Navega al siguiente elemento en el historial de búsqueda.
-
-`<C-p>` Navega al elemento anterior en el historial de búsqueda.
-
-`<C-j>` Mueve la selección hacia abajo.
-
-`<C-k>` Mueve la selección hacia arriba.
-
-`<C-c>` Cierra la ventana de Telescope.
-
-`<CR>` Selecciona el elemento actual y lo abre.
-
-`<C-x>` Selecciona el elemento actual y lo abre en una división horizontal.
-
-`<C-v>` Selecciona el elemento actual y lo abre en una división vertical.
-
-`<C-t>` Selecciona el elemento actual y lo abre en una nueva pestaña.
-
-`<C-s>` Utiliza el plugin flash.nvim para saltar a los resultados de búsqueda.
-
-`<C-u>` Desplazarse hacia arriba en la vista previa.
-
-`<C-d>` Desplazarse hacia abajo en la vista previa.
-
-`<PageUp>` Desplazarse una página hacia arriba en los resultados.
-
-`<PageDown>` Desplazarse una página hacia abajo en los resultados.
-
-`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
-
-`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
-
-`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
-
-`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
-
-`<C-l>` Completa la etiqueta actual (si es aplicable).
-
-
-### Modo Normal (n) Telescope
-
-
-`q` Cierra la ventana de Telescope.
-
-`<Esc>` Cierra la ventana de Telescope.
-
-`j` Mueve la selección hacia abajo.
-
-`k` Mueve la selección hacia arriba.
-
-`gg` Mueve la selección al primer elemento.
-
-`G` Mueve la selección al último elemento.
-
-`<C-u>` Desplazarse hacia arriba en la vista previa.
-
-`<C-d>` Desplazarse hacia abajo en la vista previa.
-
-`<PageUp>` Desplazarse una página hacia arriba en los resultados.
-
-`<PageDown>` Desplazarse una página hacia abajo en los resultados.
-
-`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
-
-`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
-
-`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
-
-`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
-
-`?` Muestra la ayuda de `which-key.nvim` para Telescope.
-
-
-**Atajos de Teclado marks.lua`:**
-
-
-`m` Alternar un marcador en la posición actual.
-
-`M` Establecer un marcador en la posición actual.
-
-
-**Atajos de Teclado GITSIGNS:**
-
-Atajo
-
-Acción
-
-`]c` Ir al siguiente cambio (hunk) en el archivo (solo funciona si no estás en modo diff).
-
-`[c` Ir al cambio anterior (hunk) en el archivo (solo funciona si no estás en modo diff).
-
-`ih` (En modo normal, visual u operador-pendiente) Seleccionar el hunk actual.
-
-
-**Atajos de Teclado: gitlinker**
-
-Atajo
-
-Acción
-
-`<leader>yg`
-
-Copia al portapapeles el enlace al archivo actual (o a la línea actual si la opción `add_current_line_on_normal_mode` está habilitada).
-
-
-**Atajos de Teclado: OBJECT OPERATOR**
-
-
-| Modo                             | Atajo         | Acción                                                                                                                      |
-| :------------------------------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------- |
-| Normal, Visual, Operator-pending | `a=`          | Seleccionar la parte externa de una asignación (por ejemplo, `x = 10`).                                                     |
-| Normal, Visual, Operator-pending | `i=`          | Seleccionar la parte interna de una asignación (por ejemplo, `10` en `x = 10`).                                             |
-| Normal, Visual, Operator-pending | `al=`         | Seleccionar el lado izquierdo de una asignación (por ejemplo, `x` en `x = 10`).                                             |
-| Normal, Visual, Operator-pending | `ar=`         | Seleccionar el lado derecho de una asignación (por ejemplo, `10` en `x = 10`).                                              |
-| Normal, Visual, Operator-pending | `a:`          | Seleccionar la parte externa de una propiedad de objeto (por ejemplo, `nombre: "Juan"` en JavaScript).                      |
-| Normal, Visual, Operator-pending | `i:`          | Seleccionar la parte interna de una propiedad de objeto (por ejemplo, `"Juan"` en `nombre: "Juan"` en JavaScript).          |
-| Normal, Visual, Operator-pending | `l:`          | Seleccionar la parte izquierda de una propiedad de objeto (por ejemplo, `nombre` en `nombre: "Juan"` en JavaScript).        |
-| Normal, Visual, Operator-pending | `r:`          | Seleccionar la parte derecha de una propiedad de objeto (por ejemplo, `"Juan"` en `nombre: "Juan"` en JavaScript).          |
-| Normal, Visual, Operator-pending | `aa`          | Seleccionar la parte externa de un parámetro/argumento de función (por ejemplo, `(x, y)` en `function suma(x, y)`).         |
-| Normal, Visual, Operator-pending | `ia`          | Seleccionar la parte interna de un parámetro/argumento de función (por ejemplo, `x, y` en `function suma(x, y)`).           |
-| Normal, Visual, Operator-pending | `ai`          | Seleccionar la parte externa de una sentencia condicional (por ejemplo, `if (x > 0) { ... }`).                              |
-| Normal, Visual, Operator-pending | `ii`          | Seleccionar la parte interna de una sentencia condicional (por ejemplo, `x > 0` en `if (x > 0) { ... }`).                   |
-| Normal, Visual, Operator-pending | `al`          | Seleccionar la parte externa de un bucle (por ejemplo, `for (let i = 0; i < 10; i++) { ... }`).                             |
-| Normal, Visual, Operator-pending | `il`          | Seleccionar la parte interna de un bucle (por ejemplo, `let i = 0; i < 10; i++` en `for (let i = 0; i < 10; i++) { ... }`). |
-| Normal, Visual, Operator-pending | `af`          | Seleccionar la parte externa de una llamada a función (por ejemplo, `suma(5, 3)`).                                          |
-| Normal, Visual, Operator-pending | `if`          | Seleccionar la parte interna de una llamada a función (por ejemplo, `5, 3` en `suma(5, 3)`).                                |
-| Normal, Visual, Operator-pending | `am`          | Seleccionar la parte externa de la definición de una función o método.                                                      |
-| Normal, Visual, Operator-pending | `im`          | Seleccionar la parte interna de la definición de una función o método.                                                      |
-| Normal, Visual, Operator-pending | `ac`          | Seleccionar la parte externa de una clase.                                                                                  |
-| Normal, Visual, Operator-pending | `ic`          | Seleccionar la parte interna de una clase.                                                                                  |
-| Normal, Visual, Operator-pending | `<leader>rna` | Intercambiar el parámetro/argumento actual con el siguiente.                                                                |
-| Normal, Visual, Operator-pending | `<leader>rn:` | Intercambiar la propiedad del objeto actual con la siguiente.                                                               |
-| Normal, Visual, Operator-pending | `<leader>rnm` | Intercambiar la función actual con la siguiente.                                                                            |
-| Normal, Visual, Operator-pending | `<leader>rpa` | Intercambiar el parámetro/argumento actual con el anterior.                                                                 |
-| Normal, Visual, Operator-pending | `<leader>rp:` | Intercambiar la propiedad del objeto actual con la anterior.                                                                |
-| Normal, Visual, Operator-pending | `<leader>rpm` | Intercambiar la función actual con la anterior.                                                                             |
-| Normal, Visual, Operator-pending | `]f`          | Ir al inicio de la siguiente llamada a función.                                                                             |
-| Normal, Visual, Operator-pending | `]m`          | Ir al inicio de la siguiente definición de método/función.                                                                  |
-| Normal, Visual, Operator-pending | `]c`          | Ir al inicio de la siguiente clase.                                                                                         |
-| Normal, Visual, Operator-pending | `]i`          | Ir al inicio de la siguiente sentencia condicional.                                                                         |
-| Normal, Visual, Operator-pending | `]l`          | Ir al inicio del siguiente bucle.                                                                                           |
-| Normal, Visual, Operator-pending | `]S`          | Ir al siguiente ámbito (scope).                                                                                             |
-| Normal, Visual, Operator-pending | `]z`          | Ir al siguiente pliegue (fold).                                                                                             |
-| Normal, Visual, Operator-pending | `]F`          | Ir al final de la siguiente llamada a función.                                                                              |
-| Normal, Visual, Operator-pending | `]M`          | Ir al final de la siguiente definición de método/función.                                                                   |
-| Normal, Visual, Operator-pending | `]C`          | Ir al final de la siguiente clase.                                                                                          |
-| Normal, Visual, Operator-pending | `]I`          | Ir al final de la siguiente sentencia condicional.                                                                          |
-| Normal, Visual, Operator-pending | `]L`          | Ir al final del siguiente bucle.                                                                                            |
-| Normal, Visual, Operator-pending | `[f`          | Ir al inicio de la llamada a función anterior.                                                                              |
-| Normal, Visual, Operator-pending | `[m`          | Ir al inicio de la definición de método/función anterior.                                                                   |
-| Normal, Visual, Operator-pending | `[c`          | Ir al inicio de la clase anterior.                                                                                          |
-| Normal, Visual, Operator-pending | `[i`          | Ir al inicio de la sentencia condicional anterior.                                                                          |
-| Normal, Visual, Operator-pending | `[l`          | Ir al inicio del bucle anterior.                                                                                            |
-| Normal, Visual, Operator-pending | `[F`          | Ir al final de la llamada a función anterior.                                                                               |
-| Normal, Visual, Operator-pending | `[M`          | Ir al final de la definición de método/función anterior.                                                                    |
-| Normal, Visual, Operator-pending | `[C`          | Ir al final de la clase anterior.                                                                                           |
-| Normal, Visual, Operator-pending | `[I`          | Ir al final de la sentencia condicional anterior.                                                                           |
-| Normal, Visual, Operator-pending | `[L`          | Ir al final del bucle anterior.                                                                                             |
-| Normal, Visual, Operator-pending | `;`           | Repetir el último movimiento de textobjeto de Treesitter.                                                                   |
-| Normal, Visual, Operator-pending | `,`           | Repetir el último movimiento de textobjeto de Treesitter en la dirección opuesta.                                           |
-
-ATAJOS KEYS.LUA
-
-| Modo | Atajo | Acción | | :---------- | :------- | :-------------------------------------------------------- | | Normal | `<Space>` | Configura la barra espaciadora como la tecla líder (`<leader>`). | | Insert | `jj` | Salir del modo de inserción (equivalente a `<Esc>`). | | Terminal | `JJ` | Salir del modo de terminal y volver al modo normal. | | Visual/Block | `p` | Pegar sin reemplazar el texto seleccionado ("overwrite paste"). | | Visual/Block | `x` | Cortar sin copiar el texto seleccionado. | | Normal, Visual, Block | `-` | Disminuir un número (equivalente a `<C-x>`). | | Normal, Visual, Block | `=` | Aumentar un número (equivalente a `<C-a>`). |
-
-| Modo                | Atajo         | Acción                                                                                                                       |
-| :------------------ | :------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| Normal/Visual/Block | `gl`          | Ir al final de la línea.                                                                                                     |
-| Normal/Visual/Block | `gh`          | Ir al inicio de la línea.                                                                                                    |
-| Normal              | `J`           | Unir la línea actual con la siguiente y mantener el cursor en el centro de la pantalla.                                      |
-| Normal              | `<C-d>`       | Desplazar media pantalla hacia abajo y centrar el cursor.                                                                    |
-| Normal              | `<C-u>`       | Desplazar media pantalla hacia arriba y centrar el cursor.                                                                   |
-| Normal              | `n`, `N`      | Buscar la siguiente/anterior coincidencia y centrar el cursor en la pantalla.                                                |
-| Normal              | `j`, `k`      | Moverse una línea hacia abajo/arriba, visualmente si el contador es 0 (`gj`, `gk`) o normalmente (`j`, `k`) de lo contrario. |
-| Visual, Block       | `J`, `K`      | Mover la selección una línea hacia abajo/arriba.                                                                             |
-| Insert, Normal      | `<Esc>`       | Salir del modo de inserción/limpiar el resaltado de búsqueda.                                                                |
-| Visual              | `<`           | Indentar la selección visual hacia la izquierda.                                                                             |
-| Visual              | `>`           | Indentar la selección visual hacia la derecha.                                                                               |
-| Insert              | `,`, `.`, `;` | Insertar el carácter y crear un punto de deshacer (`<c-g>u`).                                                                |
-
+# [nvim2k](https://github.com/2kabhishek/nvim2k) [Keybindings](https://github.com/2KAbhishek/nvim2k/blob/main/docs/keybindings.md)
+
+Here are all the keybindings defined for nvim2k.
+
+Check out the source code of individual files for more info.
+
+Sources:
+
+- [Which Key](../lua/plugins/tools/which-key.lua) - Biggest source of keybindings, fully documented.
+- [General](../lua/core/keys.lua) - Changes behavior of core keys, not documented here.
+- Individual plugin configs - Check out the source code of individual files in [plugins](../lua/plugins/) for more info.
+
+## Leader Bindings (Normal Mode)
+
+> Leader == <kbd>Space</kbd>
+
+### a - AI
+
+| Keybinding                         | Action         |
+| ---------------------------------- | -------------- |
+| <kbd>Leader</kbd> <kbd> a c </kbd> | Copilot Chat   |
+| <kbd>Leader</kbd> <kbd> a d </kbd> | Docs           |
+| <kbd>Leader</kbd> <kbd> a e </kbd> | Explain        |
+| <kbd>Leader</kbd> <kbd> a f </kbd> | Fix            |
+| <kbd>Leader</kbd> <kbd> a F </kbd> | Fix Diagnostic |
+| <kbd>Leader</kbd> <kbd> a g </kbd> | Commit         |
+| <kbd>Leader</kbd> <kbd> a G </kbd> | Commit Staged  |
+| <kbd>Leader</kbd> <kbd> a l </kbd> | Load Chat      |
+| <kbd>Leader</kbd> <kbd> a o </kbd> | Optimize       |
+| <kbd>Leader</kbd> <kbd> a r </kbd> | Review         |
+| <kbd>Leader</kbd> <kbd> a s </kbd> | Save Chat      |
+| <kbd>Leader</kbd> <kbd> a t </kbd> | Tests          |
+
+### b - Debugging
+
+| Keybinding                         | Action        |
+| ---------------------------------- | ------------- |
+| <kbd>Leader</kbd> <kbd> b b </kbd> | Breakpoint    |
+| <kbd>Leader</kbd> <kbd> b c </kbd> | Continue      |
+| <kbd>Leader</kbd> <kbd> b i </kbd> | Into          |
+| <kbd>Leader</kbd> <kbd> b l </kbd> | Last          |
+| <kbd>Leader</kbd> <kbd> b o </kbd> | Over          |
+| <kbd>Leader</kbd> <kbd> b O </kbd> | Out           |
+| <kbd>Leader</kbd> <kbd> b r </kbd> | Repl          |
+| <kbd>Leader</kbd> <kbd> b R </kbd> | Restart Frame |
+| <kbd>Leader</kbd> <kbd> b t </kbd> | Debugger      |
+| <kbd>Leader</kbd> <kbd> b x </kbd> | Exit          |
+
+### c - Code
+
+| Keybinding                         | Action            |
+| ---------------------------------- | ----------------- |
+| <kbd>Leader</kbd> <kbd> c d </kbd> | Root Directory    |
+| <kbd>Leader</kbd> <kbd> c f </kbd> | Format File       |
+| <kbd>Leader</kbd> <kbd> c F </kbd> | Fix Tabs          |
+| <kbd>Leader</kbd> <kbd> c r </kbd> | Reload Module     |
+| <kbd>Leader</kbd> <kbd> c R </kbd> | Reload Configs    |
+| <kbd>Leader</kbd> <kbd> c o </kbd> | Dashboard         |
+| <kbd>Leader</kbd> <kbd> c c </kbd> | Highlight Colors  |
+| <kbd>Leader</kbd> <kbd> c h </kbd> | Hardtime          |
+| <kbd>Leader</kbd> <kbd> c l </kbd> | Clean Empty Lines |
+| <kbd>Leader</kbd> <kbd> c m </kbd> | Markdown Preview  |
+| <kbd>Leader</kbd> <kbd> c n </kbd> | Notifications     |
+| <kbd>Leader</kbd> <kbd> c p </kbd> | Pick Color        |
+| <kbd>Leader</kbd> <kbd> c P </kbd> | Convert Color     |
+| <kbd>Leader</kbd> <kbd> c x </kbd> | Run File          |
+
+### d - Database
+
+| Keybinding                         | Action      |
+| ---------------------------------- | ----------- |
+| <kbd>Leader</kbd> <kbd> d b </kbd> | DB Explorer |
+| <kbd>Leader</kbd> <kbd> d j </kbd> | DB Next     |
+| <kbd>Leader</kbd> <kbd> d k </kbd> | DB Prev     |
+| <kbd>Leader</kbd> <kbd> d s </kbd> | To CSV      |
+| <kbd>Leader</kbd> <kbd> d S </kbd> | To JSON     |
+| <kbd>Leader</kbd> <kbd> d t </kbd> | To Table    |
+
+### e - Edit
+
+| Keybinding                         | Action            |
+| ---------------------------------- | ----------------- |
+| <kbd>Leader</kbd> <kbd> e a </kbd> | Alternate File    |
+| <kbd>Leader</kbd> <kbd> e c </kbd> | Config            |
+| <kbd>Leader</kbd> <kbd> e d </kbd> | Config Dir        |
+| <kbd>Leader</kbd> <kbd> e e </kbd> | Explorer          |
+| <kbd>Leader</kbd> <kbd> e f </kbd> | File Under Cursor |
+| <kbd>Leader</kbd> <kbd> e l </kbd> | Local Config      |
+| <kbd>Leader</kbd> <kbd> e m </kbd> | Readme            |
+| <kbd>Leader</kbd> <kbd> e n </kbd> | New File          |
+| <kbd>Leader</kbd> <kbd> e z </kbd> | Zsh Config        |
+
+### f - Find
+
+| Keybinding                         | Action             |
+| ---------------------------------- | ------------------ |
+| <kbd>Leader</kbd> <kbd> f a </kbd> | All Files          |
+| <kbd>Leader</kbd> <kbd> f b </kbd> | Buffers            |
+| <kbd>Leader</kbd> <kbd> f c </kbd> | File Commits       |
+| <kbd>Leader</kbd> <kbd> f f </kbd> | Find files         |
+| <kbd>Leader</kbd> <kbd> f g </kbd> | Find Text          |
+| <kbd>Leader</kbd> <kbd> f l </kbd> | Location List      |
+| <kbd>Leader</kbd> <kbd> f m </kbd> | Modified files     |
+| <kbd>Leader</kbd> <kbd> f o </kbd> | Find in Open Files |
+| <kbd>Leader</kbd> <kbd> f p </kbd> | Last Search        |
+| <kbd>Leader</kbd> <kbd> f q </kbd> | Quickfix           |
+| <kbd>Leader</kbd> <kbd> f r </kbd> | Recent Files       |
+| <kbd>Leader</kbd> <kbd> f s </kbd> | Fuzzy Find in File |
+| <kbd>Leader</kbd> <kbd> f t </kbd> | Panel              |
+| <kbd>Leader</kbd> <kbd> f u </kbd> | Undo History       |
+| <kbd>Leader</kbd> <kbd> f w </kbd> | Find Word          |
+
+### g - Git
+
+| Keybinding                           | Action          |
+| ------------------------------------ | --------------- |
+| <kbd>Leader</kbd> <kbd> g a </kbd>   | Stage Hunk      |
+| <kbd>Leader</kbd> <kbd> g A </kbd>   | Stage Buffer    |
+| <kbd>Leader</kbd> <kbd> g b </kbd>   | Blame           |
+| <kbd>Leader</kbd> <kbd> g c </kbd>   | Find Commits    |
+| <kbd>Leader</kbd> <kbd> g C </kbd>   | Co-Authors      |
+| <kbd>Leader</kbd> <kbd> g d </kbd>   | Diff            |
+| <kbd>Leader</kbd> <kbd> g f </kbd>   | Fugitive Panel  |
+| <kbd>Leader</kbd> <kbd> g g </kbd>   | Lazygit         |
+| <kbd>Leader</kbd> <kbd> g i </kbd>   | Hunk Info       |
+| <kbd>Leader</kbd> <kbd> g j </kbd>   | Next Hunk       |
+| <kbd>Leader</kbd> <kbd> g k </kbd>   | Prev Hunk       |
+| <kbd>Leader</kbd> <kbd> g l </kbd>   | Log             |
+| <kbd>Leader</kbd> <kbd> g p </kbd>   | Pull            |
+| <kbd>Leader</kbd> <kbd> g P </kbd>   | Push            |
+| <kbd>Leader</kbd> <kbd> g r </kbd>   | Reset Hunk      |
+| <kbd>Leader</kbd> <kbd> g R </kbd>   | Reset Buffer    |
+| <kbd>Leader</kbd> <kbd> g s </kbd>   | Switch Branch   |
+| <kbd>Leader</kbd> <kbd> g S </kbd>   | Stashed Changes |
+| <kbd>Leader</kbd> <kbd> g t b </kbd> | Blame           |
+| <kbd>Leader</kbd> <kbd> g t d </kbd> | Deleted         |
+| <kbd>Leader</kbd> <kbd> g t l </kbd> | Line HL         |
+| <kbd>Leader</kbd> <kbd> g t n </kbd> | Number HL       |
+| <kbd>Leader</kbd> <kbd> g t s </kbd> | Signs           |
+| <kbd>Leader</kbd> <kbd> g t w </kbd> | Word Diff       |
+| <kbd>Leader</kbd> <kbd> g u </kbd>   | Undo Stage Hunk |
+| <kbd>Leader</kbd> <kbd> g v </kbd>   | Select Hunk     |
+
+### h - Help
+
+| Keybinding                         | Action           |
+| ---------------------------------- | ---------------- |
+| <kbd>Leader</kbd> <kbd> h h </kbd> | Help Pages       |
+| <kbd>Leader</kbd> <kbd> h i </kbd> | Inspect Position |
+| <kbd>Leader</kbd> <kbd> h k </kbd> | Hover Doc        |
+| <kbd>Leader</kbd> <kbd> h m </kbd> | Man Pages        |
+
+### i - Insert
+
+| Keybinding                         | Action        |
+| ---------------------------------- | ------------- |
+| <kbd>Leader</kbd> <kbd> i d </kbd> | Date          |
+| <kbd>Leader</kbd> <kbd> i e </kbd> | Emojis        |
+| <kbd>Leader</kbd> <kbd> i f </kbd> | File Name     |
+| <kbd>Leader</kbd> <kbd> i n </kbd> | Nerd Glyphs   |
+| <kbd>Leader</kbd> <kbd> i P </kbd> | Absolute Path |
+| <kbd>Leader</kbd> <kbd> i p </kbd> | Relative Path |
+| <kbd>Leader</kbd> <kbd> i r </kbd> | Registers     |
+| <kbd>Leader</kbd> <kbd> i t </kbd> | Time          |
+
+### j - Jump
+
+| Keybinding                         | Action            |
+| ---------------------------------- | ----------------- |
+| <kbd>Leader</kbd> <kbd> j c </kbd> | Word              |
+| <kbd>Leader</kbd> <kbd> j d </kbd> | Diagnostics       |
+| <kbd>Leader</kbd> <kbd> j f </kbd> | Jumplist          |
+| <kbd>Leader</kbd> <kbd> j h </kbd> | Backward          |
+| <kbd>Leader</kbd> <kbd> j j </kbd> | Remote            |
+| <kbd>Leader</kbd> <kbd> j k </kbd> | Treesitter        |
+| <kbd>Leader</kbd> <kbd> j l </kbd> | Forward           |
+| <kbd>Leader</kbd> <kbd> j n </kbd> | Search Forward    |
+| <kbd>Leader</kbd> <kbd> j N </kbd> | Search Backward   |
+| <kbd>Leader</kbd> <kbd> j p </kbd> | Previous Jump     |
+| <kbd>Leader</kbd> <kbd> j s </kbd> | Search            |
+| <kbd>Leader</kbd> <kbd> j t </kbd> | Remote Treesitter |
+| <kbd>Leader</kbd> <kbd> j w </kbd> | Current Word      |
+
+### k - Keys
+
+| Keybinding                         | Action          |
+| ---------------------------------- | --------------- |
+| <kbd>Leader</kbd> <kbd> k c </kbd> | Commands        |
+| <kbd>Leader</kbd> <kbd> k h </kbd> | Command History |
+| <kbd>Leader</kbd> <kbd> k k </kbd> | Keymaps         |
+| <kbd>Leader</kbd> <kbd> k s </kbd> | Search History  |
+
+### l - LSP
+
+| Keybinding                         | Action                |
+| ---------------------------------- | --------------------- |
+| <kbd>Leader</kbd> <kbd> l a </kbd> | Code Action           |
+| <kbd>Leader</kbd> <kbd> l d </kbd> | Peek Definition       |
+| <kbd>Leader</kbd> <kbd> l f </kbd> | Finder                |
+| <kbd>Leader</kbd> <kbd> l F </kbd> | References            |
+| <kbd>Leader</kbd> <kbd> l g </kbd> | Goto Definition       |
+| <kbd>Leader</kbd> <kbd> l h </kbd> | Hover                 |
+| <kbd>Leader</kbd> <kbd> l i </kbd> | LSP Info              |
+| <kbd>Leader</kbd> <kbd> l j </kbd> | Next Diagnostic       |
+| <kbd>Leader</kbd> <kbd> l k </kbd> | Prev Diagnostic       |
+| <kbd>Leader</kbd> <kbd> l L </kbd> | Workspace Diagnostics |
+| <kbd>Leader</kbd> <kbd> l l </kbd> | File Diagnostics      |
+| <kbd>Leader</kbd> <kbd> l o </kbd> | Outline               |
+| <kbd>Leader</kbd> <kbd> l p </kbd> | Incoming Calls        |
+| <kbd>Leader</kbd> <kbd> l P </kbd> | Outgoing Calls        |
+| <kbd>Leader</kbd> <kbd> l q </kbd> | Stop LSP              |
+| <kbd>Leader</kbd> <kbd> l Q </kbd> | Restart LSP           |
+| <kbd>Leader</kbd> <kbd> l R </kbd> | Replace               |
+| <kbd>Leader</kbd> <kbd> l r </kbd> | Rename                |
+| <kbd>Leader</kbd> <kbd> l s </kbd> | Document Symbols      |
+| <kbd>Leader</kbd> <kbd> l S </kbd> | Workspace Symbols     |
+| <kbd>Leader</kbd> <kbd> l T </kbd> | Goto Type Definition  |
+| <kbd>Leader</kbd> <kbd> l t </kbd> | Peek Type Definition  |
+
+### Marks
+
+| Keybinding                           | Action              |
+| ------------------------------------ | ------------------- |
+| <kbd>Leader</kbd> <kbd> m b </kbd>   | Bookmarks           |
+| <kbd>Leader</kbd> <kbd> m d </kbd>   | Delete Line         |
+| <kbd>Leader</kbd> <kbd> m D </kbd>   | Delete Buffer       |
+| <kbd>Leader</kbd> <kbd> m h </kbd>   | Next Bookmark       |
+| <kbd>Leader</kbd> <kbd> m j </kbd>   | Next                |
+| <kbd>Leader</kbd> <kbd> m k </kbd>   | Previous            |
+| <kbd>Leader</kbd> <kbd> m l </kbd>   | Previous Bookmark   |
+| <kbd>Leader</kbd> <kbd> m m </kbd>   | All Marks           |
+| <kbd>Leader</kbd> <kbd> m n 1 </kbd> | Next Bookmark 1     |
+| <kbd>Leader</kbd> <kbd> m n 2 </kbd> | Next Bookmark 2     |
+| <kbd>Leader</kbd> <kbd> m n 3 </kbd> | Next Bookmark 3     |
+| <kbd>Leader</kbd> <kbd> m n 4 </kbd> | Next Bookmark 4     |
+| <kbd>Leader</kbd> <kbd> m p 1 </kbd> | Previous Bookmark 1 |
+| <kbd>Leader</kbd> <kbd> m p 2 </kbd> | Previous Bookmark 2 |
+| <kbd>Leader</kbd> <kbd> m p 3 </kbd> | Previous Bookmark 3 |
+| <kbd>Leader</kbd> <kbd> m p 4 </kbd> | Previous Bookmark 4 |
+| <kbd>Leader</kbd> <kbd> m P </kbd>   | Preview             |
+| <kbd>Leader</kbd> <kbd> m s </kbd>   | Set Next            |
+| <kbd>Leader</kbd> <kbd> m t </kbd>   | Toggle              |
+| <kbd>Leader</kbd> <kbd> m x </kbd>   | Delete Bookmark     |
+| <kbd>Leader</kbd> <kbd> m 1 </kbd>   | Toggle Bookmark 0   |
+| <kbd>Leader</kbd> <kbd> m 2 </kbd>   | Toggle Bookmark 2   |
+| <kbd>Leader</kbd> <kbd> m 3 </kbd>   | Toggle Bookmark 3   |
+| <kbd>Leader</kbd> <kbd> m 4 </kbd>   | Toggle Bookmark 4   |
+
+### n - Notes
+
+| Keybinding                         | Action           |
+| ---------------------------------- | ---------------- |
+| <kbd>Leader</kbd> <kbd> n d </kbd> | Today's Todo     |
+| <kbd>Leader</kbd> <kbd> n e </kbd> | Today's Entry    |
+| <kbd>Leader</kbd> <kbd> n f </kbd> | All Notes        |
+| <kbd>Leader</kbd> <kbd> n g </kbd> | Find Notes       |
+| <kbd>Leader</kbd> <kbd> n h </kbd> | Yesterday's Todo |
+| <kbd>Leader</kbd> <kbd> n l </kbd> | Tomorrow's Todo  |
+| <kbd>Leader</kbd> <kbd> n n </kbd> | New Note         |
+| <kbd>Leader</kbd> <kbd> n s </kbd> | Commit Note      |
+| <kbd>Leader</kbd> <kbd> n t </kbd> | Incomplete Todos |
+| <kbd>Leader</kbd> <kbd> n x </kbd> | Toggle Todo      |
+
+### o - Options
+
+| Keybinding                         | Action           |
+| ---------------------------------- | ---------------- |
+| <kbd>Leader</kbd> <kbd> o c </kbd> | Colorscheme      |
+| <kbd>Leader</kbd> <kbd> o h </kbd> | Highlight Colors |
+| <kbd>Leader</kbd> <kbd> o n </kbd> | Relative Numbers |
+| <kbd>Leader</kbd> <kbd> o o </kbd> | All Options      |
+
+### p - Packages
+
+| Keybinding                         | Action  |
+| ---------------------------------- | ------- |
+| <kbd>Leader</kbd> <kbd> p c </kbd> | Check   |
+| <kbd>Leader</kbd> <kbd> p d </kbd> | Debug   |
+| <kbd>Leader</kbd> <kbd> p i </kbd> | Install |
+| <kbd>Leader</kbd> <kbd> p l </kbd> | Log     |
+| <kbd>Leader</kbd> <kbd> p m </kbd> | Mason   |
+| <kbd>Leader</kbd> <kbd> p P </kbd> | Profile |
+| <kbd>Leader</kbd> <kbd> p p </kbd> | Plugins |
+| <kbd>Leader</kbd> <kbd> p r </kbd> | Restore |
+| <kbd>Leader</kbd> <kbd> p s </kbd> | Sync    |
+| <kbd>Leader</kbd> <kbd> p u </kbd> | Update  |
+| <kbd>Leader</kbd> <kbd> p x </kbd> | Clean   |
+
+### q - Quit
+
+| Keybinding                         | Action         |
+| ---------------------------------- | -------------- |
+| <kbd>Leader</kbd> <kbd> q a </kbd> | Quit All       |
+| <kbd>Leader</kbd> <kbd> q b </kbd> | Close Buffer   |
+| <kbd>Leader</kbd> <kbd> q d </kbd> | Delete Buffer  |
+| <kbd>Leader</kbd> <kbd> q f </kbd> | Force Quit     |
+| <kbd>Leader</kbd> <kbd> q q </kbd> | Quit           |
+| <kbd>Leader</kbd> <kbd> q s </kbd> | Close Split    |
+| <kbd>Leader</kbd> <kbd> q w </kbd> | Write and Quit |
+
+### r - Refactor
+
+| Keybinding                         | Action               |
+| ---------------------------------- | -------------------- |
+| <kbd>Leader</kbd> <kbd> r b </kbd> | Replace Buffer       |
+| <kbd>Leader</kbd> <kbd> r d </kbd> | Go To Definition     |
+| <kbd>Leader</kbd> <kbd> r e </kbd> | Extract Block        |
+| <kbd>Leader</kbd> <kbd> r f </kbd> | Extract To File      |
+| <kbd>Leader</kbd> <kbd> r h </kbd> | List Definition Head |
+| <kbd>Leader</kbd> <kbd> r i </kbd> | Inline Variable      |
+| <kbd>Leader</kbd> <kbd> r j </kbd> | Next Usage           |
+| <kbd>Leader</kbd> <kbd> r k </kbd> | Previous Usage       |
+| <kbd>Leader</kbd> <kbd> r l </kbd> | List Definition      |
+| <kbd>Leader</kbd> <kbd> r n </kbd> | Swap Next            |
+| <kbd>Leader</kbd> <kbd> r p </kbd> | Swap Previous        |
+| <kbd>Leader</kbd> <kbd> r R </kbd> | Refactor Commands    |
+| <kbd>Leader</kbd> <kbd> r r </kbd> | Smart Rename         |
+| <kbd>Leader</kbd> <kbd> r S </kbd> | Replace              |
+| <kbd>Leader</kbd> <kbd> r s </kbd> | Replace Word         |
+| <kbd>Leader</kbd> <kbd> r v </kbd> | Extract Variable     |
+| <kbd>Leader</kbd> <kbd> r w </kbd> | Replace Word         |
+
+### s - Split
+
+| Keybinding                          | Action           |
+| ----------------------------------- | ---------------- |
+| <kbd>Leader</kbd> <kbd> s ` </kbd>  | Previous Window  |
+| <kbd>Leader</kbd> <kbd> s \ </kbd>  | Split Right      |
+| <kbd>Leader</kbd> <kbd> s / </kbd>  | Split Below      |
+| <kbd>Leader</kbd> <kbd> s - </kbd>  | Decrease Width   |
+| <kbd>Leader</kbd> <kbd> s = </kbd>  | Increase Width   |
+| <kbd>Leader</kbd> <kbd> s \_ </kbd> | Decrease Height  |
+| <kbd>Leader</kbd> <kbd> s + </kbd>  | Increase Height  |
+| <kbd>Leader</kbd> <kbd> s a </kbd>  | Horizontal Split |
+| <kbd>Leader</kbd> <kbd> s c </kbd>  | Close Tab        |
+| <kbd>Leader</kbd> <kbd> s f </kbd>  | First Tab        |
+| <kbd>Leader</kbd> <kbd> s h </kbd>  | Move Left        |
+| <kbd>Leader</kbd> <kbd> s H </kbd>  | Decrease Width   |
+| <kbd>Leader</kbd> <kbd> s j </kbd>  | Move Down        |
+| <kbd>Leader</kbd> <kbd> s J </kbd>  | Decrease Height  |
+| <kbd>Leader</kbd> <kbd> s k </kbd>  | Move Up          |
+| <kbd>Leader</kbd> <kbd> s K </kbd>  | Increase Height  |
+| <kbd>Leader</kbd> <kbd> s l </kbd>  | Move Right       |
+| <kbd>Leader</kbd> <kbd> s L </kbd>  | Increase Width   |
+| <kbd>Leader</kbd> <kbd> s p </kbd>  | Previous Pane    |
+| <kbd>Leader</kbd> <kbd> s q </kbd>  | Close Split      |
+| <kbd>Leader</kbd> <kbd> s s </kbd>  | Vertical Split   |
+
+### t - Terminal
+
+| Keybinding                         | Action              |
+| ---------------------------------- | ------------------- |
+| <kbd>Leader</kbd> <kbd> t ` </kbd> | Horizontal Terminal |
+| <kbd>Leader</kbd> <kbd> t c </kbd> | Rails Console       |
+| <kbd>Leader</kbd> <kbd> t d </kbd> | Exe Launcher        |
+| <kbd>Leader</kbd> <kbd> t n </kbd> | Node                |
+| <kbd>Leader</kbd> <kbd> t p </kbd> | Python              |
+| <kbd>Leader</kbd> <kbd> t r </kbd> | Ruby                |
+| <kbd>Leader</kbd> <kbd> t s </kbd> | Horizontal Terminal |
+| <kbd>Leader</kbd> <kbd> t t </kbd> | Terminal            |
+| <kbd>Leader</kbd> <kbd> t v </kbd> | Vertical Terminal   |
+
+### u - Test
+
+| Keybinding                         | Action           |
+| ---------------------------------- | ---------------- |
+| <kbd>Leader</kbd> <kbd> u c </kbd> | Run Current Test |
+| <kbd>Leader</kbd> <kbd> u f </kbd> | Run Test File    |
+| <kbd>Leader</kbd> <kbd> u o </kbd> | Test Output      |
+| <kbd>Leader</kbd> <kbd> u s </kbd> | Test Summary     |
+
+### v - Select
+
+| Keybinding                         | Action         |
+| ---------------------------------- | -------------- |
+| <kbd>Leader</kbd> <kbd> v B </kbd> | Around Bracket |
+| <kbd>Leader</kbd> <kbd> v b </kbd> | Bracket        |
+| <kbd>Leader</kbd> <kbd> v P </kbd> | Around Para    |
+| <kbd>Leader</kbd> <kbd> v p </kbd> | Paragraph      |
+| <kbd>Leader</kbd> <kbd> v Q </kbd> | Around Quote   |
+| <kbd>Leader</kbd> <kbd> v q </kbd> | Quote          |
+
+### w - Writing
+
+| Keybinding                         | Action         |
+| ---------------------------------- | -------------- |
+| <kbd>Leader</kbd> <kbd> w c </kbd> | Spellcheck     |
+| <kbd>Leader</kbd> <kbd> w f </kbd> | Force Write    |
+| <kbd>Leader</kbd> <kbd> w j </kbd> | Next Misspell  |
+| <kbd>Leader</kbd> <kbd> w k </kbd> | Prev Misspell  |
+| <kbd>Leader</kbd> <kbd> w q </kbd> | Write and Quit |
+| <kbd>Leader</kbd> <kbd> w s </kbd> | Suggestions    |
+| <kbd>Leader</kbd> <kbd> w t </kbd> | Twilight       |
+| <kbd>Leader</kbd> <kbd> w w </kbd> | Write and Quit |
+| <kbd>Leader</kbd> <kbd> w z </kbd> | ZenMode        |
+
+### x - Exit
+
+| Keybinding                       | Action        |
+| -------------------------------- | ------------- |
+| <kbd>Leader</kbd> <kbd> x </kbd> | Save and Quit |
+
+### y - Yank
+
+| Keybinding                         | Action          |
+| ---------------------------------- | --------------- |
+| <kbd>Leader</kbd> <kbd> y a </kbd> | Copy Whole File |
+| <kbd>Leader</kbd> <kbd> y f </kbd> | File Name       |
+| <kbd>Leader</kbd> <kbd> y g </kbd> | Copy Git URL    |
+| <kbd>Leader</kbd> <kbd> y P </kbd> | Absolute Path   |
+| <kbd>Leader</kbd> <kbd> y p </kbd> | Relative Path   |
+
+## Leader Bindings (Visual Mode)
+
+### a - AI
+
+| Keybinding                         | Action         |
+| ---------------------------------- | -------------- |
+| <kbd>Leader</kbd> <kbd> a c </kbd> | Copilot Chat   |
+| <kbd>Leader</kbd> <kbd> a d </kbd> | Docs           |
+| <kbd>Leader</kbd> <kbd> a e </kbd> | Explain        |
+| <kbd>Leader</kbd> <kbd> a f </kbd> | Fix            |
+| <kbd>Leader</kbd> <kbd> a F </kbd> | Fix Diagnostic |
+| <kbd>Leader</kbd> <kbd> a g </kbd> | Commit         |
+| <kbd>Leader</kbd> <kbd> a G </kbd> | Commit Staged  |
+| <kbd>Leader</kbd> <kbd> a o </kbd> | Optimize       |
+| <kbd>Leader</kbd> <kbd> a r </kbd> | Review         |
+| <kbd>Leader</kbd> <kbd> a t </kbd> | Tests          |
+
+### c - Code
+
+| Keybinding                         | Action                |
+| ---------------------------------- | --------------------- |
+| <kbd>Leader</kbd> <kbd> c i </kbd> | Sort Case Insensitive |
+| <kbd>Leader</kbd> <kbd> c S </kbd> | Sort Desc             |
+| <kbd>Leader</kbd> <kbd> c s </kbd> | Sort Asc              |
+| <kbd>Leader</kbd> <kbd> c u </kbd> | Unique                |
+| <kbd>Leader</kbd> <kbd> c x </kbd> | Run Code              |
+
+### g - Git
+
+| Keybinding                         | Action     |
+| ---------------------------------- | ---------- |
+| <kbd>Leader</kbd> <kbd> g a </kbd> | Stage Hunk |
+| <kbd>Leader</kbd> <kbd> g r </kbd> | Reset Hunk |
+
+### j - Jump
+
+| Keybinding                         | Action            |
+| ---------------------------------- | ----------------- |
+| <kbd>Leader</kbd> <kbd> j d </kbd> | Diagnostics       |
+| <kbd>Leader</kbd> <kbd> j j </kbd> | Remote            |
+| <kbd>Leader</kbd> <kbd> j k </kbd> | Treesitter        |
+| <kbd>Leader</kbd> <kbd> j n </kbd> | Search Forward    |
+| <kbd>Leader</kbd> <kbd> j N </kbd> | Search Backward   |
+| <kbd>Leader</kbd> <kbd> j p </kbd> | Previous Jump     |
+| <kbd>Leader</kbd> <kbd> j s </kbd> | Search            |
+| <kbd>Leader</kbd> <kbd> j t </kbd> | Remote Treesitter |
+| <kbd>Leader</kbd> <kbd> j w </kbd> | Current Word      |
+
+### l - LSP
+
+| Keybinding                         | Action            |
+| ---------------------------------- | ----------------- |
+| <kbd>Leader</kbd> <kbd> l a </kbd> | Range Code Action |
+
+### r - Refactor
+
+| Keybinding                         | Action            |
+| ---------------------------------- | ----------------- |
+| <kbd>Leader</kbd> <kbd> r r </kbd> | Refactor Commands |
+| <kbd>Leader</kbd> <kbd> r e </kbd> | Extract Function  |
+| <kbd>Leader</kbd> <kbd> r f </kbd> | Extract To File   |
+| <kbd>Leader</kbd> <kbd> r v </kbd> | Extract Variable  |
+| <kbd>Leader</kbd> <kbd> r i </kbd> | Inline Variable   |
+
+### y - Yank
+
+| Keybinding                         | Action       |
+| ---------------------------------- | ------------ |
+| <kbd>Leader</kbd> <kbd> y g </kbd> | Copy Git URL |
+
+## Non Leader Bindings
+
+| Keybinding                         | Action                 |
+| ---------------------------------- | ---------------------- |
+| <kbd>K</kbd>                       | LSP Hover              |
+| <kbd>Q</kbd>                       | Force Quit!            |
+| <kbd>U</kbd>                       | Redo                   |
+| <kbd>Shift</kbd> + <kbd>H</kbd>    | Previous Buffer        |
+| <kbd>Shift</kbd> + <kbd>L</kbd>    | Next Buffer            |
+| <kbd>Ctrl</kbd> + <kbd>H</kbd>     | Move Left              |
+| <kbd>Ctrl</kbd> + <kbd>J</kbd>     | Move Down              |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd>     | Move Up                |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd>     | Move Right             |
+| <kbd>Ctrl</kbd> + <kbd>Up</kbd>    | Increase window height |
+| <kbd>Ctrl</kbd> + <kbd>Down</kbd>  | Decrease window height |
+| <kbd>Ctrl</kbd> + <kbd>Left</kbd>  | Decrease window width  |
+| <kbd>Ctrl</kbd> + <kbd>Right</kbd> | Increase window width  |
+| <kbd>Ctrl</kbd> + <kbd>F</kbd>     | Find Files             |
+| <kbd>Ctrl</kbd> + <kbd>G</kbd>     | Lazygit                |
+
+### [ - Previous
+
+| Keybinding                | Action       |
+| ------------------------- | ------------ |
+| <kbd>[</kbd> <kbd>b</kbd> | Buffer       |
+| <kbd>[</kbd> <kbd>c</kbd> | Change       |
+| <kbd>[</kbd> <kbd>B</kbd> | First Buffer |
+| <kbd>[</kbd> <kbd>d</kbd> | Diagnostic   |
+| <kbd>[</kbd> <kbd>e</kbd> | Edit         |
+| <kbd>[</kbd> <kbd>g</kbd> | Git Hunk     |
+| <kbd>[</kbd> <kbd>j</kbd> | Jump         |
+
+### ] - Next
+
+| Keybinding                | Action      |
+| ------------------------- | ----------- |
+| <kbd>]</kbd> <kbd>b</kbd> | Buffer      |
+| <kbd>]</kbd> <kbd>c</kbd> | Change      |
+| <kbd>]</kbd> <kbd>B</kbd> | Last Buffer |
+| <kbd>]</kbd> <kbd>d</kbd> | Diagnostic  |
+| <kbd>]</kbd> <kbd>e</kbd> | Edit        |
+| <kbd>]</kbd> <kbd>g</kbd> | Git Hunk    |
+| <kbd>]</kbd> <kbd>j</kbd> | Jump        |

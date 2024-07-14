@@ -2373,3 +2373,38 @@ Configuración Avanzada de Neovim: Mapeos de Teclas Básicos
 | Visual              | `<`           | Indentar la selección visual hacia la izquierda.                                                                             |
 | Visual              | `>`           | Indentar la selección visual hacia la derecha.                                                                               |
 | Insert              | `,`, `.`, `;` | Insertar el carácter y crear un punto de deshacer (`<c-g>u`).                                                                |
+# CUADRAGESIMO TERCERO
+
+
+[plugin/after/highlights.lua](https://github.com/FQ211776/neovim/blob/master/plugin/after/highlights.lua)
+
+
+Este archivo no tiene dependencias directas de plugins externos. Utiliza la función `vim.api.nvim_set_hl()` de la API de Neovim para definir y modificar los colores y estilos de resaltado de sintaxis.
+
+**Atajos de Teclado:**
+
+`highlights.lua` no define atajos de teclado, ya que se enfoca únicamente en personalizar la apariencia visual del editor.
+
+**Explicación del Código:**
+
+Este archivo tiene tres secciones principales:
+
+1.  **Fondo Transparente:**
+
+    -   Establece el color de fondo (`bg`) de varios elementos de la interfaz de usuario a `none`, lo que los hace transparentes.
+    -   Esto incluye elementos como el fondo normal del editor (`Normal`), ventanas flotantes (`NormalFloat`,  `FloatBorder`,  `Pmenu`), la terminal integrada (`Terminal`), el final del buffer (`EndOfBuffer`), la columna de signos (`SignColumn`) y texto plegado (`Folded`).
+    -   También hace que el fondo del plugin `nvim-tree.lua` sea transparente.
+2.  **Resaltado de Búsqueda:**
+
+    -   Personaliza los colores de los elementos de búsqueda:
+        -   `Search`: Coincidencias de búsqueda normales.
+        -   `CurSearch`: Coincidencia actual en la búsqueda.
+        -   `IncSearch`: Coincidencia en la búsqueda incremental (mientras escribes).
+3.  **CursorLine y Visual:**
+
+    -   Cambia el color de fondo de la línea actual (`CursorLine`) y la columna actual (`CursorColumn`).
+    -   Cambia el color de fondo de la selección visual (`Visual`).
+
+### plugin/after/
+
+El directorio `plugin/after/` contiene archivos de configuración que se cargan después de que se hayan inicializado todos los plugins. En este caso, `highlights.lua` se utiliza para personalizar los resaltados de sintaxis después de que los plugins hayan definido sus propios grupos de resaltado.
