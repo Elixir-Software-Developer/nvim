@@ -2100,7 +2100,7 @@ El archivo `textobjects.lua` se utiliza principalmente en la configuración de T
 
 
 
-[lua/core/langs/options.lua](https://github.com/FQ211776/neovim/blob/master/lua/core/langs/options.lua)
+[lua/core/options.lua](https://github.com/FQ211776/neovim/blob/master/lua/core/options.lua)
 
 
 Este archivo es el centro de control para establecer opciones globales y locales (a nivel de buffer) en Neovim. Define cómo se comporta el editor en general y cómo se comportará en tipos de archivos específicos.
@@ -2221,3 +2221,53 @@ Puedes personalizar las opciones en `options.lua` para adaptar Neovim a tus pref
 
 -   `lib/util.lua`: Se utiliza para obtener la configuración de Python del usuario si está disponible.
 -   Plugins: El archivo `options.lua` interactúa con varios plugins, como `cmp.lua` (autocompletado),  `telescope.nvim` (búsqueda y navegación), y otros.
+
+
+# CUADRAGESIMO
+
+
+## Configuración Avanzada de Neovim: Automatización con Autocomandos
+
+### `autocmd.lua`
+
+[lua/core/autocmd.lua](https://github.com/FQ211776/neovim/blob/master/lua/core/autocmd.lua)
+
+
+
+Este archivo define varios autocomandos que automatizan tareas comunes en Neovim, mejorando la eficiencia y la experiencia de edición.
+
+**Funcionalidades:**
+
+**Explicación del Código:**
+
+1.  **`augroup(name)`:** Esta función es una utilidad que crea un grupo de autocomandos con un nombre prefijado para evitar conflictos.
+
+2.  **Autocomandos:**
+
+    -   **`BufWritePre *`:** Se ejecuta antes de guardar cualquier buffer (`*`). Elimina los espacios en blanco al final de las líneas.
+
+    -   **`FocusGained`, `TermClose`, `TermLeave`:** Se ejecutan cuando se obtiene el foco de la ventana, se cierra un terminal o se sale de un terminal. Ejecutan el comando `checktime` para verificar si el archivo ha sido modificado externamente.
+
+    -   **`TextYankPost`:** Se ejecuta después de copiar texto (`yank`). Resalta brevemente el texto copiado.
+
+    -   **`VimResized`:** Se ejecuta cuando se cambia el tamaño de la ventana de Vim. Ajusta el tamaño de las divisiones (splits) para que ocupen el espacio disponible.
+
+    -   **`BufReadPost`:** Se ejecuta después de leer un buffer. Intenta restaurar la posición del cursor a la última ubicación conocida en el archivo.
+
+    -   **`FileType (DressingSelect, Jaq, ...)`:** Se ejecuta al abrir archivos de ciertos tipos. Deshabilita `buflisted` (para que no aparezcan en la lista de buffers) y mapea la tecla `q` para cerrar el buffer.
+
+    -   **`FileType (gitcommit, markdown)`:** Se ejecuta al abrir archivos `gitcommit` o `markdown`. Activa el ajuste de línea (`wrap`) y la revisión ortográfica (`spell`).
+
+    -   **`BufWritePre`:** Se ejecuta antes de guardar un buffer. Crea automáticamente los directorios necesarios si no existen.
+
+    -   **`BufEnter *.arb`:** Se ejecuta al abrir un archivo `.arb`. Utiliza `lib/util.get_file_type_cmd` para determinar el tipo de archivo correcto y establecerlo.
+
+    -   **`FileType *`:** Se ejecuta al abrir cualquier archivo. Elimina las opciones de formato `c`,  `r` y `o` del buffer local.
+
+3.  **Otras Opciones:**
+
+    -   `vim.opt.path:append({ '**' })`: Agrega el directorio actual y sus subdirectorios a la ruta de búsqueda de archivos.
+    -   `vim.cmd([[let &t_Cs = "\e[4:3m"]])` y `vim.cmd([[let &t_Ce = "\e[4:0m"]])`: Configuran el subrayado en la terminal.
+    -   `vim.opt.shortmess:append({ W = true, I = true, c = true })`: Modifica el comportamiento de los mensajes cortos de Vim.
+    -   `vim.g.markdown_recommended_style = 0`: Desactiva el estilo de Markdown recomendado.
+    -   `vim.cmd([[set fillchars+=eob:\ ]])`: Oculta el carácter `~` al final del buffer.
