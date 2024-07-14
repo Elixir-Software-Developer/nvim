@@ -1673,7 +1673,7 @@ Este archivo configura el plugin `ccc.nvim`, que resalta los colores en el códi
 
 ### `dbee.lua`
 
-[lua/plugins/tools//dbee.lua.nvim](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/dbee.lua.nvim)
+[lua/plugins/tools/dbee.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/dbee.lua)
 
 
 
@@ -1714,3 +1714,108 @@ Bash
 export NVIM_DB='{"dbname": {"type": "postgres", "url": "postgres://pguser:pguser@localhost:5602/dbname?sslmode=disable"}}'
 
 ```
+
+
+# TRIGESIMO TERCERO
+
+## Configuración Avanzada de Neovim: Búsqueda y Navegación con Telescope
+
+### `telescope.lua`
+
+[lua/plugins/tools/telescope.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/telescope.nvim)
+
+
+
+Este archivo configura Telescope, un plugin altamente flexible y extensible que proporciona una interfaz de búsqueda y navegación para varios aspectos de Neovim. Puedes usarlo para buscar archivos, buffers, comandos de Git, símbolos de LSP, y mucho más.
+
+**Funcionalidades:**
+
+-   **Pickers (Selectores) Versátiles:** Telescope ofrece una amplia variedad de pickers predefinidos para diferentes tareas, como `find_files`,  `live_grep`,  `git_commits`,  `lsp_references`, etc.
+-   **Extensiones:** Puedes ampliar las funcionalidades de Telescope instalando extensiones adicionales, como fzf para búsqueda difusa, undo para ver el historial de deshacer, y más.
+-   **Personalización:** La configuración de Telescope es altamente personalizable. Puedes ajustar el diseño, los atajos de teclado, los iconos y muchas otras opciones para adaptarlo a tus necesidades.
+
+**Dependencias:**
+
+-   "telescope.nvim" (requerido)
+-   "plenary.nvim" (requerido por muchas extensiones de Telescope)
+-   Otras dependencias opcionales según las extensiones que utilices (fzf, symbols, manufacture, undo, etc.)
+
+
+## Atajos de Teclado para Telescope
+
+### Modo Inserción (i)
+
+
+`<Esc>` Cierra la ventana de Telescope.
+
+`<C-n>` Navega al siguiente elemento en el historial de búsqueda.
+
+`<C-p>` Navega al elemento anterior en el historial de búsqueda.
+
+`<C-j>` Mueve la selección hacia abajo.
+
+`<C-k>` Mueve la selección hacia arriba.
+
+`<C-c>` Cierra la ventana de Telescope.
+
+`<CR>` Selecciona el elemento actual y lo abre.
+
+`<C-x>` Selecciona el elemento actual y lo abre en una división horizontal.
+
+`<C-v>` Selecciona el elemento actual y lo abre en una división vertical.
+
+`<C-t>` Selecciona el elemento actual y lo abre en una nueva pestaña.
+
+`<C-s>` Utiliza el plugin flash.nvim para saltar a los resultados de búsqueda.
+
+`<C-u>` Desplazarse hacia arriba en la vista previa.
+
+`<C-d>` Desplazarse hacia abajo en la vista previa.
+
+`<PageUp>` Desplazarse una página hacia arriba en los resultados.
+
+`<PageDown>` Desplazarse una página hacia abajo en los resultados.
+
+`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
+
+`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
+
+`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
+
+`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
+
+`<C-l>` Completa la etiqueta actual (si es aplicable).
+
+
+### Modo Normal (n) Telescope
+
+
+`q` Cierra la ventana de Telescope.
+
+`<Esc>` Cierra la ventana de Telescope.
+
+`j` Mueve la selección hacia abajo.
+
+`k` Mueve la selección hacia arriba.
+
+`gg` Mueve la selección al primer elemento.
+
+`G` Mueve la selección al último elemento.
+
+`<C-u>` Desplazarse hacia arriba en la vista previa.
+
+`<C-d>` Desplazarse hacia abajo en la vista previa.
+
+`<PageUp>` Desplazarse una página hacia arriba en los resultados.
+
+`<PageDown>` Desplazarse una página hacia abajo en los resultados.
+
+`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
+
+`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
+
+`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
+
+`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
+
+`?` Muestra la ayuda de `which-key.nvim` para Telescope.

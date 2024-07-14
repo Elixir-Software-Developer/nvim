@@ -282,3 +282,83 @@ Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
 `b` Mover el cursor al principio de la palabra anterior, saltando la puntuación insignificante.
 
 `ge` Mover el cursor al final de la palabra anterior, saltando la puntuación insignificante.
+
+
+## Atajos de Teclado para Telescope
+
+### Modo Inserción (i)
+
+
+`<Esc>` Cierra la ventana de Telescope.
+
+`<C-n>` Navega al siguiente elemento en el historial de búsqueda.
+
+`<C-p>` Navega al elemento anterior en el historial de búsqueda.
+
+`<C-j>` Mueve la selección hacia abajo.
+
+`<C-k>` Mueve la selección hacia arriba.
+
+`<C-c>` Cierra la ventana de Telescope.
+
+`<CR>` Selecciona el elemento actual y lo abre.
+
+`<C-x>` Selecciona el elemento actual y lo abre en una división horizontal.
+
+`<C-v>` Selecciona el elemento actual y lo abre en una división vertical.
+
+`<C-t>` Selecciona el elemento actual y lo abre en una nueva pestaña.
+
+`<C-s>` Utiliza el plugin flash.nvim para saltar a los resultados de búsqueda.
+
+`<C-u>` Desplazarse hacia arriba en la vista previa.
+
+`<C-d>` Desplazarse hacia abajo en la vista previa.
+
+`<PageUp>` Desplazarse una página hacia arriba en los resultados.
+
+`<PageDown>` Desplazarse una página hacia abajo en los resultados.
+
+`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
+
+`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
+
+`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
+
+`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
+
+`<C-l>` Completa la etiqueta actual (si es aplicable).
+
+
+### Modo Normal (n) Telescope
+
+
+`q` Cierra la ventana de Telescope.
+
+`<Esc>` Cierra la ventana de Telescope.
+
+`j` Mueve la selección hacia abajo.
+
+`k` Mueve la selección hacia arriba.
+
+`gg` Mueve la selección al primer elemento.
+
+`G` Mueve la selección al último elemento.
+
+`<C-u>` Desplazarse hacia arriba en la vista previa.
+
+`<C-d>` Desplazarse hacia abajo en la vista previa.
+
+`<PageUp>` Desplazarse una página hacia arriba en los resultados.
+
+`<PageDown>` Desplazarse una página hacia abajo en los resultados.
+
+`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
+
+`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
+
+`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
+
+`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
+
+`?` Muestra la ayuda de `which-key.nvim` para Telescope.
