@@ -1819,3 +1819,43 @@ Este archivo configura Telescope, un plugin altamente flexible y extensible que 
 `<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
 
 `?` Muestra la ayuda de `which-key.nvim` para Telescope.
+
+
+# TRIGESIMO CUARTO
+
+## Configuración Avanzada de Neovim: Gestión de Marcadores con marks.nvim
+
+### `marks.lua`
+
+Este archivo configura el plugin `marks.nvim`, que mejora la gestión de marcadores de texto en Neovim. Los marcadores te permiten guardar posiciones en el texto para poder volver a ellas rápidamente más tarde.
+
+**Funcionalidades:**
+
+-   **Marcadores Personalizados:** Permite crear grupos de marcadores personalizados con diferentes iconos y texto virtual.
+-   **Atajos de Teclado Intuitivos:** Define atajos de teclado para establecer (`M`) y alternar (`m`) marcadores fácilmente.
+-   **Visualización Clara:** Los marcadores se muestran como signos en el margen del editor, lo que facilita su identificación.
+-   **Navegación Eficiente:** Puedes saltar rápidamente entre marcadores utilizando comandos y atajos de teclado.
+-   **Integración con Telescope:** El plugin `marks.nvim` se integra con Telescope para mostrar una lista de todos los marcadores y facilitar la navegación entre ellos.
+
+**Dependencias:**
+
+-   "marks.nvim" (requerido)
+-   "lib/icons.lua" (opcional, pero mejora la presentación visual)
+
+**Atajos de Teclado marks.lua`:**
+
+
+`m` Alternar un marcador en la posición actual.
+
+`M` Establecer un marcador en la posición actual.
+
+**Grupos de Marcadores Personalizados:**
+
+La configuración define cuatro grupos de marcadores personalizados:
+
+-   **`bookmark_1`:** Usa el icono de una bandera.
+-   **`bookmark_2`:** Usa el icono de un ojo.
+-   **`bookmark_3`:** Usa el icono de una estrella.
+-   **`bookmark_4`:** Usa el icono de un bicho (bug).
+
+Puedes personalizar estos grupos o crear nuevos según tus necesidades.
