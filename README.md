@@ -1663,3 +1663,54 @@ Este archivo configura el plugin `ccc.nvim`, que resalta los colores en el códi
 **Dependencias:**
 
 -   "ccc.nvim" (requerido)
+
+
+
+
+# TRIGESIMO SEGUNDO
+
+## Configuración Avanzada de Neovim: Interacción con Bases de Datos con nvim-dbee
+
+### `dbee.lua`
+
+[lua/plugins/tools//dbee.lua.nvim](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/dbee.lua.nvim)
+
+
+
+Este archivo configura el plugin `nvim-dbee`, que proporciona una interfaz dentro de Neovim para conectarse y trabajar con bases de datos.
+
+**Funcionalidades:**
+
+-   **Conexión a Bases de Datos:** Permite establecer conexiones a diferentes tipos de bases de datos (PostgreSQL, MySQL, SQLite, etc.).
+-   **Exploración de Esquemas:** Navega por las tablas, vistas y otros objetos de la base de datos.
+-   **Ejecución de Consultas:** Escribe y ejecuta consultas SQL directamente desde Neovim.
+-   **Visualización de Resultados:** Muestra los resultados de las consultas en un formato legible.
+-   **Edición de Datos:** Permite modificar los datos en las tablas de la base de datos.
+
+**Dependencias:**
+
+-   "nvim-dbee" (requerido)
+
+**Configuración de Conexión:**
+
+La configuración de la conexión a la base de datos se carga desde la variable de entorno `NVIM_DB`. Debes establecer esta variable antes de usar `nvim-dbee`.
+
+**Atajo de Teclado (Ejemplo):**
+
+Atajo
+
+Acción
+
+`<leader>db`
+
+Abrir/cerrar la interfaz de nvim-dbee.
+
+
+**Ejemplo de Configuración de `NVIM_DB`:**
+
+Bash
+
+```
+export NVIM_DB='{"dbname": {"type": "postgres", "url": "postgres://pguser:pguser@localhost:5602/dbname?sslmode=disable"}}'
+
+```

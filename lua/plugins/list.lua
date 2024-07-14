@@ -314,6 +314,19 @@ local plugins = {
         keys = { '[t', ']t' },
         -- dir = '~/Projects/GitHub/Maintain/tdo.nvim',
     },
+    {
+        'kndndrj/nvim-dbee',
+        dependencies = {
+            'MunifTanjim/nui.nvim',
+        },
+        build = function()
+            --    "curl", "wget", "bitsadmin", "go"
+            require('dbee').install('curl')
+        end,
+        config = load_config('tools.dbee'),
+        cmd = 'DBToggle',
+        enabled = false,
+    },
 }
 
 return {
