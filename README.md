@@ -2271,3 +2271,41 @@ Este archivo define varios autocomandos que automatizan tareas comunes en Neovim
     -   `vim.opt.shortmess:append({ W = true, I = true, c = true })`: Modifica el comportamiento de los mensajes cortos de Vim.
     -   `vim.g.markdown_recommended_style = 0`: Desactiva el estilo de Markdown recomendado.
     -   `vim.cmd([[set fillchars+=eob:\ ]])`: Oculta el carácter `~` al final del buffer.
+
+
+
+# CUADRAGESIMO PRIMERO
+
+## Configuración Avanzada de Neovim: Comandos Personalizados
+
+### `functions.lua`
+
+Este archivo define varios comandos personalizados de Neovim para realizar tareas comunes de manera más eficiente.
+
+**Comandos Disponibles:**
+
+
+`:ReloadConfig` Recarga la configuración de Neovim.
+
+`:CopyRelativePath` Copia la ruta relativa del archivo actual al portapapeles.
+
+`:CopyAbsolutePath` Copia la ruta absoluta del archivo actual al portapapeles.
+
+`:CopyFileName` Copia solo el nombre del archivo actual al portapapeles.
+
+`:RootDir` Cambia el directorio de trabajo actual al directorio raíz del proyecto Git (o al directorio padre del archivo si no es un proyecto Git).
+
+**Ejemplo de Atajos de Teclado (para `core/keys.lua`):**
+
+Lua
+
+```
+vim.keymap.set("n", "<leader>rc", ":ReloadConfig<CR>")
+vim.keymap.set("n", "<leader>cp", ":CopyRelativePath<CR>")
+vim.keymap.set("n", "<leader>cP", ":CopyAbsolutePath<CR>")
+vim.keymap.set("n", "<leader>cf", ":CopyFileName<CR>")
+vim.keymap.set("n", "<leader>cd", ":RootDir<CR>")
+
+```
+
+Use code [with caution.](/faq#coding)
