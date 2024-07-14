@@ -254,3 +254,17 @@ auto completion
 
 
 `<Tab>` Si el cursor está dentro de un par de caracteres configurable, salta fuera de ellos. De lo contrario, inserta una tabulación o realiza la acción de tabulación predeterminada (`<C-t>` en este caso).
+
+
+
+**Atajos de Teclado: Flash NVIM**
+
+`s` Activa el modo de salto de Flash en modo normal, visual y operador-pendiente.
+
+`S` Activa el modo de salto de Flash basado en árboles de sintaxis de Treesitter en modo normal, visual y operador-pendiente.
+
+`r` Activa el modo de salto remoto de Flash en modo operador-pendiente.
+
+`R` Activa el modo de búsqueda de Treesitter de Flash en modo operador-pendiente y visual.
+
+`<c-s>` Activa/desactiva la búsqueda de Flash en modo comando.

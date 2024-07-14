@@ -1481,3 +1481,43 @@ Este archivo configura el plugin `tabout.nvim`, que permite saltar fuera de pare
 
 
 `<Tab>` Si el cursor está dentro de un par de caracteres configurable, salta fuera de ellos. De lo contrario, inserta una tabulación o realiza la acción de tabulación predeterminada (`<C-t>` en este caso).
+
+
+
+# VIGESIMO SEPTIMO
+
+
+## Configuración Avanzada de Neovim: Navegación Rápida con flash.nvim
+
+### `flash.lua`
+
+
+* [lua/plugins/tools/flash.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/flash.lua)
+
+
+Este archivo configura el plugin `flash.nvim`, que permite navegar por el código de forma rápida y eficiente utilizando "etiquetas de búsqueda" (search labels). Flash proporciona una forma intuitiva de saltar entre coincidencias de búsqueda, caracteres específicos o nodos de Treesitter.
+
+**Funcionalidades:**
+
+-   **Modos de Búsqueda:** Ofrece varios modos de búsqueda, incluyendo búsqueda exacta, difusa y con expresiones regulares.
+-   **Búsqueda Incremental:** Actualiza los resultados de búsqueda en tiempo real a medida que escribes.
+-   **Salto Rápido:** Permite saltar rápidamente a las coincidencias de búsqueda utilizando teclas cortas.
+-   **Etiquetas de Colores:** Utiliza etiquetas de colores tipo arcoíris para identificar visualmente las coincidencias.
+-   **Comando Personalizado para Diagnósticos:** Incluye un comando `:FlashDiagnostics` para saltar entre los diagnósticos del LSP.
+-   **Personalización:** Permite personalizar el modo de búsqueda, el prompt, los colores de las etiquetas y más.
+
+**Dependencias:**
+
+-   "flash.nvim" (requerido)
+
+**Atajos de Teclado: Flash NVIM**
+
+`s` Activa el modo de salto de Flash en modo normal, visual y operador-pendiente.
+
+`S` Activa el modo de salto de Flash basado en árboles de sintaxis de Treesitter en modo normal, visual y operador-pendiente.
+
+`r` Activa el modo de salto remoto de Flash en modo operador-pendiente.
+
+`R` Activa el modo de búsqueda de Treesitter de Flash en modo operador-pendiente y visual.
+
+`<c-s>` Activa/desactiva la búsqueda de Flash en modo comando.
