@@ -359,6 +359,11 @@ local plugins = {
     },
 
     -- Git
+    {
+        '2kabhishek/co-author.nvim',
+        dependencies = { 'stevearc/dressing.nvim' },
+        cmd = 'CoAuthor',
+    },
 }
 
 return {
