@@ -362,3 +362,11 @@ Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
 `<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
 
 `?` Muestra la ayuda de `which-key.nvim` para Telescope.
+
+
+**Atajos de Teclado marks.lua`:**
+
+
+`m` Alternar un marcador en la posición actual.
+
+`M` Establecer un marcador en la posición actual.

@@ -351,6 +351,14 @@ local plugins = {
         config = load_config('tools.marks'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
+    {
+        '2kabhishek/nerdy.nvim',
+        dependencies = { 'stevearc/dressing.nvim' },
+        cmd = 'Nerdy',
+        -- dir = '~/Projects/GitHub/Maintain/nerdy.nvim',
+    },
+
+    -- Git
 }
 
 return {
