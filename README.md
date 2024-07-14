@@ -1974,6 +1974,8 @@ vim.keymap.set("n", "<leader>rc", ":RorCommands<CR>") -- Abrir el menú de coman
 
 
 # TRIGESIMO OCTAVO:
+
+
 El archivo `textobjects.lua` es crucial para personalizar y extender los "textobjects" en Neovim, aprovechando la estructura de código proporcionada por Treesitter.
 
 **¿Qué son los textobjects?**
