@@ -289,6 +289,14 @@ local plugins = {
         config = load_config('tools.which-key'),
         event = 'VeryLazy',
     },
+    {
+        'iamcco/markdown-preview.nvim',
+        build = function()
+            vim.fn['mkdp#util#install']()
+        end,
+        ft = 'markdown',
+        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview' },
+    },
 }
 
 return {
