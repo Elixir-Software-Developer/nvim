@@ -370,3 +370,28 @@ Mover el cursor a la siguiente palabra, saltando la puntuación insignificante.
 `m` Alternar un marcador en la posición actual.
 
 `M` Establecer un marcador en la posición actual.
+
+
+**Atajos de Teclado GITSIGNS:**
+
+Atajo
+
+Acción
+
+`]c` Ir al siguiente cambio (hunk) en el archivo (solo funciona si no estás en modo diff).
+
+`[c` Ir al cambio anterior (hunk) en el archivo (solo funciona si no estás en modo diff).
+
+`ih` (En modo normal, visual u operador-pendiente) Seleccionar el hunk actual.
+
+
+**Atajos de Teclado: gitlinker**
+
+Atajo
+
+Acción
+
+`<leader>yg`
+
+Copia al portapapeles el enlace al archivo actual (o a la línea actual si la opción `add_current_line_on_normal_mode` está habilitada).
+

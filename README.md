@@ -1888,7 +1888,7 @@ Este archivo configura el plugin `gitlinker.nvim`, que permite generar enlaces c
 
 -   "gitlinker.nvim" (requerido)
 
-**Atajos de Teclado:**
+**Atajos de Teclado: gitlinker**
 
 Atajo
 
@@ -1899,4 +1899,39 @@ Acción
 Copia al portapapeles el enlace al archivo actual (o a la línea actual si la opción `add_current_line_on_normal_mode` está habilitada).
 
 
+# TRIGESIMO SEXTO
 
+
+## Configuración Avanzada de Neovim: Integración con Git usando gitsigns.nvim
+
+### `gitsigns.lua`
+
+[lua/plugins/tools/gitsigns.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/tools/gitsigns.lua)
+
+
+
+
+Este archivo configura el plugin `gitsigns.nvim`, que integra información de Git directamente en tu editor Neovim. Muestra indicadores visuales en el margen del editor para indicar líneas añadidas, modificadas o eliminadas, y proporciona comandos para interactuar con Git desde Neovim.
+
+**Funcionalidades:**
+
+-   **Indicadores Visuales:** Muestra signos en el margen para indicar los cambios de Git en cada línea.
+-   **Navegación por Hunks:** Permite saltar entre los cambios (hunks) en el archivo.
+-   **Blame en Línea:** Puedes ver información sobre quién modificó por última vez una línea.
+-   **Acciones de Git:** Realiza acciones comunes de Git, como añadir cambios al stage, deshacer cambios, etc., directamente desde Neovim.
+
+**Dependencias:**
+
+-   "gitsigns.nvim" (requerido)
+
+**Atajos de Teclado GITSIGNS:**
+
+Atajo
+
+Acción
+
+`]c` Ir al siguiente cambio (hunk) en el archivo (solo funciona si no estás en modo diff).
+
+`[c` Ir al cambio anterior (hunk) en el archivo (solo funciona si no estás en modo diff).
+
+`ih` (En modo normal, visual u operador-pendiente) Seleccionar el hunk actual.

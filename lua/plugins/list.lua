@@ -369,6 +369,12 @@ local plugins = {
         config = load_config('tools.gitlinker'),
         keys = '<leader>yg',
     },
+    {
+        'lewis6991/gitsigns.nvim',
+        config = load_config('tools.gitsigns'),
+        cmd = 'Gitsigns',
+        event = { 'BufReadPre', 'BufNewFile' },
+    },
 }
 
 return {
