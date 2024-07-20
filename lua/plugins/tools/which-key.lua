@@ -611,3 +611,7 @@ which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
 which_key.register(no_leader_mappings, no_leader_opts)
 which_key.register({ mode = { 'o', 'x' }, i = i, a = a })
+
+-- ... (otras configuraciones de which-key.lua) ...
+
+require('custom_keys') -- Requerir el archivo personalizado

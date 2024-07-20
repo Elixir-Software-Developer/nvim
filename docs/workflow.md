@@ -1,18 +1,61 @@
-# [nvim2k](https://github.com/2kabhishek/nvim2k) [Keybindings](https://github.com/2KAbhishek/nvim2k/blob/main/docs/keybindings.md)
-
-Here are all the keybindings defined for nvim2k.
-
-Check out the source code of individual files for more info.
-
-Sources:
-
-- [Which Key](../lua/plugins/tools/which-key.lua) - Biggest source of keybindings, fully documented.
-- [General](../lua/core/keys.lua) - Changes behavior of core keys, not documented here.
-- Individual plugin configs - Check out the source code of individual files in [plugins](../lua/plugins/) for more info.
-
 ## Leader Bindings (Normal Mode)
 
 > Leader == <kbd>Space</kbd>
+
+# Abrir el explorador
+| Keybinding                         | Action         |
+| <kbd>Leader</kbd> <kbd> e e </kbd> | Explorer          |x abre - cierra el explorador
+| <kbd>Leader</kbd> <kbd> q b </kbd> | Close Buffer   |x cierra un buffer abierto
+
+
+
+-   **moverse:** Utiliza las flechas `↑`,  `↓`,  `j`,  `k` para moverte arriba, abajo, dentro y fuera de directorios, respectivamente.
+`(tab)` para abrir un archivo o entrar en un directorio.
+`<CR>` (Enter) para abrir un archivo o entrar en un directorio.
+`h` y `l`:** También puedes usar `h` para retroceder al directorio padre
+
+`ctrl+h` y `ctrl+l`:** para saltar del buffer abierto al explorador y viceversa
+
+
+
+**Crear Carpetas:**
+
+-   **`a`:** Presiona `a` para crear un nuevo archivo o directorio.
+-   **Escribe el nombre:** Ingresa el nombre de la carpeta que deseas crear y presiona `Enter`.
+
+**Abrir un Archivo en una División Vertical:**
+
+-   **Seleccionar archivo:** Navega hasta el archivo que deseas abrir.
+-   **`v`:** Presiona `v` para abrir el archivo en una división vertical.
+-   **`o`:** Presiona `o` para abrir el archivo en una división horizontal.
+
+**Otros Atajos de Teclado Útiles:**
+
+-   **`r`:** Renombrar el archivo o directorio seleccionado.
+-   **`d`:** Eliminar el archivo o directorio seleccionado.
+-   **`R`:** Refrescar el árbol de archivos.
+-   ** `Y`:** Copia el nombre del archivo o directorio actualmente seleccionado en NvimTree al portapapeles del sistema.
+-   ** `y`:** Copia la ruta relativa del archivo o directorio seleccionado al portapapeles del sistema
+-   ** `S`:** busqueda basica por nombre de archivo
+-   ** `f`:** busqueda basica por nombre de archivo
+-   **`?`:** Mostrar la ayuda de NvimTree para ver todos los atajos de teclado disponibles.
+**Múltiples Nvim-trees  (Splits):**
+
+-   Puedes dividir la ventana de Neovim en múltiples paneles y abrir diferentes proyectos en cada panel. Esto te permite ver y editar archivos de diferentes proyectos simultáneamente.
+-   Para crear una nueva división vertical, usa el comando `:vsplit` o el atajo de teclado `:vsplit <ruta/al/proyecto>`.
+-   Para crear una nueva división horizontal, usa el comando `:split` o el atajo de teclado `:split <ruta/al/proyecto>`.
+
+los siguientes ejemplos abren una workspace vacio
+
+| Keybinding                          | Action           |
+| ----------------------------------- | ---------------- |
+| <kbd>Leader</kbd> <kbd> s a </kbd>  | Horizontal Split |
+| <kbd>Leader</kbd> <kbd> s q </kbd>  | Close Split      |
+| <kbd>Leader</kbd> <kbd> s s </kbd>  | Vertical Split   |
+
+
+
+
 
 ### a - AI
 
@@ -92,54 +135,112 @@ Sources:
 
 ### f - Find
 
+# Telescope
+
+
+## Atajos de Teclado para Telescope
+
+### Modo Inserción (i)
+
+`<Esc>` Cierra la ventana de Telescope.
+`<C-n>` Navega al siguiente elemento en el historial de búsqueda.
+`<C-p>` Navega al elemento anterior en el historial de búsqueda.
+`<C-j>` Mueve la selección hacia abajo.
+`<C-k>` Mueve la selección hacia arriba.
+`<C-c>` Cierra la ventana de Telescope.
+`<CR>` Selecciona el elemento actual y lo abre.
+`<C-x>` Selecciona el elemento actual y lo abre en una división horizontal.
+`<C-v>` Selecciona el elemento actual y lo abre en una división vertical.
+`<C-t>` Selecciona el elemento actual y lo abre en una nueva pestaña.
+`<C-s>` Utiliza el plugin flash.nvim para saltar a los resultados de búsqueda.
+`<C-u>` Desplazarse hacia arriba en la vista previa.
+`<C-d>` Desplazarse hacia abajo en la vista previa.
+`<PageUp>` Desplazarse una página hacia arriba en los resultados.
+`<PageDown>` Desplazarse una página hacia abajo en los resultados.
+`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
+`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
+`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
+`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
+`<C-l>` Completa la etiqueta actual (si es aplicable).
+
+
+### Modo Normal (n)
+
+
+`q` Cierra la ventana de Telescope.
+`<Esc>` Cierra la ventana de Telescope.
+`j` Mueve la selección hacia abajo.
+`k` Mueve la selección hacia arriba.
+`gg` Mueve la selección al primer elemento.
+`G` Mueve la selección al último elemento.
+`<C-u>` Desplazarse hacia arriba en la vista previa.
+`<C-d>` Desplazarse hacia abajo en la vista previa.
+`<PageUp>` Desplazarse una página hacia arriba en los resultados.
+`<PageDown> ` Desplazarse una página hacia abajo en los resultados.
+`<Tab>` Alterna la selección y mueve al siguiente elemento peor clasificado.
+`<S-Tab>` Alterna la selección y mueve al siguiente elemento mejor clasificado.
+`<C-q>` Envía todos los elementos a la lista de coincidencias rápidas y la abre.
+`<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
+`?` Muestra la ayuda de `which-key.nvim` para Telescope.
+
+
 | Keybinding                         | Action             |
 | ---------------------------------- | ------------------ |
-| <kbd>Leader</kbd> <kbd> f a </kbd> | All Files          |
-| <kbd>Leader</kbd> <kbd> f b </kbd> | Buffers            |
-| <kbd>Leader</kbd> <kbd> f c </kbd> | File Commits       |
-| <kbd>Leader</kbd> <kbd> f f </kbd> | Find files         |
-| <kbd>Leader</kbd> <kbd> f g </kbd> | Find Text          |
+| <kbd>Leader</kbd> <kbd> f a </kbd> | All Files          |x Usa find_files() cuando quieras buscar cualquier archivo en tu sistema de archivos.
+| <kbd>Leader</kbd> <kbd> f b </kbd> | Buffers            |x buffers abiertps
+| <kbd>Leader</kbd> <kbd> f c </kbd> | File Commits       |x muestra los commits de un archivo - nirvana
+| <kbd>Leader</kbd> <kbd> f f </kbd> | Find files         |x Usa git_files() cuando quieras buscar archivos específicamente dentro del repositorio Git actual.
+| <kbd>Leader</kbd> <kbd> f g </kbd> | Find Text          |x  encuentra todas las ocurrencias en los archivos del proyecto.
 | <kbd>Leader</kbd> <kbd> f l </kbd> | Location List      |
-| <kbd>Leader</kbd> <kbd> f m </kbd> | Modified files     |
-| <kbd>Leader</kbd> <kbd> f o </kbd> | Find in Open Files |
-| <kbd>Leader</kbd> <kbd> f p </kbd> | Last Search        |
-| <kbd>Leader</kbd> <kbd> f q </kbd> | Quickfix           |
-| <kbd>Leader</kbd> <kbd> f r </kbd> | Recent Files       |
-| <kbd>Leader</kbd> <kbd> f s </kbd> | Fuzzy Find in File |
-| <kbd>Leader</kbd> <kbd> f t </kbd> | Panel              |
-| <kbd>Leader</kbd> <kbd> f u </kbd> | Undo History       |
-| <kbd>Leader</kbd> <kbd> f w </kbd> | Find Word          |
+| <kbd>Leader</kbd> <kbd> f m </kbd> | Modified files     |x git diff archivos modifcados - nirvana
+| <kbd>Leader</kbd> <kbd> f o </kbd> | Find in Open Files |x Busca un término que sepas que está en uno de los archivos abiertos.
+| <kbd>Leader</kbd> <kbd> f p </kbd> | Last Search        |x Repite la última búsqueda realizada con Telescope
+| <kbd>Leader</kbd> <kbd> f q </kbd> | Quickfix           |x para ver tu historial de búsquedas de Telescope.
+| <kbd>Leader</kbd> <kbd> f r </kbd> | Recent Files       |x lista de los archivos abiertos recientemente en Neovim.
+| <kbd>Leader</kbd> <kbd> f s </kbd> | Fuzzy Find in File |x búsqueda difusa en el contenido del archivo actual.
+| <kbd>Leader</kbd> <kbd> f t </kbd> | Panel              |X all modes unlocked
+| <kbd>Leader</kbd> <kbd> f u </kbd> | Undo History       |x Navega por el historial de deshacer y presiona <CR> para restaurar un estado anterior.
+| <kbd>Leader</kbd> <kbd> f w </kbd> | Find Word          |x buscar la palabra bajo el cursor en todo el proyecto
 
-### g - Git
+
+# GIT
+
+| Keybinding | Action |
+| ---------- | ------ |
+| <kbd>Leader</kbd> <kbd> f c </kbd> | File Commits       |x muestra los commits de un archivo - nirvana
+| <kbd>Leader</kbd> <kbd> f f </kbd> | Find files         |x Usa git_files() cuando quieras buscar archivos específicamente dentro del repositorio Git actual.
+| <kbd>Leader</kbd> <kbd> f m </kbd> | Modified files     |x git diff archivos modifcados - nirvana
+
+
 
 | Keybinding                           | Action          |
 | ------------------------------------ | --------------- |
-| <kbd>Leader</kbd> <kbd> g a </kbd>   | Stage Hunk      |
-| <kbd>Leader</kbd> <kbd> g A </kbd>   | Stage Buffer    |
-| <kbd>Leader</kbd> <kbd> g b </kbd>   | Blame           |
-| <kbd>Leader</kbd> <kbd> g c </kbd>   | Find Commits    |
+| <kbd>Leader</kbd> <kbd> g a </kbd>   | Stage Hunk      |x (Stage Hunk) stage un bloque de codigo
+| <kbd>Leader</kbd> <kbd> g A </kbd>   | Stage Buffer    |x Añade todos los cambios del archivo actual al stage.
+| <kbd>Leader</kbd> <kbd> g b </kbd>   | Blame           |x Muestra la información de "blame" (autor y fecha) de la línea actual.
+| <kbd>Leader</kbd> <kbd> g c </kbd>   | Find Commits    |x (Find Commits): Abre Telescope para buscar commits en el proyecto
 | <kbd>Leader</kbd> <kbd> g C </kbd>   | Co-Authors      |
-| <kbd>Leader</kbd> <kbd> g d </kbd>   | Diff            |
-| <kbd>Leader</kbd> <kbd> g f </kbd>   | Fugitive Panel  |
-| <kbd>Leader</kbd> <kbd> g g </kbd>   | Lazygit         |
-| <kbd>Leader</kbd> <kbd> g i </kbd>   | Hunk Info       |
-| <kbd>Leader</kbd> <kbd> g j </kbd>   | Next Hunk       |
-| <kbd>Leader</kbd> <kbd> g k </kbd>   | Prev Hunk       |
-| <kbd>Leader</kbd> <kbd> g l </kbd>   | Log             |
-| <kbd>Leader</kbd> <kbd> g p </kbd>   | Pull            |
-| <kbd>Leader</kbd> <kbd> g P </kbd>   | Push            |
+| <kbd>Leader</kbd> <kbd> g d </kbd>   | Diff            |x Abre una ventana para ver el diff (diferencia) del archivo actual con la versión anterior.
+| <kbd>Leader</kbd> <kbd> g f </kbd>   | Fugitive Panel  |x Abre el panel de Fugitive
+| <kbd>Leader</kbd> <kbd> g g </kbd>   | Lazygit         |x Abre el panel de Lazygit
+| <kbd>Leader</kbd> <kbd> g i </kbd>   | Hunk Info       |x (Hunk Info) muestra que esta en stage
+| <kbd>Leader</kbd> <kbd> g j </kbd>   | Next Hunk       |x (Next Hunk)
+| <kbd>Leader</kbd> <kbd> g k </kbd>   | Prev Hunk       |x (Prev Hunk)
+| <kbd>Leader</kbd> <kbd> g l </kbd>   | Log             |x log ugly
+| <kbd>Leader</kbd> <kbd> g p </kbd>   | Pull            |x pull
+| <kbd>Leader</kbd> <kbd> g P </kbd>   | Push            |x push
 | <kbd>Leader</kbd> <kbd> g r </kbd>   | Reset Hunk      |
-| <kbd>Leader</kbd> <kbd> g R </kbd>   | Reset Buffer    |
-| <kbd>Leader</kbd> <kbd> g s </kbd>   | Switch Branch   |
-| <kbd>Leader</kbd> <kbd> g S </kbd>   | Stashed Changes |
-| <kbd>Leader</kbd> <kbd> g t b </kbd> | Blame           |
-| <kbd>Leader</kbd> <kbd> g t d </kbd> | Deleted         |
-| <kbd>Leader</kbd> <kbd> g t l </kbd> | Line HL         |
+| <kbd>Leader</kbd> <kbd> g R </kbd>   | Reset Buffer    |x restablece el archivo a su último estado guardado en Git.
+| <kbd>Leader</kbd> <kbd> g s </kbd>   | Switch Branch   |x Abre Telescope para mostrar una lista de ramas y permitirte seleccionar una.
+| <kbd>Leader</kbd> <kbd> g S </kbd>   | Stashed Changes |x Abre Telescope para mostrar una lista de los stashes disponibles.
+| <kbd>Leader</kbd> <kbd> g t b </kbd> | Blame           |x activa - desactiva blame
+| <kbd>Leader</kbd> <kbd> g t d </kbd> | Deleted         |x muestra las lineas elimindas contra previo commit
+| <kbd>Leader</kbd> <kbd> g t l </kbd> | Line HL         |x gtl Alterna el resaltado de las líneas modificadas
 | <kbd>Leader</kbd> <kbd> g t n </kbd> | Number HL       |
-| <kbd>Leader</kbd> <kbd> g t s </kbd> | Signs           |
+| <kbd>Leader</kbd> <kbd> g t s </kbd> | Signs           |x muestra o quita las anotaciones
 | <kbd>Leader</kbd> <kbd> g t w </kbd> | Word Diff       |
-| <kbd>Leader</kbd> <kbd> g u </kbd>   | Undo Stage Hunk |
-| <kbd>Leader</kbd> <kbd> g v </kbd>   | Select Hunk     |
+| <kbd>Leader</kbd> <kbd> g u </kbd>   | Undo Stage Hunk |x Deshace el último cambio añadido al stage en el hunk actual.
+| <kbd>Leader</kbd> <kbd> g v </kbd>   | Select Hunk     |x (Select Hunk): Selecciona visualmente el hunk actual.
 
 ### h - Help
 
@@ -186,7 +287,7 @@ Sources:
 | Keybinding                         | Action          |
 | ---------------------------------- | --------------- |
 | <kbd>Leader</kbd> <kbd> k c </kbd> | Commands        |
-| <kbd>Leader</kbd> <kbd> k h </kbd> | Command History |
+| <kbd>Leader</kbd> <kbd> k h </kbd> | Command History | x para ver el historial de comandos de Neovim.
 | <kbd>Leader</kbd> <kbd> k k </kbd> | Keymaps         |
 | <kbd>Leader</kbd> <kbd> k s </kbd> | Search History  |
 
@@ -248,9 +349,31 @@ Sources:
 
 ### n - Notes
 
+**Atajos de Teclado:**
+
+`<Leader>nd` `Tdo`: Abre la lista de tareas pendientes del día actual.
+
+`<Leader>ne` `TdoEntry`: Abre la entrada de diario del día actual.
+
+`<Leader>nf` `TdoFiles`: Muestra todas las notas creadas con `tdo.nvim`.
+
+`<Leader>ng` `TdoFind`: Abre una búsqueda interactiva para encontrar notas por contenido.
+
+`<Leader>nh` `Tdo -1`: Abre la lista de tareas pendientes del día anterior.
+
+`<Leader>nl` `Tdo 1`: Abre la lista de tareas pendientes del día siguiente.
+
+`<Leader>nn` `TdoNote`: Crea una nueva nota (o un borrador si no se proporciona un título).
+
+`<Leader>ns` `TdoToggle`: Guarda la nota actual y marca la tarea pendiente en la línea actual como completada o pendiente.
+
+`<Leader>nt` `TdoTodos`: Muestra todas las tareas pendientes sin completar en todas las notas.
+
+`<Leader>nx` `TdoToggle`: Alterna el estado de una tarea pendiente (completada/pendiente) en la línea actual.
+
 | Keybinding                         | Action           |
 | ---------------------------------- | ---------------- |
-| <kbd>Leader</kbd> <kbd> n d </kbd> | Today's Todo     |
+| <kbd>Leader</kbd> <kbd> n d </kbd> | Today's Todo     |x
 | <kbd>Leader</kbd> <kbd> n e </kbd> | Today's Entry    |
 | <kbd>Leader</kbd> <kbd> n f </kbd> | All Notes        |
 | <kbd>Leader</kbd> <kbd> n g </kbd> | Find Notes       |
@@ -259,7 +382,7 @@ Sources:
 | <kbd>Leader</kbd> <kbd> n n </kbd> | New Note         |
 | <kbd>Leader</kbd> <kbd> n s </kbd> | Commit Note      |
 | <kbd>Leader</kbd> <kbd> n t </kbd> | Incomplete Todos |
-| <kbd>Leader</kbd> <kbd> n x </kbd> | Toggle Todo      |
+| <kbd>Leader</kbd> <kbd> n x </kbd> | Toggle Todo      |x
 
 ### o - Options
 
@@ -348,17 +471,20 @@ Sources:
 
 ### t - Terminal
 
+para cerrar usa ctrl+d
+
+
 | Keybinding                         | Action              |
 | ---------------------------------- | ------------------- |
-| <kbd>Leader</kbd> <kbd> t ` </kbd> | Horizontal Terminal |
+| <kbd>Leader</kbd> <kbd> t ` </kbd> | Horizontal Terminal |x es la tecla a la par de 1
 | <kbd>Leader</kbd> <kbd> t c </kbd> | Rails Console       |
-| <kbd>Leader</kbd> <kbd> t d </kbd> | Exe Launcher        |
-| <kbd>Leader</kbd> <kbd> t n </kbd> | Node                |
-| <kbd>Leader</kbd> <kbd> t p </kbd> | Python              |
+| <kbd>Leader</kbd> <kbd> t d </kbd> | Exe Launcher        |x ejecuta td...no me convence
+| <kbd>Leader</kbd> <kbd> t n </kbd> | Node                |x terminal con node
+| <kbd>Leader</kbd> <kbd> t p </kbd> | Python              |x
 | <kbd>Leader</kbd> <kbd> t r </kbd> | Ruby                |
-| <kbd>Leader</kbd> <kbd> t s </kbd> | Horizontal Terminal |
-| <kbd>Leader</kbd> <kbd> t t </kbd> | Terminal            |
-| <kbd>Leader</kbd> <kbd> t v </kbd> | Vertical Terminal   |
+| <kbd>Leader</kbd> <kbd> t s </kbd> | Horizontal Terminal |x terminal horizontal
+| <kbd>Leader</kbd> <kbd> t t </kbd> | Terminal            |x terminal pantalla completa
+| <kbd>Leader</kbd> <kbd> t v </kbd> | Vertical Terminal   |x terminal vertical
 
 ### u - Test
 

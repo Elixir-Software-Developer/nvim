@@ -44,6 +44,40 @@ SnipRun (ejecución de fragmentos de código)
 * [lib/icons.lua](# primero)
 * [init.luan](# primero)
 
+¡Claro! Aquí tienes un resumen breve de cada archivo de configuración de Neovim:
+
+-   **`onedark.lua`:** Configura el tema visual Onedark para Neovim.
+-   **`lib/util.lua`:** Contiene funciones de utilidad personalizadas para diversas tareas.
+-   **`lazy.lua`:** Gestiona la instalación y carga de plugins de forma eficiente.
+-   **`lualine.lua`:** Personaliza la barra de estado de Neovim.
+-   **`indentline.lua`:** Muestra guías de indentación visuales en el código.
+-   **`rainbow.lua`:** Resalta los delimitadores de código con diferentes colores.
+-   **`nvim_notify.lua`:** Configura notificaciones personalizadas en Neovim.
+-   **`dressing.lua`:** Mejora la apariencia de ventanas emergentes y selecciones.
+-   **`dashboard.lua`:** Crea una página de inicio personalizada para Neovim.
+-   **`wilder.nvim`:** Mejora la línea de comandos (wildmenu) con sugerencias y autocompletado.
+-   **`zen-mode.nvim` y `twilight.nvim`:** Proporcionan un modo de edición sin distracciones y oscurecimiento del código.
+-   **`neotest.lua`:** Configura un framework para ejecutar pruebas en Neovim.
+-   **`sniprun.lua`:** Permite ejecutar fragmentos de código directamente desde el editor.
+-   **`refactoring.lua`:** Habilita herramientas de refactorización de código.
+-   **`autopairs.lua`:** Autocompleta pares de caracteres (paréntesis, corchetes, etc.).
+-   **`comment.lua`:** Facilita la adición y eliminación de comentarios en el código.
+-   **`surround.lua`:** Permite manipular texto rodeado por caracteres (paréntesis, comillas, etc.).
+-   **`ai.lua`:** Define textobjects personalizados basados en la estructura del código.
+-   **`lspconfig.lua`:** Configura el protocolo de servidor de lenguaje (LSP) para diferentes lenguajes.
+-   **`lspsaga.lua`:** Mejora la interfaz de usuario para las funciones del LSP.
+-   **`mason.lua`:** Gestiona la instalación de servidores LSP, DAP y linters.
+-   **`gitlinker.lua`:** Crea enlaces a líneas de código en repositorios de Git.
+-   **`gitsigns.lua`:** Muestra información de Git en el editor.
+-   **`spider.lua`:** Mejora los movimientos del cursor para saltar sobre puntuación.
+-   **`which-key.lua`:** Muestra un menú emergente con los atajos de teclado disponibles.
+-   **`ccc.lua`:** Resalta los colores en el código fuente.
+-   **`dbee.lua`:** Permite interactuar con bases de datos desde Neovim.
+-   **`telescope.lua`:** Proporciona una interfaz de búsqueda y navegación potente.
+-   **`marks.lua`:** Mejora la gestión de marcadores de texto.
+-   **`ftplugin/python.lua`:** Configuración específica para archivos Python.
+
+
 ```
 .
 ├── docs
@@ -1393,21 +1427,46 @@ Este archivo configura el plugin `nvim-tree.lua`, que proporciona un explorador 
 -   "nvim-tree.lua" (requerido)
 -   "lib/icons.lua" (opcional, pero mejora la presentación visual)
 
-**Atajos de Teclado:**
 
+## Abrir el explorador
+| Keybinding                         | Action         |
+| <kbd>Leader</kbd> <kbd> e e </kbd> | Explorer          |x abre - cierra el explorador
+| <kbd>Leader</kbd> <kbd> q b </kbd> | Close Buffer   |x cierra un buffer abierto
 
-`Y` Copiar el nombre del archivo o directorio seleccionado al portapapeles.
+-   **moverse:** Utiliza las flechas `↑`,  `↓`,  `j`,  `k` para moverte arriba, abajo, dentro y fuera de directorios, respectivamente.
+`(tab)` para abrir un archivo o entrar en un directorio.
+`<CR>` (Enter) para abrir un archivo o entrar en un directorio.
+`h` y `l`:** También puedes usar `h` para retroceder al directorio padre
 
-`y` Copiar la ruta relativa del archivo o directorio seleccionado al portapapeles.
+`ctrl+h` y `ctrl+l`:** para saltar del buffer abierto al explorador y viceversa
 
-`l` o `<CR>` Abrir el archivo o directorio seleccionado.
+**Crear Carpetas:**
 
-`h` Cerrar el directorio actual (o navegar al directorio padre si ya estás en la raíz).
+-   **`a`:** Presiona `a` para crear un nuevo archivo o directorio.
+-   **Escribe el nombre:** Ingresa el nombre de la carpeta que deseas crear y presiona `Enter`.
 
-`v` Abrir el archivo o directorio seleccionado en una división vertical.
+**Abrir un Archivo en una División Vertical:**
 
-`o` Abrir el archivo o directorio seleccionado en una división horizontal.
+-   **Seleccionar archivo:** Navega hasta el archivo que deseas abrir.
+-   **`v`:** Presiona `v` para abrir el archivo en una división vertical.
+-   **`o`:** Presiona `o` para abrir el archivo en una división horizontal.
 
+**Otros Atajos de Teclado Útiles:**
+
+-   **`r`:** Renombrar el archivo o directorio seleccionado.
+-   **`d`:** Eliminar el archivo o directorio seleccionado.
+-   **`R`:** Refrescar el árbol de archivos.
+-   ** `Y`:** Copia el nombre del archivo o directorio actualmente seleccionado en NvimTree al portapapeles del sistema.
+-   ** `y`:** Copia la ruta relativa del archivo o directorio seleccionado al portapapeles del sistema
+-   ** `S`:** busqueda basica por nombre de archivo
+-   ** `f`:** busqueda basica por nombre de archivo
+-   **`?`:** Mostrar la ayuda de NvimTree para ver todos los atajos de teclado disponibles.
+
+**Múltiples Nvim-trees  (Splits):**
+
+-   Puedes dividir la ventana de Neovim en múltiples paneles y abrir diferentes proyectos en cada panel. Esto te permite ver y editar archivos de diferentes proyectos simultáneamente.
+-   Para crear una nueva división vertical, usa el comando `:vsplit` o el atajo de teclado `:vsplit <ruta/al/proyecto>`.
+-   Para crear una nueva división horizontal, usa el comando `:split` o el atajo de teclado `:split <ruta/al/proyecto>`.
 
 # VIGESIMO CUARTO
 
@@ -1819,6 +1878,26 @@ Este archivo configura Telescope, un plugin altamente flexible y extensible que 
 `<M-q>` Envía el elemento seleccionado a la lista de coincidencias rápidas y la abre.
 
 `?` Muestra la ayuda de `which-key.nvim` para Telescope.
+
+which-key
+
+| Keybinding                         | Action             |
+| ---------------------------------- | ------------------ |
+| <kbd>Leader</kbd> <kbd> f a </kbd> | All Files          |
+| <kbd>Leader</kbd> <kbd> f b </kbd> | Buffers            |
+| <kbd>Leader</kbd> <kbd> f c </kbd> | File Commits       |
+| <kbd>Leader</kbd> <kbd> f f </kbd> | Find files         |
+| <kbd>Leader</kbd> <kbd> f g </kbd> | Find Text          |
+| <kbd>Leader</kbd> <kbd> f l </kbd> | Location List      |
+| <kbd>Leader</kbd> <kbd> f m </kbd> | Modified files     |
+| <kbd>Leader</kbd> <kbd> f o </kbd> | Find in Open Files |
+| <kbd>Leader</kbd> <kbd> f p </kbd> | Last Search        |
+| <kbd>Leader</kbd> <kbd> f q </kbd> | Quickfix           |
+| <kbd>Leader</kbd> <kbd> f r </kbd> | Recent Files       |
+| <kbd>Leader</kbd> <kbd> f s </kbd> | Fuzzy Find in File |
+| <kbd>Leader</kbd> <kbd> f t </kbd> | Panel              |
+| <kbd>Leader</kbd> <kbd> f u </kbd> | Undo History       |
+| <kbd>Leader</kbd> <kbd> f w </kbd> | Find Word          |
 
 
 # TRIGESIMO CUARTO
