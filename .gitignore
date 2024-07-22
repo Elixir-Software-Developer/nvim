@@ -4,3 +4,4 @@ plugin/packer_compiled.lua
 # Custom user configs
 lua/user/
 lua/plugins/lock.json
+lazy-lock.json

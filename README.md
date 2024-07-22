@@ -77,6 +77,73 @@ SnipRun (ejecución de fragmentos de código)
 -   **`marks.lua`:** Mejora la gestión de marcadores de texto.
 -   **`ftplugin/python.lua`:** Configuración específica para archivos Python.
 
+```sh
+-- if you want to use the system clipboard
+$ yay -s xsel
+
+-- if yo want use lazygit in nvim
+$ yay -s lazygit
+
+-- if you want have good syntax highlighting in nvim
+$ yay -s tree-sitter
+
+-- if you want convenient fuzzy search in nvim
+$ yay -s fd sed ripgrep
+
+-- if you want use translation in nvim
+$ yay -s translate-shell
+
+-- if you want to put files deleted in nvim into recycle bin
+$ yay -s trash-cli
+
+-- if you want to link the mysql in nvim
+$ yay -s percona-server-clients
+
+-- if you want use tabnine in nvim
+$ yay -s unzip curl
+
+-- if you want preview markdown to browser in nvim
+$ yay -s pandoc
+$ npm i -g live-server
+
+-- if you want to quickly upload images to the internet and generate markdown links
+$ npm i -g picgo
+
+-- if you want to store dd and yy data persistently
+$ yay -S sqlite3
+```
+
+# Neovim Configure
+
+```sh
+.
+├── compiler                  -- compiler related setting
+├── coc-settings.json         -- for coc.nvim if you use coc.nvim as default complation framework, you can also select the builtin lsp
+├── ftplugin                  -- some specific setting for some filetype
+├── init.lua
+├── install.sh
+├── lua
+│   ├── configure
+│   │   ├── nvim_cmp.lua      -- builtin lsp complation config
+│   │   ├── lsp_config        -- builtin lsp config
+│   │   ├── ....              -- other plugin configs
+│   │   └── coc.lua           -- coc.nvim based lsp config
+│   ├── core
+│   │   ├── after.lua         -- just eusure this will be setting after all plugin loaded
+│   │   ├── default.lua       -- some default setting
+│   │   ├── init.lua          --
+│   │   ├── mapping.lua       -- mapping register module
+│   │   ├── plugins.lua       -- all plugin name and group center
+│   │   └── themes.lua        -- my favorite themes
+│   ├── hack                  -- something you want to hack
+│   │   ├── init.lua
+│   │   └── pomodoro.lua
+│   ├── local.lua             --
+│   ├── user.lua              -- user related configure like email, name, etc.
+│   └── util                  -- some useful tools and functions
+└── tasks.ini                 -- asynctasks
+
+```
 
 ```
 .
