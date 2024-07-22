@@ -76,7 +76,7 @@ SnipRun (ejecución de fragmentos de código)
 -   **`telescope.lua`:** Proporciona una interfaz de búsqueda y navegación potente.
 -   **`marks.lua`:** Mejora la gestión de marcadores de texto.
 -   **`ftplugin/python.lua`:** Configuración específica para archivos Python.
-
+python3 -m pip install pynvim
 ```sh
 -- if you want to use the system clipboard
 $ yay -s xsel
