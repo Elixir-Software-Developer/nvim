@@ -29,6 +29,7 @@ local mappings = {
     z = {
         name = 'Randoms',
         r = { "<cmd>lua require('ranger-nvim').open()<CR>", "Ranger" },
+        a = { '<CMD>lua require("activate").list_plugins()<CR>', "Activate Plugins"},     
     },
 }
 
