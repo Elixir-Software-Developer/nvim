@@ -12,17 +12,23 @@ local opts = {
 local mappings = {
     y = {
         name = 'Custom Yank',
-        l = { '"+yy', 'Copy Line to Clipboard' }, -- Copiar línea al portapapeles del sistema
+        l = { '"+yy', 'R- Copy Line to Clipboard' }, -- Copiar línea al portapapeles del sistema
         -- ... otros comandos personalizados que quieras agregar ...
     },
 
     v = {
         name = 'Select',
-        f = { 'dyaf', 'Delete Function' }, -- Eliminar función en modo visual
+        f = { 'dyaf', 'R- Delete Function' }, -- Eliminar función en modo visual
+        a = { 'ggVG', "R- Select Whole File" },
+        w = { '"_diw', "R- Delete Word" },
         -- ... otros comandos personalizados en modo visual ...
     },
     t = {
-        z = { '<cmd>Fterm ranger<cr>', 'Rangerl cli' },
+        z = { '<cmd>R- Fterm ranger<cr>', 'Rangerl cli' },
+    },
+    z = {
+        name = 'Randoms',
+        z = { '<cmd>R- Fterm ranger<cr>', 'Rangerl cli' },
     },
 }
 

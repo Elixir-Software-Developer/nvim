@@ -66,3 +66,10 @@ map('v', '>', '>gv')
 map('i', ',', ',<c-g>u')
 map('i', '.', '.<c-g>u')
 map('i', ';', ';<c-g>u')
+
+-- Add customs 
+require("core.custom-keys")
+
+
+
+
