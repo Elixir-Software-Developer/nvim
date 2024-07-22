@@ -2502,3 +2502,117 @@ Este archivo proporciona una configuración específica para archivos Python (`.
 
 
 `<A-r>` Ejecuta el archivo Python actual en un terminal integrado.
+
+
+# CUADRAGESIMO QUINTO
+
+[/lua/plugins/custom_plugins.lua](https://github.com/FQ211776/neovim/blob/master/lua/plugins/custom_plugins.lua)
+
+
+## Configuración Avanzada de Neovim: Movimientos Inteligentes con nvim-gomove
+
+### `nvim-gomove`
+
+Este plugin mejora la forma en que mueves líneas y bloques de texto en Neovim. Proporciona movimientos "inteligentes" que tienen en cuenta la indentación y la estructura del código, lo que te permite mover líneas y bloques de forma más eficiente y precisa.
+
+### Funcionalidades:
+
+-   **Movimiento de líneas:** Mueve la línea actual o un conjunto de líneas seleccionadas hacia arriba o hacia abajo.
+-   **Movimiento de bloques:** Mueve bloques de texto (seleccionados en modo visual de bloque) hacia arriba, abajo, izquierda o derecha, manteniendo la indentación correcta.
+-   **Reindentación automática:** Reindenta automáticamente las líneas después de moverlas verticalmente para mantener la estructura del código.
+-   **Deshacer en un solo paso:** Agrupa los movimientos en la misma dirección al deshacer, lo que facilita revertir varios movimientos a la vez.
+
+### Atajos de Teclado:
+
+Normal `<A-j>` Mueve la línea actual o el bloque seleccionado una línea hacia abajo.
+
+Normal `<A-k>` Mueve la línea actual o el bloque seleccionado una línea hacia arriba.
+
+Normal `<A-h>` Mueve la línea actual o el bloque seleccionado un carácter hacia la izquierda.
+
+Normal `<A-l>` Mueve la línea actual o el bloque seleccionado un carácter hacia la derecha.
+
+Normal `<A-Shift-h>` **Duplica** el texto actual o el bloque seleccionado un carácter hacia la izquierda.
+
+Normal `<A-Shift-j>` **Duplica** la línea actual o el bloque seleccionado una línea hacia abajo.
+
+Normal `<A-Shift-k>` **Duplica** la línea actual o el bloque seleccionado una línea hacia arriba.
+
+Normal `<A-Shift-l>` **Duplica** el texto actual o el bloque seleccionado un carácter hacia la derecha.
+
+Visual `<A-h>` Mueve los caracteres seleccionados hacia la izquierda.
+
+Visual `<A-j>` Mueve los caracteres seleccionados hacia abajo.
+
+Visual `<A-k>` Mueve los caracteres seleccionados hacia arriba.
+
+Visual `<A-l>` Mueve los caracteres seleccionados hacia la derecha.
+
+Visual `<A-Shift-h>` **Duplica** los caracteres seleccionados hacia la izquierda.
+
+Visual `<A-Shift-j>` **Duplica** los caracteres seleccionados hacia abajo.
+
+Visual `<A-Shift-k>` **Duplica** los caracteres seleccionados hacia arriba.
+
+Visual `<A-Shift-l>` **Duplica** los caracteres seleccionados hacia la derecha.
+
+Visual `<C-h>` Mueve las líneas seleccionadas hacia la izquierda (por nivel de indentación).
+
+Visual `<C-j>` Mueve las líneas seleccionadas hacia abajo.
+
+Visual `<C-k>` Mueve las líneas seleccionadas hacia arriba.
+
+Visual `<C-l>` Mueve las líneas seleccionadas hacia la derecha (por nivel de indentación).
+
+Visual `<C-Shift-h>` **Duplica** las líneas seleccionadas hacia la izquierda (por nivel de indentación), eliminando espacios en blanco iniciales.
+
+Visual `<C-Shift-j>` **Duplica** las líneas seleccionadas hacia abajo.
+
+Visual `<C-Shift-k>` **Duplica** las líneas seleccionadas hacia arriba.
+
+Visual `<C-Shift-l>` **Duplica** las líneas seleccionadas hacia la derecha (por nivel de indentación).
+
+
+
+## Configuración Avanzada de Neovim: Explorador de Archivos con Ranger.nvim
+
+### `ranger.nvim`
+
+Este plugin integra el potente administrador de archivos de consola Ranger dentro de Neovim, permitiéndote explorar y gestionar tus archivos de proyecto sin salir del editor. Ranger.nvim utiliza una interfaz similar a Vim, lo que facilita la transición para los usuarios de Vim.
+
+### Funcionalidades:
+
+-   **Exploración Eficiente:** Navega rápidamente por directorios y archivos utilizando atajos de teclado familiares de Vim.
+-   **Previsualización de Archivos:** Previsualiza el contenido de archivos de texto, imágenes y otros formatos sin abrirlos.
+-   **Operaciones de Archivos:** Realiza operaciones comunes como crear, renombrar, mover, eliminar y copiar archivos y directorios.
+-   **Integración con Herramientas Externas:** Permite ejecutar comandos de shell y abrir archivos en aplicaciones externas.
+-   **Personalización:** Adapta la apariencia y el comportamiento de Ranger.nvim a tus preferencias.
+
+**`keybinds`:**  atajos de teclado de ranger
+
+*`leader+zr`:*  para invocarlo con ranger y luego ocupar:
+
+-   `sv`: Abre el archivo seleccionado en una división vertical.
+-   `sh`: Abre el archivo seleccionado en una división horizontal.
+-   `st`: Abre el archivo seleccionado en una nueva pestaña.
+-   `sr`: Abre el archivo seleccionado en una ventana flotante (rifle).
+
+Configuración Avanzada de Neovim: Gestión de Plugins con activate.nvim
+activate.nvim
+
+Este plugin simplifica la gestión de tus plugins en Neovim, permitiéndote activar y desactivar plugins directamente desde el editor de forma intuitiva. Utiliza la interfaz de Telescope para presentar una lista organizada de tus plugins y gestionar su estado.
+Funcionalidades
+
+    Lista de Plugins Curada: La lista de plugins disponibles se genera a partir del repositorio rockerBOO/awesome-neovim, asegurando que tengas acceso a una amplia selección de plugins de calidad.
+
+    Interfaz Intuitiva: Navega, busca, instala y desinstala plugins de Neovim fácilmente a través de la conocida interfaz de Telescope.
+
+    Configuración Automática: Si un plugin sigue el estándar no oficial de configuración (setup.lua.example), activate.nvim puede generar automáticamente una configuración básica. Esto te ahorra tiempo al configurar nuevos plugins.
+
+    Actualizaciones Automáticas: Una acción de GitHub verifica periódicamente el repositorio awesome-neovim en busca de actualizaciones, manteniendo tu lista de plugins al día.
+
+Cómo Funciona
+
+Actualización de Plugins:
+
+Después de instalar un plugin con activate.nvim, las actualizaciones son gestionadas por lazy.nvim, al igual que cualquier otro plugin.

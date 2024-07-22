@@ -24,7 +24,34 @@ local extra_plugins = {
             })
         end,
     },
+    {
+        "roobert/activate.nvim",
+        keys = {
+            {
+                "<leader>P",
+                '<CMD>lua require("activate").list_plugins()<CR>',
+                desc = "Plugins",
+            },
+        },
+        dependencies = {
+            { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } }
+        }
+    },
+    {
+        "booperlv/nvim-gomove",
+        event = "BufRead", -- Cargar al leer un buffer
+        config = function()
+        require("gomove").setup({
+        -- Opciones de configuración de nvim-gomove
+        -- alt+h,j,k,l para mover lineas o bloques
+        map_defaults = true,
+        reindent = true,
+        undojoin = true,
+        move_past_end_col = false,
+        })
+        end,
+    },
+
 }
 
 return extra_plugins
-

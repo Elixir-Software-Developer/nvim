@@ -37,5 +37,5 @@ map('i', '<Tab>', '<C-T>', { desc = 'Indent' })
 map('i', '<S-Tab>', '<C-D>', { desc = 'Unindent' })
 map('i', '<C-s>', '<cmd>write<CR>', { desc = 'Guardar archivo' })
 map('i', '<C-d>', '<Esc>yypkA', { desc = 'Salir a modo normal, copiar y pegar la línea, volver a insertar al final' })
-    
+
 --    map('n', '<F3>', '<cmd>lua vim.lsp.buf.formatting()<CR>', { desc = 'Formato' })
