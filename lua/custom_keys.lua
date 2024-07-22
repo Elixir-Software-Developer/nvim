@@ -24,11 +24,11 @@ local mappings = {
         -- ... otros comandos personalizados en modo visual ...
     },
     t = {
-        z = { '<cmd>R- Fterm ranger<cr>', 'Rangerl cli' },
+        z = { '<cmd>Fterm ranger<cr>', 'Rangerl cli' },
     },
     z = {
         name = 'Randoms',
-        z = { '<cmd>R- Fterm ranger<cr>', 'Rangerl cli' },
+        r = { "<cmd>lua require('ranger-nvim').open()<CR>", "Ranger" },
     },
 }
 

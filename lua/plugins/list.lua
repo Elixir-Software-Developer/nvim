@@ -478,6 +478,10 @@ if util.is_present('cargo') then
     table.insert(lsp_servers, 'rust_analyzer')
 end
 
+-- Cargar plugins personalizados
+local custom_plugins = require("plugins.custom_plugins")
+vim.list_extend(plugins, custom_plugins)
+
 return {
     plugins = plugins,
     lsp_servers = lsp_servers,
