@@ -1,0 +1,71 @@
+* 4d37cd2 (HEAD -> main, origin/main, origin/HEAD) Actualizado Readme.md y agregado chatgpt-prompts.csv para plugin
+* 337860c Agregado kickstart-python.lua
+* 650700b agregado atajo de which-key para activate.nvim
+* bb7587d CUADRAGESIMO QUINTO : Agregado custom_plugins.lua
+* 5433d5e agregado ranger.nvim
+* 70f5caa Agregado muchos atajos de teclado nuevos
+* 5eb19eb respaldo nvim
+* da281c9 Actualizado telescope.lua y which-key.lua
+* 4d42c89 CUADRAGESIMO CUARTO: python.lua
+* 341c3f1 CUADRAGESIMO TERCERO : AGREGADO highlight.lua
+* 0f03544 CUADRAGESIMO SEGUNDO: Agregado keys.lua
+* c49fd35 CUADRAGESIMO PRIMERO : CORE : functions.lua
+* 0c83799 CUADRAGESIMO: CORE : options.lua
+* b5c2165 TRIGESIMO NOVENO - CORE : options.lua
+* a78f8d8 actualizado dashboard.lua
+* 0747788 Aplicado StyleLua a todo el documento
+* 328c66a VIGESIMO QUINTO - TOOLS - tabout.lua
+* 338c45e TRIGESIMO OCTAVO: LANG - textobjects.lua
+* ac6a8d7 TRIGESIMO SEPTIMO - ror.lua
+* 216f878 TRIGESIMO SEXTO - TOOLS - GIT - gitsigns.lua
+* 18969bf TRIGESIMO QUINTO : TOOLS - GIT : gitlinker.lua
+* 270990c Agregado CoaAuthor NVIM
+* e7c16f5 Agregado nerdy.lua
+* 20c90d9 TRIGESIMO CUARTO - TOOLS - TELESCCOPE : marks.lua
+* 5099c94 TRIGESIMO TERCERO - TOOLS - TELESCOPE telescope.lua
+* 8070d5f TRIGESIMO SEGUNDO - TOOLS - dbee.lua
+* a05de41 Agregado tdo
+* 43ca68d agregadp termin.nvim para manejar las terminale
+* f3d8f9f TRIGESIMO PRIMERO - TOOLS - ccc.lua
+* 8ffbde8 agregado markdown preview
+* e544cdb TRIGESIMO - TOOLS : which-key.lua
+* 9ff7fe2 VIGESIMO NOVENO - TOOLS : spider.lua
+* c131224 agregado hardtime.lua
+* 2560077 VIGESIMO OCTAVO - TOOLS - navigator.lua
+* 0969c8e VIGESIMO SEPTIMO - TOOLS : flash.nvim
+* 33d863f VIGESIMO SEXTO - TOOLS - tabout.lua
+* 58fe68e VIGESIMO QUINTO - TOOLS : Agregado Spectree.lua
+* 032b247 VIGESIMO CUARTO - TOOLS - nvim-tree.lua
+* e774aca VIGESIMO TERCERO - LANG - COMPLETION : copilot.lua copilot.lua
+* f6ede46 VIGESIMO TERCERO - LANG -LSP : Agregado cmp.lua y null.lua
+* 7770904 Prueba con un nuevo stylua.toml
+* dee8274 VIGESIMO PRIMERO - LANG - LSP : mason.lua
+* a42217b VIGESIMO - LANG - LSP : lspsaga.lua
+* ffd88c2 agregado lazydev
+* 0e16c8d DECIMO NOVEMO - LANG - LSP : lspconfig.lua
+* f658f84 Agregado Devcontainer y Dockerfile
+* 607960f agregado stylua.toml y aplicdo a neotest a modo de ejemplo.
+* 72c3b46 Actualizado README.md
+* fc0af39 DECIMO OCTAVO - LANG - TREESETER : treesitter.lua
+* 583fb2c DIECISISETEAVO - LANG: ai.lua
+* c7719ef DIECISEISAVO - LANG : surround.lua
+* 4d3c557 QUINCEAVO - LANG : comment.lua
+* 564f3fb CATORCEAVO: LANG - autopair.lua
+* de9c9d5 TRECEAVO - LANG : refactoring.lua
+* 7d85acb DOCEAVO - LANG - sniprun.lua --> python
+* 4afba3b ONCEAVO - LANGS - neotest.lua
+* cd284a7 DECIMO: TOOLS - DEPURACION dap.lua
+* ced94b0 Actualizacion a README.md
+* 77bcdf2 NOVENO: Agregado zen-mode.lua y twilight.lua
+* e6cf572 OCTAVO: Agregado wilder.lua
+* b2e50e8 SEPTIMO: Agregado dashboard.lua y reagregado lualine.lua
+* 62f8ac0 SEXTO: configuracion de dressing.lua
+* f656c9e QUINTO: Configura notify.lua
+* a9e9de8 CUARTO: Agregado indentline y rainbow.lua
+* d98c944 TERCERO: Agregado lualine que depende de icon.lua
+* 7b3e869 Argegado onedark y utils.lua
+* a747c17 PASO 1: lazy, icons, list e init.lua
+* e9d6617 creada estructura basica
+* 07c082f ok. vamos bien
+* 0570689 commit inicial
+* 22dcfff Initial commit
