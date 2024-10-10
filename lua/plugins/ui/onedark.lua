@@ -14,10 +14,10 @@ onedark.setup({
     -- Options are italic, bold, underline, none and combos 'italic,bold'
     code_style = {
         comments = 'italic',
-        keywords = 'none',
-        functions = 'none',
+        keywords = 'italic',
+        functions = 'none ',
         strings = 'none',
-        variables = 'none',
+        variables = 'italic',
     },
 
     lualine = { transparent = true },

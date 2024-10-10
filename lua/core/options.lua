@@ -72,6 +72,12 @@ vim.g.markdown_recommended_style = 0
 vim.opt.path:append({ '**' })
 vim.opt.shortmess:append({ W = true, I = true, c = true })
 
+-- Configurar la fuente
+vim.opt.guifont = "Operator-Caska:h12"
+vim.opt.termguicolors = true
+
+
+
 -- hides `~` at the end of the buffer
 vim.cmd([[set fillchars+=eob:\ ]])
 

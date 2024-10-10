@@ -374,6 +374,7 @@ local n_mappings = {
     { '<leader>td', '<cmd>Sterm dexe<cr>', desc = 'Exe Launcher' },
     { '<leader>tn', '<cmd>Sterm node<cr>', desc = 'Node' },
     { '<leader>tp', '<cmd>Sterm bpython<cr>', desc = 'Python' },
+    { '<leader>tp', '<cmd>Sterm iex<cr>', desc = 'Elixir' },
     { '<leader>tr', '<cmd>Sterm irb<cr>', desc = 'Ruby' },
     { '<leader>ts', '<cmd>Sterm<cr>', desc = 'Horizontal Terminal' },
     { '<leader>tt', '<cmd>Fterm<cr>', desc = 'Terminal' },

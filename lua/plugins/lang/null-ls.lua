@@ -13,8 +13,6 @@ null_ls.setup({
     log_level = 'info',
     diagnostics_format = '#{c} #{m} (#{s})',
     sources = {
-        diag.flake8, -- Linter para Python
-        format.black, -- Formateador para Python
         action.proselint, -- markdown actions
         action.refactoring,
         -- action.ts_node_action, -- treesitter node actions, buggy, causes repeated notifications
