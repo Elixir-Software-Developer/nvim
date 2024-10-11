@@ -20,9 +20,9 @@ vim.g.maplocalleader = ' '
 map('n', '<C-s>', '<cmd>write<CR>', { desc = 'Guardar archivo' })
 map('n', '<C-v>', '"+p', { desc = 'Paste at Cursor' })
 map('n', '<C-d>', 'yypkA', { desc = 'Salir a modo normal, copiar y pegar la línea, volver a insertar al final' })
-  
+
 -- Map para Spectre en modo visual
-  
+
 -- Mapeos en modo visual
 map('v', '<C-c>', '"+y', { desc = 'Copiar al portapapeles del sistema' })
 map('v', '<C-x>', '"+d', { desc = 'cortar al portapapeles del sistema' })
@@ -39,3 +39,9 @@ map('i', '<C-s>', '<cmd>write<CR>', { desc = 'Guardar archivo' })
 map('i', '<C-d>', '<Esc>yypkA', { desc = 'Salir a modo normal, copiar y pegar la línea, volver a insertar al final' })
 
 --    map('n', '<F3>', '<cmd>lua vim.lsp.buf.formatting()<CR>', { desc = 'Formato' })
+
+-- Guardar y cerrar el buffer actual
+vim.api.nvim_set_keymap('n', '<C-q>', ':w<CR>:bd<CR>', { noremap = true, silent = true })
+
+-- Si no hay buffers activos, cerrar Neovim
+vim.api.nvim_set_keymap('n', '<C-q>', ':w<CR>:bd<CR>:q<CR>', { noremap = true, silent = true })
